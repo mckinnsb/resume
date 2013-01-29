@@ -1,4 +1,109 @@
-jobs:
+skills:
+
+  programming languages: 
+    expert:
+      - Ruby
+      - JavaScript
+      - CSS
+    advanced:
+      - SQL
+      - PHP
+    intermediate:
+      - C
+      - C++
+      - Objective-C
+      - Java  
+    beginner:
+      - Python
+      - Assembly
+      - ActionScript
+      - ML
+      - Haskell
+      - Erlang
+
+  databases:
+    expert:
+      - PostgreSQL
+      - MySQL
+    advanced:
+      - CouchDB
+    beginner:
+      - MongoDB
+    
+  frameworks:
+    expert: 
+      - Ruby on Rails
+      - jQuery
+    advanced:
+      - Backbone.js
+      - Underscore.js
+      - mooTools
+      - CodeIgniter
+    intermediate:
+      - Node.js
+      - Dojo
+      - OpenGL
+      - OpenGL ES
+    beginner:
+      - Prototype
+      - Django
+
+  testing frameworks:
+    expert:
+      - RSpec
+      - Cucumber
+    advanced:
+      - Webrat
+      - Capybara
+    intermediate:
+      - Selenium
+      - Jasmine
+
+  workflow applications:
+    - git
+    - vim
+    - tmux
+
+  strategies:
+    - object-oriented programming
+    - procedural programming
+    - callback-oriented programming
+    - client-driven web applications
+    - mvc architecture
+    - event architecture
+    - middleware and API layers
+    - separation of concerns
+
+  worked extensively with:
+    - orms ( active record, couchrest_model )
+    - restful resources
+    - cmses ( refinery, joomla, django, radiant )
+    - apis, apis, apis
+    - middleware
+    - service oriented architectures
+
+  is good at:
+    - writing
+    - verbal communication ( sometimes )
+    - documentation
+    - creating schedules
+    - scoping work
+    - architecting novel and effective solutions
+    - leading teams
+    - pipelining work
+    - satisfying needs
+    - working in agile environment
+    - working in a not-so agile environment
+
+  is comfortable with these operating systems:
+    - os x
+    - centos
+    - ubuntu
+    - fedora
+    - freebsd
+    - windows xp/7/vista/metro
+  
+job:
   - 
     company: The Barbarian Group
     location: New York, NY
