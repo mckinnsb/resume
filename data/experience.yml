@@ -1,0 +1,77 @@
+jobs:
+  - 
+    company: The Barbarian Group
+    location: New York, NY
+    position: Senior Developer
+    when: June 2011 - Present
+    accomplishments:
+      - Oh yeah
+  - 
+    company: The Barbarian Group
+    location: New York, NY
+    position: Developer
+    when: June 2010 - June 2011
+    accomplishments:
+      - Oh yeah
+  -
+    company: RecycleBank
+    location: New York, NY
+    position: Developer/Analyst
+    when: January 2010 - Present
+    accomplishments:
+      - Employed RSpec, Cucumber, and Selenium to write User Features and Scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
+      - Reverse engineered, improved and re-wrote an interactive address validation web interface in jQuery, originally written in Dojo, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
+      - Inherited, maintained, re-factored and optimized a JSON interface to a Drools Rules Engine running as a web service that exposed abstracted database queries through predefined calls and then responded to action instructions given by the Rules Engine.
+      - Constructed a “To Do” list in the user’s profile page, which gave users ideas of things to on the website to engage them on a daily basis, based on previous user activity.
+      - Designed and developed a functional demo of a system in which individuals could report their individual recycling efforts without the need for specialized hauler equipment in five days with another developer, and then fleshed the system out into full functionality.
+      - Took project technical specifications and screen mocks from buisness analysts and breathed life into the ideas by translating them into architecture and attractive interfaces.
+      - Worked with the Web Producer, Rewards Manager, and Rules Engine lead to quickly produce solutions to emerging business needs in ‘hot fix’ releases.
+      - Fixed many long-standing JavaScript and CSS bugs (several were years old) in the front end of the website.
+  -
+    company: Kazoo Interactive
+    location: Southbury, CT
+    position: Founder
+    when: March 2008 - Present
+    accomplishments:
+      - Developed an educational Facebook application targeted specifically at students, “Posit”™, which gathered user information to deliver a better content experience.
+      - Authored modules that enabled the specific functionality of the application using the Ruby on Rails web framework and Facebooker Ruby gem.
+      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook). 
+      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines. 
+      - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
+      - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
+      - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
+      - Worked with a business partner in creating an initial vision for the company: its logo, slogan, business plan, site design, and overall mission. 
+  -
+    company: Amedia Creative
+    location: Ramsey, NJ 
+    position: Senior UI Developer 
+    when: February 2008 - November 2008
+    accomplishments:
+      - Designed a web application in PHP5 and CodeIgniter using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
+      - Lead small teams of 2-3 people to carry individual projects to satisfactory conclusions, and ensured that other projects not managed by myself also reached satisfactory conclusions when requested.
+      - Produced re-usable, attractive, unobtrusive and simple JavaScript UI modules that employed recommended web practices, which were deployed on several websites and frequently included as examples in sales pitches to hook new clients.
+      - Created timelines for projects based on client contracts, established project milestones on the timeline and personally assured both clients and my employer that milestones were achieved according to schedule.
+      - Communicated directly with clients to address user experience, functionality, technical issues, deadlines, quality of service issues, or necessary clarifications concerning any of the preceding topics in person, through e-mail, or over the phone.
+      - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
+  -
+    company: The Guitar Hangar
+    location: Brookfield, CT
+    position: Webmaster 
+    when: October 2007 - June 2008
+    accomplishments:
+      - Developed components for the CMS that extended the functionality of the website and enhanced the user experience using PHP, JavaScript and MySQL.
+      - Maintained and supported a Joomla-powered e-commerce site (including a storefront, shopping cart and credit card transaction mechanism) on a day-to-day basis.
+      - Wrote internal documentation that explained the workings of the website for future replacement(s), none of whom would likely be programmers, and trained one of them.
+      - Was responsible for managing shipment and upkeep of valuable musical equipment.
+      - Created product descriptions of merchandise with the purpose of inviting customers to buy.
+
+education:
+  where: Boston College
+  location: Chestnut Hill, MA
+  degree: Bachelor of Science, Computer Science
+  minor: Mathematics
+
+
+
+
+

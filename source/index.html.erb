@@ -1,3 +1,33 @@
 <% content_for :head do %>
   <title>Stew Mckinney :: Developer :: Resume</title>
 <% end%>
+<header>
+  <div class="name">
+    <h1>Stew Mckinney</h1>
+    <h2>lordmaple@gmail.com</h2>
+    <h3>Brooklyn, NY</h3>
+    <h3>( 203 ) 233-9608</h3>
+  </div>
+</header>
+
+<section class="skills">
+
+</section>
+
+<section class="experience"><% 
+data.experience.jobs.each do | job | %>
+  <%= job.company %><br/>
+  <%= job.location %><br/>
+  <%= job.position %><br/>
+  <%= job.when %><br/>
+  <ul><%
+  job.accomplishments.each do | accomplishment | %>
+    <li><%= accomplishment %></li><%
+  end %>
+  </ul> <%
+end %>
+</section>
+
+<section class="education">
+
+</section>
