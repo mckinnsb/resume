@@ -5,7 +5,9 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-    <%= stylesheet_link_tag "site.css" %>
+    <%= stylesheet_link_tag "bootstrap", "bootstrap-responsive", "resume.css" %>
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <%= javascript_include_tag "require", :"data-main" => "javascripts/main" %>
     <%= yield_content :head %>
   </head>
   

@@ -12,6 +12,9 @@ test/tmp
 test/version_tmp
 tmp
 vendor/
+.sass-cache/
+*.sw*
+*/*.sw*
 
 # YARD artifacts
 .yardoc
