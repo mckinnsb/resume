@@ -4,7 +4,7 @@
 set :application, "stew"
 
 set :scm, :git
-set :repository, "git@github.com:mckinnsb/RIYP.git"
+set :repository, "git@github.com:mckinnsb/resume.git"
 set :branch, "master"
 set :ssh_options, { :forward_agent => true }
 
