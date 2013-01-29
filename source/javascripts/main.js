@@ -1,7 +1,12 @@
 require.config( { 
 
-  deps: [ "app", "bootstrap" ],
-  baseUrl: "javascripts/"
+  deps: [ "app" ],
+  baseUrl: "javascripts/",
+
+  shim: {
+    "bootstrap": [ "jquery" ],
+    "jquery-mig": [ "jquery" ]
+  }
 
 } );
 
