@@ -59,70 +59,87 @@ skills:
       - Selenium
       - Jasmine
 
-  workflow applications:
-    - git
-    - vim
-    - tmux
+  nebulous:
 
-  strategies:
-    - object-oriented programming
-    - procedural programming
-    - callback-oriented programming
-    - client-driven web applications
-    - mvc architecture
-    - event architecture
-    - middleware and API layers
-    - separation of concerns
+    workflow applications:
+      - git
+      - vim
+      - tmux
 
-  worked extensively with:
-    - orms ( active record, couchrest_model )
-    - restful resources
-    - cmses ( refinery, joomla, django, radiant )
-    - apis, apis, apis
-    - middleware
-    - service oriented architectures
+    strategies:
+      - object-oriented programming
+      - procedural programming
+      - callback-oriented programming
+      - client-driven web applications
+      - mvc architecture
+      - event architecture
+      - middleware and API layers
+      - separation of concerns
 
-  is good at:
-    - writing
-    - verbal communication ( sometimes )
-    - documentation
-    - creating schedules
-    - scoping work
-    - architecting novel and effective solutions
-    - leading teams
-    - pipelining work
-    - satisfying needs
-    - working in agile environment
-    - working in a not-so agile environment
+    worked extensively with:
+      - orms ( active record, couchrest_model )
+      - restful resources
+      - cmses ( refinery, joomla, django, radiant )
+      - apis, apis, apis
+      - middleware
+      - service oriented architectures
 
-  is comfortable with these operating systems:
-    - os x
-    - centos
-    - ubuntu
-    - fedora
-    - freebsd
-    - windows xp/7/vista/metro
+    is good at:
+      - writing
+      - verbal communication ( sometimes )
+      - documentation
+      - creating schedules
+      - scoping work
+      - architecting novel and effective solutions
+      - leading teams
+      - pipelining work
+      - satisfying needs
+      - working in agile environment
+      - working in a not-so agile environment
+
+    is comfortable with these operating systems:
+      - os x
+      - centos
+      - ubuntu
+      - fedora
+      - freebsd
+      - windows xp/7/vista/metro
   
-job:
+jobs:
   - 
     company: The Barbarian Group
     location: New York, NY
     position: Senior Developer
     when: June 2011 - Present
     accomplishments:
-      - Oh yeah
+      - Modified a popular CMS , Refinery, to use CouchDB instead of a SQL database, including several attendant gems.
+      - Built a very thick JS rich content application for a major client mostly using Backbone and jQuery.
+      - Architected a server solution for a major retailer&rsquo;s  central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
+      - Performed load tests using JMeter to make sure that projects met contractual obligations.
+      - Developed long term schedules for major client projects, between 3 months to a year in length.
+      - Lead teams of 2-4 people in developing long term projects and acted as the main point of contact for all non-developers.
   - 
     company: The Barbarian Group
     location: New York, NY
     position: Developer
     when: June 2010 - June 2011
     accomplishments:
-      - Oh yeah
+      - Designed and developed a recommendation system for a major cereal company that guided its users to more relevant content.
+      - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers, two dedicated database servers, and four asset servers.
+      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using a script I helped to author.
+      - Responded to crisis events resulting from an underestimated user and load turnout with system diagnostic tools and fixed the production environments within 24 hours.
+      - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in Pivotal Tracker.
+      - Worked with Account Services to do what was best for clients by accomodating their requests while also pushing back where necessary.
+      - Worked with Producers on scoping major features ( beyond a sprint or encompassing several tickets ) as they came on the radar.
+      - Helped to migrate an ancient Rails application, and its aging tests, from Rails 1.* ~ 2.1 to Rails 2.3.6.
+      - More = Kashi? GE?
+  
+
   -
     company: RecycleBank
     location: New York, NY
-    position: Developer/Analyst
-    when: January 2010 - Present
+    position: Developer / Analyst
+    when: January 2010 - June 2010
     accomplishments:
       - Employed RSpec, Cucumber, and Selenium to write User Features and Scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
       - Reverse engineered, improved and re-wrote an interactive address validation web interface in jQuery, originally written in Dojo, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
