@@ -14,7 +14,6 @@
 ###
 # Haml
 ###
-
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
 # require 'haml-coderay'
@@ -90,3 +89,5 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+#JS from gems ( middleman uses coffee, coffee drops this in here )

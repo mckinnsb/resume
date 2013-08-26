@@ -2,7 +2,6 @@
 $primary: #444444;
 $secondary: #999999;
 $tertiary: #ab2d28;
-$background: transparent url( "images/paper.png" ) scroll repeat center center;
 $slight-percentage: 2.71%;
 $gutter: 16px;
 $doublegutter: 32px;
@@ -18,7 +17,6 @@ $section_gap: 2em;
 
 body {
   font-family: "Helvetica Neue", "Helvetica";
-  background: $background;
   color: $primary;
 }
 
