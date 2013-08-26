@@ -5,31 +5,27 @@
   <div class="row-fluid">
     <div class="span12">
       <h1 class="name">Stew Mckinney</h1>
-      <h1 class="email"><small>lordmaple <span>at</span> gmail.com</small></h1>
+      <h1 class="title"><small><span>Developer</span></small></br><small>Game, Web, And Software</small></h1>
+      <h1 class="email"><small><br/ >mckinnsb <span>at</span> gmail.com</small></h1>
       <!--<h3 class="location">Brooklyn, NY ( phone # on request )</h3> -->
     </div>
   </div>
 </header>
 
-<section class="skills"><%
-data.experience.skills.nebulous.each do | nebula, collection | %>
-  <h5 class="category"><%= nebula %></h5><%
 
-  collection.each do | element | %>
-    <span class="item"><%= element %></span><% 
-  end
-end %>
-</section>
-
-<section class="experience"><% 
+<section class="experience">
+<header>
+<h1><small>Experience</small></h1>
+</header>
+<% 
 data.experience.jobs.each do | job | %>
   <div class="row-fluid">
     <div class="job_brief span5">
       <h4 class="company"><%= job.company %></h4>
-      <h5 class="location"><%= job.location %></h5>
+      <h4 class="location"><%= job.location %></h5>
       <h4 class="position"><%= job.position %></h4>
     </div>
-    <h5 class="when span5 offset2"><%= job.when.gsub( /-/, "-<br/>" ) %></h5>
+    <h5 class="when span5 offset2"><%= job.when %></h5>
   </div>
   <div class="row-fluid">
     <div class="span12">
@@ -41,8 +37,4 @@ data.experience.jobs.each do | job | %>
     </div>
   </div> <%
 end %>
-</section>
-
-<section class="education">
-
 </section>
