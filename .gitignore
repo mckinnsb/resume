@@ -20,6 +20,7 @@ vendor/
 .sass-cache/
 *.sw*
 */*.sw*
+*.vim
 
 # YARD artifacts
 .yardoc
