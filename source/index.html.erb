@@ -19,22 +19,24 @@
 </header>
 <% 
 data.experience.jobs.each do | job | %>
-  <div class="row-fluid">
-    <div class="job_brief span5">
-      <h4 class="company"><%= job.company %></h4>
-      <h4 class="location"><%= job.location %></h5>
-      <h4 class="position"><%= job.position %></h4>
+  <section class="job_history">
+    <header class="row-fluid">
+      <div class="job_brief span5">
+        <h4><span class="location"><%= job.company %></span><br /><span class="location"><%= job.location %></span></h4>
+        <h4 class="position"><%= job.position %></h4>
+      </div>
+      <h5 class="when span5 offset2"><%= job.when %></h5>
+    </header>
+    <div class="row-fluid">
+      <div class="span12">
+        <ul class="accomplishments"><%
+        job.accomplishments.each do | accomplishment | %>
+          <li class="point"><%= accomplishment %></li><%
+        end %>
+        </ul>
+      </div>
     </div>
-    <h5 class="when span5 offset2"><%= job.when %></h5>
-  </div>
-  <div class="row-fluid">
-    <div class="span12">
-      <ul class="accomplishments"><%
-      job.accomplishments.each do | accomplishment | %>
-        <li class="point"><%= accomplishment %></li><%
-      end %>
-      </ul>
-    </div>
-  </div> <%
+  </section>
+  <%
 end %>
 </section>

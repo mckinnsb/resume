@@ -2,13 +2,13 @@
 $primary: #444444;
 $secondary: #999999;
 $tertiary: #ab2d28;
-$background: transparent url( "/images/paper.png" ) scroll repeat center center;
+$background: transparent url( "images/paper.png" ) scroll repeat center center;
 $slight-percentage: 2.71%;
 $gutter: 16px;
 $doublegutter: 32px;
 $page_lead: 48px;
 $page_lead: 48px;
-$section_gap: 60px;
+$section_gap: 2em;
 
 //obviously fucking temporar
 
@@ -91,6 +91,12 @@ h1.name {
 }
 
 .experience {
+  section {
+    padding-bottom: 1em;
+  }
+  .job_history:last-child {
+    margin-bottom: 0em;
+  }
   margin-top: $section_gap;
   margin-bottom: $section_gap;
 }
