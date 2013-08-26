@@ -26,6 +26,7 @@ role :db,  domain
 # these http://github.com/rails/irs_process_scripts
 
 # If you are using Passenger mod_rails uncomment this:
+=begin
 namespace :deploy do
  task :start do; end
  task :bundler do
@@ -36,4 +37,5 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:bundler"
+=end
 
