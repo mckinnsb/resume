@@ -39,3 +39,12 @@ end
 after "deploy:update_code", "deploy:bundler"
 =end
 
+namespace :deploy do
+  task :move_build do
+    run "cd #{release_path} && mv build/ public/resume/"
+  end
+end
+
+after "deploy:update_code", "deploy:move_build"
+
+
