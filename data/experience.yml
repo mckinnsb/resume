@@ -118,7 +118,6 @@ jobs:
       - Performed load tests using JMeter to make sure that projects met contractual obligations, and operated at 99.99% uptime.
       - Maintained large test suites using Cruise Control.
       - Developed several "give away" minisites that were conducted on major social networks ( Twitter, Facebook, et al ) and utilized their APIs.
-      - Developed several pitches for interactive games for large clients.
       - Performed analysis of commercial vendors and made recommendations based on technical assessments.
       - Advised projects on early technical requirements and pitfalls.
       - Assisted teams in brainstorming creative technical solutions to meet client needs.
