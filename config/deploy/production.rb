@@ -1,4 +1,17 @@
 set :ssh_options, { :forward_agent => true }
+set :deploy_to, '/var/www/stew'
+
+namespace :deploy do
+  task :move_build do
+    on roles :all do | host |
+      execute "cd #{release_path} && mv build/ public/resume/"
+    end
+  end
+end
+
+after "deploy:updated", "deploy:move_build"
+
+
 
 # server-based syntax
 # ======================
@@ -19,11 +32,12 @@ set :ssh_options, { :forward_agent => true }
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-# role :app, %w{deploy@example.com}, my_property: :my_value
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
+user = fetch :user
+domain = fetch :domain
 
-
+role :app, "#{user}@#{domain}"
+role :web, "#{user}@#{domain}"
+role :db, "#{user}@#{domain}"
 
 # Configuration
 # =============

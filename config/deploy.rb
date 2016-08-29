@@ -1,15 +1,13 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-puts "HI"
-
 set :application, 'stew'
 set :domain, "96.126.106.220"
 set :repo_url, 'git@github.com:mckinnsb/resume.git'
 set :scm, :git
+set :user, "root"
 
 #set :runner, "nginx"
-
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -40,15 +38,3 @@ set :scm, :git
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-namespace :deploy do
-  task :move_build do
-    on roles :all do | host |
-      execute "cd #{release_path} && mv build/ public/resume/"
-    end
-  end
-end
-
-after "deploy:updated", "deploy:move_build"
-
-
