@@ -1,22 +1,17 @@
-/* line 14, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .skills {
   display: none; }
 
-/* line 18, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 body {
   font-family: "Helvetica Neue", "Helvetica";
   color: #444444; }
 
-/* line 23, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 h1, h2 {
   width: 100%;
   float: left;
   clear: both;
   padding-left: 16px; }
-  /* line 28, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   header h1.title, header h2.title {
     width: 50%; }
-  /* line 31, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   h1.email, h2.email {
     width: 47%;
     clear: none;
@@ -25,61 +20,49 @@ h1, h2 {
     text-align: right;
     padding-left: 0px;
     padding-right: 16px; }
-  /* line 40, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   h1 small, h2 small {
     color: #444444;
     background-color: white;
     font-weight: bold; }
-    /* line 44, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
     h1 small span, h2 small span {
       font-weight: bold;
       color: #ab2d28; }
 
-/* line 55, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .skills {
   clear: both; }
 
-/* line 59, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 #resume {
   margin-top: 48px;
   margin-bottom: 48px;
   background-color: white; }
 
-/* line 65, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .job_brief {
   float: left;
   color: #444444;
   text-align: left;
   padding-left: 16px; }
-  /* line 72, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   .job_brief .position {
     color: #ab2d28; }
 
-/* line 78, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .when {
   float: right;
   text-align: right;
   color: #999999;
   padding-right: 16px; }
 
-/* line 85, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .accomplishments {
   float: left;
   clear: both;
   margin-left: 32px; }
 
-/* line 91, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 .experience {
   margin-top: 2em;
   margin-bottom: 2em; }
-  /* line 92, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   .experience section {
     padding-bottom: 1em; }
-  /* line 95, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
   .experience .job_history:last-child {
     margin-bottom: 0em; }
 
-/* line 103, /Users/smckinney/local/resume/source/stylesheets/resume.css.scss */
 ul li {
   margin-top: .5em; }
 
