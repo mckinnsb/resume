@@ -1,9 +1,10 @@
 @import "compass/css3/transition"
 
-$black: #290200
-$pink: #dbc2c0
+$primary: 0.87
+$secondary: 0.54
+
+$black: #000000
 $red: #ab2f28
-$grey: #999999
 
 $slight-percentage: 2.71%
 $gutter: 16px
@@ -15,6 +16,7 @@ $section_gap: 2em
   display: none
 
 body 
+  opacity: $primary
   font-family: "Helvetica Neue", "Helvetica"
   color: $black
   max-width: 1440px
@@ -57,7 +59,6 @@ h1.name
   margin-bottom: $page_lead
   background-color: white
 
-
 .job_brief 
   float: left
   text-align: left
@@ -70,9 +71,12 @@ h1.name
 
 .when 
   float: right
-  color: $grey
+  opacity: $secondary
   text-align: right
   padding-right: $gutter
+
+  .cssanimations &
+    @include transition( opacity 500ms )
 
 
 .accomplishments 
@@ -85,9 +89,10 @@ section
   margin-top: $section_gap
   margin-bottom: $section_gap
 
-  &:hover
-    .accomplishments
+section:hover
 
+  .when
+    opacity: $primary
 
 ul
   li 
