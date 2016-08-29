@@ -2,25 +2,26 @@
   title
     | Stew Mckinney :: Developer :: Consulting :: Resume
 
-header
-  .row-fluid
-    .span12
-      h1.name
-        | Stew Mckinney
-      h1.title
-        small
-          span
-            | Developer
-          br
-          | Web, Tech, and Games
-      h1.email
-        small
-          br
-          | mckinnsb 
-          span="at "
-          | gmail.com
-      //
-        Location: Brooklyn, NY ( phone # on request )
+section
+  header
+    .row-fluid
+      .span12
+        h1.name
+          | Stew Mckinney
+        h1.title
+          small
+            span
+              | Developer
+            br
+            | Web, Tech, and Games
+        h1.email[ onclick="RESUME.mailMe()" ]
+          small
+            br
+            | mckinnsb 
+            span
+            | gmail
+        //
+          Location: Brooklyn, NY ( phone # on request )
 
 - data.experience.jobs.each do | job | 
   section.job_history
