@@ -75,6 +75,9 @@ h1.name
   text-align: right
   padding-right: $gutter
 
+  .hidden
+    display: none
+
   .cssanimations &
     @include transition( opacity 500ms )
 
@@ -93,6 +96,8 @@ section:hover
 
   .when
     opacity: $primary
+    .hidden
+      display: inline
 
 ul
   li 

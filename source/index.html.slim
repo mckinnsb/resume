@@ -31,7 +31,12 @@ header
           span.location= job.company
           br
           span.location= job.location 
-      h5.when.span5.offset2= job.when
+
+      h5.when.span5.offset2
+       | #{job.when} 
+       span.hidden
+         |  <
+
 
     div.row-fluid
       div.span12
