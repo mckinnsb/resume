@@ -17,6 +17,8 @@ test/tmp
 test/version_tmp
 tmp
 vendor/
+old_deploy/
+log/
 .sass-cache/
 *.sw*
 */*.sw*
