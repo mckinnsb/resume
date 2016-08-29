@@ -1,0 +1,12 @@
+#A sample Gemfile
+source "https://rubygems.org"
+
+gem "middleman"
+gem "middleman-cli"
+gem "middleman-core"
+gem "middleman-slim"
+gem "slim" 
+
+gem "capistrano", '~> 3.6'
+gem "capistrano-rails"
+gem "capistrano-bundler"

@@ -1,0 +1,42 @@
+- content_for( :head ) do 
+  title
+    | Stew Mckinney :: Developer :: Consulting :: Resume
+
+header
+  .row-fluid
+    .span12
+      h1.name
+        | Stew Mckinney
+      h1.title
+        small
+          span
+            | Developer
+          br
+          | Web, Tech, and Games
+      h1.email
+        small
+          br
+          | mckinnsb 
+          span="at "
+          | gmail.com
+      //
+        Location: Brooklyn, NY ( phone # on request )
+
+- data.experience.jobs.each do | job | 
+  section.job_history
+    header.row-fluid
+      div.job_brief.span5
+        h4.position= job.position 
+        h4
+          span.location= job.company
+          br
+          span.location= job.location 
+      h5.when.span5.offset2= job.when
+
+    div.row-fluid
+      div.span12
+        ul.accomplishments
+          - job.accomplishments.each do | accomplishment | 
+            li class="point"= accomplishment 
+
+

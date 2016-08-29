@@ -3,10 +3,6 @@
 .bundle
 .config
 
-# This is a static site
-Gemfile
-Gemfile.lock
-
 coverage
 InstalledFiles
 lib/bundler/man

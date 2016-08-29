@@ -1,0 +1,17 @@
+doctype html
+
+html
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+
+    link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'
+
+    = stylesheet_link_tag :bootstrap, :resume
+    = yield_content :head
+
+  body 
+    #main.row-fluid[ role="main" ]
+      #resume.span8.offset2
+        = yield
