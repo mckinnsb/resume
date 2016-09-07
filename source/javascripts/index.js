@@ -24,4 +24,7 @@ var RESUME = RESUME || {};
 
   };
 
+  window.document.addEventListener( "touchstart", function() {} );
+
 } () );
+
