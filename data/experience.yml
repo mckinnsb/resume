@@ -1,3 +1,119 @@
+﻿jobs:
+  -
+    company: SBM Consulting 
+    location: New York, NY
+    position: Founder 
+    when: June 2013 - April 2016
+    accomplishments:
+      - Built a robust e-commerce platform for FarmersWeb, a B2B food sales portal between small food producers and restaurants, using Rails 4.2.
+      - Worked with the leadership team to design a complex scheduled ordering system which deals with order substitutions, weight changes, date changes, and route changes.
+      - Integrated with Braintree, a major credit card processor, to validate/authorize and capture credit card transactions.
+      - Designed a role system at the controller level using CanCan, in order to accommodate a multi-tiered subscription model.
+      - Developed, extended and maintained an order accounting system which integrates with Xero and FarmersWeb's administrative backend.
+      - Used a location-aware database using PostGIS that filtered sellers on the buyer-side based on delivery zones and distance from the buyer.
+      - Architected and built a thick front-end application layer for FarmersWeb using AngularJS.
+      - Created a product and inventory system with tiered categories, characteristics, catch weight, inventory limits and multiple packaging options.
+      - Implemented a complex order view which supported order viewing, editing, creation, and conflict resolution ( crediting, refunds, messages ) with dynamic previews.
+      - Using Google Maps API, developed a delivery zone management module which allows sellers to control exactly where they deliver their products in a custom geometric zone or on the state, county, or city level.
+      - Created a logistics management dashboard which controlled delivery prices, minimums, and additionally facilitated the coordination of third party delivery solutions.
+      - Developed a product browsing section with two modes, grid and list, which included product filtering and quickly adding products to an order.
+      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
+      - Authored an incredibly extensive suite of background tasks and workers to manage the data life-cycle.
+      - Wrote over two thousand tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
+      - Eschewed quarterly releases or feature releases in favor of continual releases backed up by continuous integration ( CircleCI ).
+      - Worked directly with the co-founders and clients of FarmersWeb to develop the product around the needs of the modern small farm.
+      - Partnered with the CTO of the company and several contractors to make sure that the technological foundations of the business were solid.
+      - Found and hired developers within the New York area in order to further the development of FarmersWeb.
+  -
+    company: The Barbarian Group
+    location: New York, NY
+    position: Senior Developer
+    when: June 2011 - April 2013
+    accomplishments:
+      - Modified Refinery CMS to use CouchDB instead of a SQL database, which included modifying several required gems, to be used extensively in-house as a ready client solution.
+      - Built a Backbone JS application for Bloomberg Philanthropies.
+      - Architected a server solution for a major retailer&rsquo;s central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
+      - Performed load tests using JMeter to make sure that projects met contractual obligations, and operated at 99.99% uptime.
+      - Maintained large test suites using Cruise Control.
+      - Developed several "give away" mini-sites that were conducted on major social networks ( Twitter, Facebook, et al ) and utilized their APIs.
+      - Performed analysis of commercial vendors and made recommendations based on technical assessments.
+      - Advised projects on early technical requirements and pitfalls.
+      - Assisted teams in brainstorming creative technical solutions to meet client needs.
+      - Bound an in-house open source graphics library, Cinder, to the JavaScript programming language via V8, Google&rsquo;s JavaScript engine.
+      - Acted as Technical Lead to develop long term schedules for major client projects, between 3 months to a year in length.
+      - Lead teams of 2-4 people in developing long term projects and acted as the main point of contact for all non-developers.
+  -
+    company: The Barbarian Group
+    location: New York, NY
+    position: Developer
+    when: June 2010 - June 2011
+    accomplishments:
+      - Designed and developed a recommendation system for a major cereal company that guided its users to more relevant content.
+      - Developed a "Static Search System" to respond to a client need for all content on a site to be searchable, which involved creating an XML pipe from .HTML documents present in the repository.
+      - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers, two dedicated database servers, and four asset servers.
+      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using a script I helped to author.
+      - Responded to crisis events resulting from an underestimated user and load turnout with system diagnostic tools and fixed the production environments within 24 hours.
+      - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in Pivotal Tracker.
+      - Worked with Account Services to do what was best for clients by accommodating their requests while also pushing back where necessary.
+      - Worked with Producers on scoping major features ( beyond a sprint or encompassing several tickets ) as they came on the radar.
+      - Helped to migrate an ancient Rails application, and its aging tests, from Rails 1.* ~ 2.1 to Rails 2.3.6.
+  -
+    company: RecycleBank
+    location: New York, NY
+    position: Developer / Analyst
+    when: January 2010 - June 2010
+    accomplishments:
+      - Employed RSpec, Cucumber, and Selenium to write User Features and Scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
+      - Reverse engineered, improved and re-wrote an interactive address validation web interface in jQuery, originally written in Dojo, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
+      - Inherited, maintained, re-factored and optimized a JSON interface to a Drools Rules Engine running as a web service that exposed abstracted database queries through predefined calls and then responded to action instructions given by the Rules Engine.
+      - Constructed a “To Do” list in the user’s profile page, which gave users ideas of things to on the website to engage them on a daily basis, based on previous user activity.
+      - Designed and developed a functional demo of a system in which individuals could report their individual recycling efforts without the need for specialized hauler equipment in five days with another developer, and then fleshed the system out into full functionality.
+      - Took project technical specifications and screen mocks from business analysts and breathed life into the ideas by translating them into architecture and attractive interfaces.
+      - Worked with the Web Producer, Rewards Manager, and Rules Engine lead to quickly produce solutions to emerging business needs in ‘hot fix’ releases.
+      - Fixed many long-standing JavaScript and CSS bugs (several years old) in the front end of the website.
+  -
+    company: Kazoo Interactive
+    location: Southbury, CT
+    position: Founder
+    when: March 2008 - Present
+    accomplishments:
+      - Developed an educational Facebook application targeted specifically at students, “Posit”™, which gathered user information to deliver a better content experience.
+      - Authored modules that enabled the specific functionality of the application using the Ruby on Rails web framework and Facebooker Ruby gem.
+      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
+      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
+      - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
+      - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
+      - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
+      - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
+  -
+    company: Amedia Creative
+    location: Ramsey, NJ
+    position: Senior UI Developer
+    when: February 2008 - November 2008
+    accomplishments:
+      - Designed a web application in PHP5 and CodeIgniter using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
+      - Lead small teams of 2-3 people to carry individual projects to satisfactory conclusions, and ensured that other projects not managed by myself also reached satisfactory conclusions when requested.
+      - Produced re-usable, attractive, unobtrusive and simple JavaScript UI modules that employed recommended web practices, which were deployed on several websites and frequently included as examples in sales pitches to hook new clients.
+      - Created timelines for projects based on client contracts, established project milestones on the timeline and personally assured both clients and my employer that milestones were achieved according to schedule.
+      - Communicated directly with clients to address user experience, functionality, technical issues, deadlines, quality of service issues, or necessary clarifications concerning any of the preceding topics in person, through e-mail, or over the phone.
+      - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
+  -
+    company: The Guitar Hangar
+    location: Brookfield, CT
+    position: Webmaster
+    when: October 2007 - June 2008
+    accomplishments:
+      - Developed components for the CMS that extended the functionality of the website and enhanced the user experience using PHP, JavaScript and MySQL.
+      - Maintained and supported a Joomla-powered e-commerce site (including a storefront, shopping cart and credit card transaction mechanism) on a day-to-day basis.
+      - Wrote internal documentation that explained the workings of the website for future replacement(s), none of whom would likely be programmers, and trained one of them.
+      - Was responsible for managing shipment and upkeep of valuable musical equipment.
+      - Created product descriptions of merchandise with the purpose of inviting customers to buy.
+
+education:
+  where: Boston College
+  degree: Bachelor of Science, Computer Science
+  minor: Mathematics
+
 skills:
 
   programming languages:
@@ -63,7 +179,7 @@ skills:
 
   nebulous:
 
-    workflow applications:
+    work flow applications:
       - git
       - vim
       - tmux
@@ -87,8 +203,8 @@ skills:
       - service oriented architectures
 
     is good at:
+      - agile
       - writing
-      - verbal communication ( sometimes )
       - documentation
       - creating schedules
       - scoping work
@@ -96,8 +212,6 @@ skills:
       - leading teams
       - pipelining work
       - satisfying needs
-      - working in agile environment
-      - working in a not-so agile environment
 
     is comfortable with these operating systems:
       - os x
@@ -106,120 +220,3 @@ skills:
       - fedora
       - freebsd
       - windows 10/7/xp/vista/metro
-
-jobs:
-  -
-    company: SBM Consulting ( FarmersWeb )
-    location: New York, NY
-    position: Founder ( VP of Tech )
-    when: June 2013 - April 2016
-
-    accomplishments:
-      - Built a robust e-commerce site for FarmersWeb, a B2B food sales portal between small local organic producers, restaurants, other large kitchens.
-      - Integrated with Braintree, a major credit card processor, to process orders, including purchases, discounts, partial refunds, full refunds, and subscriptions.
-      - Developed a location-aware database using PostGIS that filtered sellers on the buyer-side based on sellers delivery zones and distance from the buyer.
-      - Designed and developed a complex ordering system which handled many of the intricacies of food ordering, handling cancelling, substitutions, catch weight changes, date changes, and delivery changes.
-      - Architechted and built a thick front-end application layer for FarmersWeb, which handled order editing, logistics management, product filtering, vacation setting, and subscription services.
-      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
-      - Authored an incredibly extensive suite of background tasks and workers to manage the data lifecycle.
-      - Wrote over two thousand tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
-      - Eschewed quarterly releases or feature releases in favor of continual releases backed up by continuous integration ( CircleCI ).
-      - Worked directly with the co-founders and clients of Farmersweb to develop the product around the needs of the modern small farm.
-      - Partnered with the CTO of the company and several contractors to make sure that the technoligical foundations of the business were solid.
-      - Found and hired developers within the New York area in order to further the development of FarmersWeb.
-
-  -
-    company: The Barbarian Group
-    location: New York, NY
-    position: Senior Developer
-    when: June 2011 - April 2013
-    accomplishments:
-      - Modified Refinery CMS to use CouchDB instead of a SQL database, which included modifying several required gems, to be used extensively in-house as a ready client solution.
-      - Built a thick Backbone JS application for Bloomberg Philanthropies.
-      - Architected a server solution for a major retailer&rsquo;s central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
-      - Performed load tests using JMeter to make sure that projects met contractual obligations, and operated at 99.99% uptime.
-      - Maintained large test suites using Cruise Control.
-      - Developed several "give away" minisites that were conducted on major social networks ( Twitter, Facebook, et al ) and utilized their APIs.
-      - Performed analysis of commercial vendors and made recommendations based on technical assessments.
-      - Advised projects on early technical requirements and pitfalls.
-      - Assisted teams in brainstorming creative technical solutions to meet client needs.
-      - Bound an in-house open source graphics library, Cinder, to the Javascript programming language via V8, Google&rsquo;s javascript engine.
-      - Acted as Technical Lead to develop long term schedules for major client projects, between 3 months to a year in length.
-      - Lead teams of 2-4 people in developing long term projects and acted as the main point of contact for all non-developers.
-  -
-    company: The Barbarian Group
-    location: New York, NY
-    position: Developer
-    when: June 2010 - June 2011
-    accomplishments:
-      - Designed and developed a recommendation system for a major cereal company that guided its users to more relevant content.
-      - Developed a "Static Search System" to respond to a client need for all content on a site to be searchable, which involved creating an XML pipe from .html documents present in the repository.
-      - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers, two dedicated database servers, and four asset servers.
-      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using a script I helped to author.
-      - Responded to crisis events resulting from an underestimated user and load turnout with system diagnostic tools and fixed the production environments within 24 hours.
-      - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in Pivotal Tracker.
-      - Worked with Account Services to do what was best for clients by accomodating their requests while also pushing back where necessary.
-      - Worked with Producers on scoping major features ( beyond a sprint or encompassing several tickets ) as they came on the radar.
-      - Helped to migrate an ancient Rails application, and its aging tests, from Rails 1.* ~ 2.1 to Rails 2.3.6.
-  -
-    company: RecycleBank
-    location: New York, NY
-    position: Developer / Analyst
-    when: January 2010 - June 2010
-    accomplishments:
-      - Employed RSpec, Cucumber, and Selenium to write User Features and Scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
-      - Reverse engineered, improved and re-wrote an interactive address validation web interface in jQuery, originally written in Dojo, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
-      - Inherited, maintained, re-factored and optimized a JSON interface to a Drools Rules Engine running as a web service that exposed abstracted database queries through predefined calls and then responded to action instructions given by the Rules Engine.
-      - Constructed a “To Do” list in the user’s profile page, which gave users ideas of things to on the website to engage them on a daily basis, based on previous user activity.
-      - Designed and developed a functional demo of a system in which individuals could report their individual recycling efforts without the need for specialized hauler equipment in five days with another developer, and then fleshed the system out into full functionality.
-      - Took project technical specifications and screen mocks from buisness analysts and breathed life into the ideas by translating them into architecture and attractive interfaces.
-      - Worked with the Web Producer, Rewards Manager, and Rules Engine lead to quickly produce solutions to emerging business needs in ‘hot fix’ releases.
-      - Fixed many long-standing JavaScript and CSS bugs (several years old) in the front end of the website.
-  -
-    company: Kazoo Interactive
-    location: Southbury, CT
-    position: Founder
-    when: March 2008 - Present
-    accomplishments:
-      - Developed an educational Facebook application targeted specifically at students, “Posit”™, which gathered user information to deliver a better content experience.
-      - Authored modules that enabled the specific functionality of the application using the Ruby on Rails web framework and Facebooker Ruby gem.
-      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
-      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
-      - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
-      - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
-      - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
-      - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
-  -
-    company: Amedia Creative
-    location: Ramsey, NJ
-    position: Senior UI Developer
-    when: February 2008 - November 2008
-    accomplishments:
-      - Designed a web application in PHP5 and CodeIgniter using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
-      - Lead small teams of 2-3 people to carry individual projects to satisfactory conclusions, and ensured that other projects not managed by myself also reached satisfactory conclusions when requested.
-      - Produced re-usable, attractive, unobtrusive and simple JavaScript UI modules that employed recommended web practices, which were deployed on several websites and frequently included as examples in sales pitches to hook new clients.
-      - Created timelines for projects based on client contracts, established project milestones on the timeline and personally assured both clients and my employer that milestones were achieved according to schedule.
-      - Communicated directly with clients to address user experience, functionality, technical issues, deadlines, quality of service issues, or necessary clarifications concerning any of the preceding topics in person, through e-mail, or over the phone.
-      - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
-  -
-    company: The Guitar Hangar
-    location: Brookfield, CT
-    position: Webmaster
-    when: October 2007 - June 2008
-    accomplishments:
-      - Developed components for the CMS that extended the functionality of the website and enhanced the user experience using PHP, JavaScript and MySQL.
-      - Maintained and supported a Joomla-powered e-commerce site (including a storefront, shopping cart and credit card transaction mechanism) on a day-to-day basis.
-      - Wrote internal documentation that explained the workings of the website for future replacement(s), none of whom would likely be programmers, and trained one of them.
-      - Was responsible for managing shipment and upkeep of valuable musical equipment.
-      - Created product descriptions of merchandise with the purpose of inviting customers to buy.
-
-education:
-  where: Boston College
-  location: Chestnut Hill, MA
-  degree: Bachelor of Science, Computer Science
-  minor: Mathematics
-
-
-
-
-

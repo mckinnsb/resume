@@ -9,10 +9,13 @@ $red: #ab2f28
 $background-color: #f5f5f5
 
 $slight-percentage: 2.71%
+
 $gutter: 16px
 $doublegutter: $gutter * 2
 $page_lead: $gutter * 3
 $section_gap: 2em
+
+$speed: 400ms
 
 .skills 
   display: none
@@ -77,15 +80,44 @@ h1.name
   border-left: $red solid 3px
   max-width: 1080px
 
-.job_brief 
+.job_brief
+
   float: left
-  text-align: left
   padding-left: $gutter
-  .location 
-  
-  .position 
+  text-align: left
+
+  .location
+
+  .position
     color: $red
-    //this is based off another height i think
+    position: relative
+
+    .bullet
+      background-color: white
+      border-color: $red
+      border-radius: 1em
+      border-style: solid
+      bottom: 0px
+      text-align: center
+      height: 1em
+      position: absolute
+      left: -3.3em
+      width: 1em
+
+      &:before
+        
+        background-color: white
+        display: inline-block
+        text-align: center
+        border-radius: 0em
+        width: 0em
+        height: 0em
+        margin-bottom: 0.33em
+        content: ""
+
+        .cssanimations &
+          @include transition( all $speed / 2 )
+
 
 .when 
   float: right
@@ -97,7 +129,7 @@ h1.name
     display: none
 
   .cssanimations &
-    @include transition( opacity 500ms )
+    @include transition( opacity $speed )
 
 
 .accomplishments 
@@ -115,6 +147,14 @@ section:hover
     opacity: $primary
     .hidden
       display: inline
+
+  .job_brief .bullet:before
+    background-color: $red
+    border-radius: 0.75em
+    width: 0.75em
+    height: 0.75em
+    margin-bottom: 0.0625em
+
 
 ul
   li 

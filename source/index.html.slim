@@ -27,7 +27,9 @@ section
   section.job_history
     header.row-fluid
       div.job_brief.span5
-        h4.position= job.position 
+        h4.position 
+          .bullet
+          | #{ job.position  } 
         h4
           span.location= job.company
           br
