@@ -1,5 +1,4 @@
 @import "compass/css3/transition"
-@import "responsive"
 
 $primary: 0.87
 $secondary: 0.54
@@ -155,6 +154,9 @@ h1.name
   .hidden
     display: none
 
+  .mobile
+    display: none
+
   .cssanimations &
     @include transition( opacity $speed )
 
@@ -168,8 +170,7 @@ h1.name
 section
   margin: $section_gap
 
-section:hover, section:focus
-
+section:hover, section.hovered
   .when
     opacity: $primary
     .hidden
@@ -178,11 +179,11 @@ section:hover, section:focus
   .job_brief .bullet:before
     background-color: $red
     border-radius: 0.75em
-    width: 0.76em
+    width: 0.75em
     opacity: 1
-    height: 0.76em
-    top: ( 1em - 0.76em ) / 2
-    left: ( 1em - 0.76em ) / 2
+    height: 0.75em
+    top: ( 1em - 0.75em ) / 2
+    left: ( 1em - 0.75em ) / 2
 
   .job_brief .bullet:after
     width: 0.75em
@@ -191,3 +192,4 @@ ul
   li 
     margin-top: .5em
   
+@import "responsive"
