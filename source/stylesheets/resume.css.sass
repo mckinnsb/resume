@@ -72,6 +72,23 @@ h1.name
 .skills 
   clear: both
 
+//something of a bootstrap hack
+
+.row-fluid
+  .spanbody:first-child 
+    width: 65.95744680851064%
+    *width: 65.90425531914893%
+    margin-left: 17.02127659574468%
+    *margin-left: 16.914893617021278%
+
+
+@media (max-width: 700px) 
+  .row-fluid
+    .spanbody:first-child 
+      width: 82.97872340425532%
+      *width: 82.92553191489361%
+      margin-left: 8.51063829787234%
+      *margin-left: 8.404255319148938%
 
 #resume 
   padding-top: $page_lead
