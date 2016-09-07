@@ -1,6 +1,6 @@
 skills:
 
-  programming languages: 
+  programming languages:
     expert:
       - Ruby
       - JavaScript
@@ -12,7 +12,7 @@ skills:
       - C
       - C++
       - Objective-C
-      - Java  
+      - Java
     beginner:
       - Python
       - Assembly
@@ -29,14 +29,16 @@ skills:
       - CouchDB
     beginner:
       - MongoDB
-    
+
   frameworks:
-    expert: 
+    expert:
       - Ruby on Rails
       - jQuery
-    advanced:
-      - Backbone.js
       - Underscore.js
+      - Angular 1.x+
+    advanced:
+      - PostGIS
+      - Backbone.js
       - mooTools
       - CodeIgniter
     intermediate:
@@ -103,10 +105,30 @@ skills:
       - ubuntu
       - fedora
       - freebsd
-      - windows xp/7/vista/metro
-  
+      - windows 10/7/xp/vista/metro
+
 jobs:
-  - 
+  -
+    company: SBM Consulting ( FarmersWeb )
+    location: New York, NY
+    position: Founder ( VP of Tech )
+    when: June 2013 - April 2016
+
+    accomplishments:
+      - Built a robust e-commerce site for FarmersWeb, a B2B food sales portal between small local organic producers, restaurants, other large kitchens.
+      - Integrated with Braintree, a major credit card processor, to process orders, including purchases, discounts, partial refunds, full refunds, and subscriptions.
+      - Developed a location-aware database using PostGIS that filtered sellers on the buyer-side based on sellers delivery zones and distance from the buyer.
+      - Designed and developed a complex ordering system which handled many of the intricacies of food ordering, handling cancelling, substitutions, catch weight changes, date changes, and delivery changes.
+      - Architechted and built a thick front-end application layer for FarmersWeb, which handled order editing, logistics management, product filtering, vacation setting, and subscription services.
+      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
+      - Authored an incredibly extensive suite of background tasks and workers to manage the data lifecycle.
+      - Wrote over two thousand tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
+      - Eschewed quarterly releases or feature releases in favor of continual releases backed up by continuous integration ( CircleCI ).
+      - Worked directly with the co-founders and clients of Farmersweb to develop the product around the needs of the modern small farm.
+      - Partnered with the CTO of the company and several contractors to make sure that the technoligical foundations of the business were solid.
+      - Found and hired developers within the New York area in order to further the development of FarmersWeb.
+
+  -
     company: The Barbarian Group
     location: New York, NY
     position: Senior Developer
@@ -124,7 +146,7 @@ jobs:
       - Bound an in-house open source graphics library, Cinder, to the Javascript programming language via V8, Google&rsquo;s javascript engine.
       - Acted as Technical Lead to develop long term schedules for major client projects, between 3 months to a year in length.
       - Lead teams of 2-4 people in developing long term projects and acted as the main point of contact for all non-developers.
-  - 
+  -
     company: The Barbarian Group
     location: New York, NY
     position: Developer
@@ -139,7 +161,7 @@ jobs:
       - Worked with Account Services to do what was best for clients by accomodating their requests while also pushing back where necessary.
       - Worked with Producers on scoping major features ( beyond a sprint or encompassing several tickets ) as they came on the radar.
       - Helped to migrate an ancient Rails application, and its aging tests, from Rails 1.* ~ 2.1 to Rails 2.3.6.
-  - 
+  -
     company: RecycleBank
     location: New York, NY
     position: Developer / Analyst
@@ -161,16 +183,16 @@ jobs:
     accomplishments:
       - Developed an educational Facebook application targeted specifically at students, “Posit”™, which gathered user information to deliver a better content experience.
       - Authored modules that enabled the specific functionality of the application using the Ruby on Rails web framework and Facebooker Ruby gem.
-      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook). 
-      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines. 
+      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
+      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
       - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
       - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
       - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
-      - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission. 
+      - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
   -
     company: Amedia Creative
-    location: Ramsey, NJ 
-    position: Senior UI Developer 
+    location: Ramsey, NJ
+    position: Senior UI Developer
     when: February 2008 - November 2008
     accomplishments:
       - Designed a web application in PHP5 and CodeIgniter using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
@@ -182,7 +204,7 @@ jobs:
   -
     company: The Guitar Hangar
     location: Brookfield, CT
-    position: Webmaster 
+    position: Webmaster
     when: October 2007 - June 2008
     accomplishments:
       - Developed components for the CMS that extended the functionality of the website and enhanced the user experience using PHP, JavaScript and MySQL.
