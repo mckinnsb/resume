@@ -3,31 +3,21 @@ set :deploy_to, '/var/www/stew'
 
 namespace :deploy do
 
-  previous_release = nil
-
-  task :capture_previous_version do
-    previous_release = capture "readlink #{current_path}"
-  end
-
   task :move_build do
+
     on roles :all do | host |
 
-      #until we are done
-      if previous_release do
-        execute "cd #{release_path} && mv #{previous_release}/public/resume public/resume/"
-      end
-
+      execute "cd #{release_path} && mv old_build/ public/resume/"
       execute "cd #{release_path} && mv build/ public/_resume_preview/"
 
     end
+
   end
 
 end
 
-before "deploy:symlink:release", "deploy:capture_previous_version"
+#before "deploy:symlink:release", "deploy:capture_previous_version"
 after "deploy:updated", "deploy:move_build"
-
-
 
 # server-based syntax
 # ======================
@@ -37,8 +27,6 @@ after "deploy:updated", "deploy:move_build"
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-
-
 
 # role-based syntax
 # ==================
@@ -91,3 +79,5 @@ role :db, "#{user}@#{domain}"
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+
