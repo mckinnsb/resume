@@ -11,6 +11,9 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :relative_links, true
+activate :relative_assets
+
 # With alternative layout
 # page '/path/to/file.html', layout: :otherlayout
 
@@ -38,6 +41,7 @@ page '/*.txt', layout: false
 configure :build do
   # Minify CSS on build
   # activate :minify_css
+ 
 
   # Minify Javascript on build
   # activate :minify_javascript

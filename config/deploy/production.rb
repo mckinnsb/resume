@@ -2,13 +2,29 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_to, '/var/www/stew'
 
 namespace :deploy do
+
+  previous_release = nil
+
+  task :capture_previous_version do
+    previous_release = capture "readlink #{current_path}"
+  end
+
   task :move_build do
     on roles :all do | host |
+
+      #until we are done
+      if previous_release do
+        execute "cd #{release_path} && mv #{previous_release}/public/resume public/resume/"
+      end
+
       execute "cd #{release_path} && mv build/ public/_resume_preview/"
+
     end
   end
+
 end
 
+before "deploy:symlink:release", "deploy:capture_previous_version"
 after "deploy:updated", "deploy:move_build"
 
 
