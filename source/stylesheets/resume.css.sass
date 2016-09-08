@@ -111,10 +111,10 @@ h1.name
       border-style: solid
       top: -0.1em
       text-align: center
-      height: 1em
+      height: 18px
       position: absolute
       left: -3.3em
-      width: 1em
+      width: 18px
 
       &:before
         
@@ -122,13 +122,13 @@ h1.name
         border-radius: 0em
         content: ""
         display: inline-block
-        height: 0em
+        height: 0px
         opacity: 0
         position: absolute
         text-align: center
-        top: 0.5em
-        left: 0.5em
-        width: 0em
+        top: 9px
+        left: 9px
+        width: 0px
 
         .cssanimations &
           @include transition( all ($speed / 2 ) linear )
@@ -154,7 +154,7 @@ h1.name
   .hidden
     display: none
 
-  .mobile
+  &.mobile
     display: none
 
   .cssanimations &
@@ -178,12 +178,12 @@ section:hover, section.hovered
 
   .job_brief .bullet:before
     background-color: $red
-    border-radius: 0.75em
-    width: 0.75em
+    border-radius: 14px
+    width: 14px
     opacity: 1
-    height: 0.75em
-    top: ( 1em - 0.75em ) / 2
-    left: ( 1em - 0.75em ) / 2
+    height: 14px
+    top: 2px
+    left: 2px
 
   .job_brief .bullet:after
     width: 0.75em

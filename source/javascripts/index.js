@@ -4,7 +4,8 @@ var RESUME = RESUME || {};
 
   RESUME.mailMe = youveGotMail;
 
-  var shown;
+  var eventAttached = false,
+      shown;
 
   function checkVisible( e ) {
 
@@ -42,13 +43,17 @@ var RESUME = RESUME || {};
 
   }
 
-  var eventAttached = false;
+
   function touchInit () {
 
     if( !eventAttached ) {
+
+      checkVisible();
+
       console.log( "attaching event listener" );
       window.addEventListener( "scroll", checkVisible );
       eventAttached = true;
+
     }
 
   }
@@ -75,11 +80,7 @@ var RESUME = RESUME || {};
 
   }
 
-
-
   window.document.addEventListener( "touchstart", touchInit );
-
-  window.onload = checkVisible;
 
 } () );
 
