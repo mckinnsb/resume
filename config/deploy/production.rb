@@ -4,7 +4,7 @@ set :deploy_to, '/var/www/stew'
 namespace :deploy do
   task :move_build do
     on roles :all do | host |
-      execute "cd #{release_path} && mv build/ public/resume/"
+      execute "cd #{release_path} && mv build/ public/_resume_preview/"
     end
   end
 end
