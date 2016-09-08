@@ -43,6 +43,23 @@ var RESUME = RESUME || {};
 
   }
 
+  function initEvents() {
+
+    var email_link = window.document.getElementById( "email_me" ),
+        show_email_link = window.document.getElementById( "show_email" ),
+        hide_email_link = window.document.getElementById( "hide_email" ),
+        show_email,
+        hide_email;
+
+
+    show_email = showEmail.bind( show_email_link, true );
+    hide_email = showEmail.bind( hide_email_link, false );
+
+    email_link.addEventListener( "click", youveGotMail );
+    show_email_link.addEventListener( "click", show_email );
+    hide_email_link.addEventListener( "click", hide_email );
+
+  }
 
   function touchInit () {
 
@@ -54,6 +71,23 @@ var RESUME = RESUME || {};
       window.addEventListener( "scroll", checkVisible );
       eventAttached = true;
 
+    }
+
+  }
+
+  function showEmail ( show, e ) {
+
+    var slider = window.document.getElementById( "email_slide" );
+
+    console.log( 'args' );
+    console.log( arguments );
+    console.log( "shown :" + show );
+
+    if( show ) {
+      slider.classList.add( "shown" );
+    }
+    else {
+      slider.classList.remove( "shown" );
     }
 
   }
@@ -80,6 +114,7 @@ var RESUME = RESUME || {};
 
   }
 
+  window.onload = initEvents;
   window.document.addEventListener( "touchstart", touchInit );
 
 } () );
