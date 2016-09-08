@@ -4,7 +4,8 @@ $primary: 0.87
 $secondary: 0.54
 
 $black: #000000
-$red: #ab2f28
+$red: #e41b10
+$green: #1fca3e
 
 $background-color: #f5f5f5
 
@@ -22,10 +23,16 @@ $speed: 400ms
   display: none
 
 body 
-  opacity: $primary
   font-family: "Helvetica Neue", "Helvetica"
   color: $black
   background-color: $background-color
+
+h1, h2, h3, h5
+  opacity: $primary
+
+h4
+  *:not(div)
+    opacity: $primary
 
 h4
   font-size: 18px
@@ -39,8 +46,14 @@ h1, h2
   header &.title 
     width: 50%
   
+  &.link
+    margin-top: 1.3em
+
+  &.link:hover
+    text-decoration: underline
+    
   &.email 
-    opacity: 1
+    opacity: $primary
     cursor: pointer
     width: 47%
     clear: none
@@ -49,6 +62,7 @@ h1, h2
     text-align: right
     padding-left: 0px
     padding-right: $gutter
+    will-change: transform
 
     .cssanimations &
       @include transition( all $speed )
@@ -103,9 +117,7 @@ header
     overflow: hidden
 
   h1.slide
-
-    background-color: white
-
+    //background-color: white
     bottom: 0%
     right: -52%
 
@@ -154,7 +166,7 @@ header
       text-align: center
       height: 18px
       position: absolute
-      left: -3.3em
+      left: -57px
       width: 18px
 
       &:before
@@ -231,6 +243,7 @@ section, header.main
 
 ul
   li 
+    opacity: $primary
     margin-top: .5em
   
 @import "responsive"
