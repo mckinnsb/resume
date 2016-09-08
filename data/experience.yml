@@ -7,25 +7,28 @@
     mobile_when: 6/13-Now
     accomplishments:
       - Built a robust e-commerce platform for FarmersWeb, a B2B food sales portal between small food producers and restaurants, using Rails 4.2.
+      - Worked directly with the co-founders and clients of FarmersWeb to develop the product around the needs of the modern small farm.
       - Worked with the leadership team to design a scheduled ordering system which allows buyers to place orders for specific dates.
+      - Partnered with the CTO of the company and several contractors to make sure that the technological foundations of the business were solid.
+      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
+      - Eschewed quarterly releases or feature releases in favor of continual releases backed up by continuous integration ( CircleCI ), with an average time between deploys of 4 days.
+      - Authored an incredibly extensive suite of background tasks and workers to manage the data life-cycle.
+      - Wrote over fifteen hundred tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
       - Integrated with Braintree, a major credit card processor, to validate, authorize, and capture credit card transactions.
       - Engineered a role system at the controller level using CanCan, in order to accommodate a multi-tiered subscription model which was integrated with Braintree.
       - Developed, extended, and maintained an order accounting system which integrates with the Xero API.
-      - Using Google Maps API, developed a delivery zone management module which allows sellers to control exactly where they deliver their products in a custom geometric zone or on the state, county, or city level.
+      - Using the Google Maps API, developed a delivery zone management module which allows sellers to control exactly where they deliver their products in a custom geometric zone or on the state, county, or city level.
       - Used a location-aware database using PostGIS that filtered sellers on the buyer-side based on delivery zones and distance from the buyer.
-      - Architected and built a thick front-end application layer for FarmersWeb using AngularJS.
+      - Architected and built a thick front-end application layer for FarmersWeb using AngularJS, Restangular, and RABL.
+      - Designed an easily-extendable REST API for robust client-server interaction.
       - Created a product inventory system with tiered categories, characteristics, catch weight, inventory limits, multiple packaging options, and dynamic profit previews.
-      - Implemented a powerful order interface which supported order viewing, editing, creation, and conflict resolution ( crediting, refunds, messages ), all with dynamic previews.
+      - Implemented a powerful order interface which supported order viewing, editing, creation, and conflict resolution ( crediting, refunds, messages ), for the seller, all with dynamic previews.
+      - Developed and extended a multi-cart checkout system which allowed for purchasing of several orders at once.
+      - Created a group delivery system which allowed for sellers to pool logistics resources and have multiple farms' orders be delivered by the same delivery agent, with no assistance from the buyer.
       - Extended the ordering system to deal with order substitutions, weight changes, date changes, and route changes.
       - Created a logistics management dashboard which controlled delivery prices, minimums, and additionally facilitated the coordination of third party delivery solutions.
       - Developed a product browsing section with two modes, grid and list, which included product filtering and quickly adding products to an order.
       - Designed an administrative backend which synthesized information for orders, including Braintree transaction codes and Xero invoice records.
-      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
-      - Authored an incredibly extensive suite of background tasks and workers to manage the data life-cycle.
-      - Wrote over two thousand tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
-      - Eschewed quarterly releases or feature releases in favor of continual releases backed up by continuous integration ( CircleCI ), with an average time between deploys of 4 days.
-      - Worked directly with the co-founders and clients of FarmersWeb to develop the product around the needs of the modern small farm.
-      - Partnered with the CTO of the company and several contractors to make sure that the technological foundations of the business were solid.
       - Found and hired developers within the New York area in order to further the development of FarmersWeb.
   -
     company: The Barbarian Group
