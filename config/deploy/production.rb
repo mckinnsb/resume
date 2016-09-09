@@ -1,5 +1,6 @@
 set :ssh_options, { :forward_agent => true }
 set :deploy_to, '/var/www/stew'
+set :branch,  :adding_devlog
 
 namespace :deploy do
 
