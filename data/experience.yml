@@ -6,22 +6,22 @@
     when: April 2013 - Present
     mobile_when: 6/13-Now
     accomplishments:
-      - Using Rails 4.2 and Angular, I built a robust e-commerce platform for FarmersWeb, a B2B food sales portal between small food producers and restaurants.
-      - Conceived the product directly with the co-founders and clients of FarmersWeb to develop it around the needs of the modern small farm.
+      - Using <b>Rails 4.2</b>, <b>PostgresSQL 9.1</b>, and <b>Angular 1.3</b>, I built a robust e-commerce platform for <i>FarmersWeb</i>, a B2B food sales portal between small food producers and restaurants.
+      - Conceived the product directly with the co-founders and clients of <i>FarmersWeb</i> to develop it around the needs of the modern small farm.
       - Developed a scheduled ordering system with the leadership team to permit buyers to place orders on specific dates.
       - Partnered with the CTO of the company and several contractors to make sure that the technological foundations of the business were solid.
-      - Created prototype component designs using Suzy and Compass that became final designs after several iterations.
-      - Implemented continuous integration using CircleCI and drove process changes to make our development cycle more efficient, with an average time between deploys of 4 days.
+      - Created prototype component designs using <b>CSS3</b>, <b>Slim</b>, <b>Suzy</b> and <b>Compass</b> that became final designs after several iterations.
+      - Implemented continuous integration using <b>CircleCI</b> and drove process changes to make our development cycle more efficient, such as issue tracking with <b>Pivotal Tracker</b>, code tracking via <b>Github</b>, and collaboration and integration hooks via <b>HipChat</b>, leading to an average time between deploys of 4 days.
       - Created an order life-cycle using a state machine which ensured the integrity of the business processes.
-      - Authored an extensive suite of background tasks and workers to manage the data life-cycle.
-      - Wrote over fifteen hundred tests for the application using Jasmine, RSpec, Capybara, and PhantomJS.
-      - Integrated with Braintree, a major credit card processor, to validate, authorize, and capture credit card transactions.
-      - Engineered a role system at the controller level using CanCan, in order to accommodate a multi-tiered subscription model which was integrated with Braintree.
-      - Developed, extended, and maintained an order accounting system which integrates with the Xero API.
-      - Using the Google Maps API, developed a delivery zone management module which allows sellers to control exactly where they deliver their products in a custom geometric zone or on the state, county, or city level.
-      - Used a location-aware database using PostGIS that filtered sellers for the buyer based on delivery zones and distance from the buyer.
-      - Architected and built a thick front-end application layer for FarmersWeb using AngularJS, Restangular, and RABL.
-      - Designed an easily-extendable REST API for robust client-server interaction.
+      - Authored an extensive suite of background tasks and workers in <b>Sidekiq</b> to manage the data life-cycle.
+      - Wrote over fifteen hundred tests for the application using <b>Jasmine</b>, <b>RSpec</b>, <b>Capybara</b>, and <b>PhantomJS</b>.
+      - Integrated with <b>Braintree</b>, a major credit card processor, to validate, authorize, and capture credit card transactions.
+      - Engineered a role system at the controller level using <b>CanCan</b>, in order to accommodate a multi-tiered subscription model which was integrated with <b>Braintree</b>.
+      - Developed, extended, and maintained an order accounting system which integrates with the <b>Xero API</b>.
+      - Using the <b>Google Maps API</b>, developed a delivery zone management module which allows sellers to control exactly where they deliver their products in a custom geometric zone or on the state, county, or city level.
+      - Used a location-aware database using <b>PostGIS</b> that filtered sellers for the buyer based on delivery zones and distance from the buyer.
+      - Architected and built a thick front-end application layer for using <b>AngularJS</b>, <b>Restangular</b>, and <b>RABL</b>.
+      - Designed an easily-extendable <b>REST API</b> for robust client-server interaction.
       - Created a product inventory system with tiered categories, characteristics, catch weight, inventory limits, multiple packaging options, and dynamic profit previews.
       - Implemented a powerful order interface which supported order viewing, editing, creation, and conflict resolution ( crediting, refunds, messages ), for the seller, all with dynamic previews.
       - Developed and extended a multi-cart checkout system which allowed for purchasing of several orders at once.
@@ -29,8 +29,8 @@
       - Extended the ordering system to deal with order substitutions, weight changes, date changes, and route changes.
       - Created a logistics management dashboard which controlled delivery prices, minimums, and additionally facilitated the coordination of third-party delivery solutions.
       - Developed a product browsing section with two modes, "grid" and "lis"t, which included product filtering and quickly adding products to an order.
-      - Designed an administrative backend which synthesized information for orders, including Braintree transaction codes and Xero invoice records.
-      - Found and hired developers within the New York area in order to further the development of FarmersWeb.
+      - Designed an administrative backend which synthesized information for orders, including <b>Braintree</b> transaction codes and <b>Xero</b> invoice records.
+      - Found and hired developers within the New York area in order to further the development of the product.
   -
     company: The Barbarian Group
     location: New York, NY
@@ -38,16 +38,16 @@
     when: June 2011 - April 2013
     mobile_when: 6/11-4/13
     accomplishments:
-      - Modified Refinery CMS to use CouchDB instead of a SQL database, which included modifying several required gems, to be used extensively in-house as a ready client solution.
-      - Built a Backbone JS application for Bloomberg Philanthropies.
-      - Architected a server solution for a major retailer&rsquo;s central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
-      - Performed load tests using JMeter to make sure that projects met contractual obligations, and operated at 99.99% uptime.
-      - Maintained large test suites using Cruise Control.
-      - Developed several "give away" mini-sites that were conducted on major social networks ( Twitter, Facebook, et al ) and utilized their APIs.
+      - Modified <b>Refinery CMS</b> to use <b>CouchDB</b> instead of a SQL database, which included modifying several required gems, to be used extensively in-house as a ready client solution.
+      - Architected a server solution with <b>Rails 3</b> for a major retailer&rsquo;s central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
+      - Built a <b>Backbone JS</b> application for <i>Bloomberg Philanthropies</i>.
+      - Performed load tests using <b>JMeter</b> to make sure that projects met contractual obligations, and operated at 99.99% uptime.
+      - Maintained large test suites using <b>Cruise Control</b>.
+      - Developed several "give away" mini-sites using <b>JavaScript</b>, <b>Facebook Applications</b>, the <b>Twitter API</b>, and the <b>Facebook Graph API</b>.
       - Performed analysis of commercial vendors and made recommendations based on technical assessments.
       - Advised projects on early technical requirements and pitfalls.
       - Assisted teams in brainstorming creative technical solutions to meet client needs.
-      - Bound an in-house open source graphics library, Cinder, to the JavaScript programming language via V8, Google&rsquo;s JavaScript engine.
+      - Bound an in-house open source graphics library, <b>Cinder</b>, to the <b>JavaScript</b> programming language via <b>V8</b>, Google&rsquo;s <b>JavaScript</b> engine.
       - Acted as Technical Lead to develop long term schedules for major client projects, between 3 months to a year in length.
       - Lead teams of 2-4 people in developing long term projects and acted as the main point of contact for all non-developers.
   -
@@ -57,15 +57,15 @@
     when: June 2010 - June 2011
     mobile_when: 6/10-6/11
     accomplishments:
-      - Designed and developed a recommendation system for a major cereal company that guided its users to more relevant content.
-      - Developed a "Static Search System" to respond to a client need for all content on a site to be searchable, which involved creating an XML pipe from .HTML documents present in the repository.
-      - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers, two dedicated database servers, and four asset servers.
-      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using a script I helped to author.
+      - Designed and developed a recommendation system with <b>Rails 2</b> for a major cereal company that guided its users to more relevant content.
+        - Developed a "Static Search System" using <b>Elasticsearch</b> to respond to a client need for all content on a site to be searchable, which involved creating an XML pipe from .HTML documents present in the repository.
+      - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers on <b>Passenger</b>, two dedicated database servers, and four asset servers.
+      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using <b>Capistrano</b>.
       - Responded to crisis events resulting from an underestimated user and load turnout with system diagnostic tools and fixed the production environments within 24 hours.
-      - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in Pivotal Tracker.
+      - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in <b>Pivotal Tracker</b>.
       - Worked with Account Services to do what was best for clients by accommodating their requests while also pushing back where necessary.
       - Worked with Producers on scoping major features ( beyond a sprint or encompassing several tickets ) as they came on the radar.
-      - Helped to migrate an ancient Rails application, and its aging tests, from Rails 1.* ~ 2.1 to Rails 2.3.6.
+      - Helped to migrate several ancient applications backed by <b>MySQL</b>, and their aging tests, from <b>Rails 1.* ~ 2.1</b> to <b>Rails 2.3.6</b>.
   -
     company: RecycleBank
     location: New York, NY
@@ -73,14 +73,14 @@
     when: January 2010 - June 2010
     mobile_when: 1/10-6/10
     accomplishments:
-      - Employed RSpec, Cucumber, and Selenium to write User Features and Scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
-      - Reverse engineered, improved and re-wrote an interactive address validation web interface in jQuery, originally written in Dojo, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
-      - Inherited, maintained, re-factored and optimized a JSON interface to a Drools Rules Engine running as a web service that exposed abstracted database queries through predefined calls and then responded to action instructions given by the Rules Engine.
+      - Employed <b>RSpec</b>, <b>Cucumber</b>, and <b>Selenium</b> to write user features and scenarios for software components with business analysts and then used the Red-Green-Refactor development cycle to complete those components in true Behavior Driven Development style.
+      - Reverse engineered, improved and re-wrote an interactive address validation web interface in <b>jQuery</b>, originally written in <b>Dojo</b>, which confirmed the existence of an address entered by the user refined input errors over interaction iterations to arrive at a valid address.
+      - Inherited, maintained, re-factored and optimized a <b>JSON</b> interface to a <b>Drools Rules Engine</b> running as a web service that exposed abstracted database queries through predefined calls and then responded to action instructions given by the Rules Engine.
       - Constructed a “To Do” list in the user’s profile page, which gave users ideas of things to on the website to engage them on a daily basis, based on previous user activity.
       - Designed and developed a functional demo of a system in which individuals could report their individual recycling efforts without the need for specialized hauler equipment in five days with another developer, and then fleshed the system out into full functionality.
-      - Took project technical specifications and screen mocks from business analysts and breathed life into the ideas by translating them into architecture and attractive interfaces.
+      - Took project technical specifications and screen mocks from business analysts and translated them into architecture and attractive interfaces.
       - Worked with the Web Producer, Rewards Manager, and Rules Engine lead to quickly produce solutions to emerging business needs in ‘hot fix’ releases.
-      - Fixed many long-standing JavaScript and CSS bugs (several years old) in the front end of the website.
+      - Fixed many long-standing <b>JavaScript</b> and <b>CSS</b> bugs (several years old) in the front end of the website.
   -
     company: Kazoo Interactive
     location: Southbury, CT
@@ -88,10 +88,10 @@
     when: March 2008 - Oct 2010
     mobile_when: 3/08-10/10
     accomplishments:
-      - Developed an educational Facebook application targeted specifically at students, “Posit”™, which gathered user information to deliver a better content experience.
-      - Authored modules that enabled the specific functionality of the application using the Ruby on Rails web framework and Facebooker Ruby gem.
-      - Constructed a UI framework within the application using JavaScript (mooTools) and Flash to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
-      - Designed a normalized database using PostgreSQL, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
+      - Developed an educational <b>Facebook</b> application targeted specifically at students, <i>Posit</i>, which gathered user information to deliver a better content experience.
+      - Authored modules that enabled the specific functionality of the application using <b>Rails 2.1</b> and the Facebooker Ruby gem.
+      - Constructed a UI framework within the application using <b>mooTools</b> and <b>Flash</b> to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
+      - Designed a normalized database using <b>PostgreSQL</b>, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
       - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
       - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
       - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
@@ -103,9 +103,9 @@
     when: February 2008 - November 2008
     mobile_when: 2/08-11/08
     accomplishments:
-      - Designed a web application in PHP5 and CodeIgniter using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
+      - Designed a web application in <b>PHP5</b> and <b>CodeIgniter</b> using MVC principles for a specialized nation-wide CMS that had multiple access portals with each portal tailored to a specific state.
       - Lead small teams of 2-3 people to carry individual projects to satisfactory conclusions, and ensured that other projects not managed by myself also reached satisfactory conclusions when requested.
-      - Produced re-usable, attractive, unobtrusive and simple JavaScript UI modules that employed recommended web practices, which were deployed on several websites and frequently included as examples in sales pitches to hook new clients.
+      - Produced re-usable, attractive, unobtrusive and simple <b>JavaScript</b> UI modules that employed recommended web practices, which were deployed on several websites and frequently included as examples in sales pitches to hook new clients.
       - Created timelines for projects based on client contracts, established project milestones on the timeline and personally assured both clients and my employer that milestones were achieved according to schedule.
       - Communicated directly with clients to address user experience, functionality, technical issues, deadlines, quality of service issues, or necessary clarifications concerning any of the preceding topics in person, through e-mail, or over the phone.
       - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
@@ -116,10 +116,10 @@
     when: October 2007 - June 2008
     mobile_when: 10/07-6/08
     accomplishments:
-      - Developed components for the CMS that extended the functionality of the website and enhanced the user experience using PHP, JavaScript and MySQL.
-      - Maintained and supported a Joomla-powered e-commerce site (including a storefront, shopping cart and credit card transaction mechanism) on a day-to-day basis.
+      - Developed components for <b>Joomla CMS</b> that extended the functionality of the website and enhanced the user experience using <b>PHP</b>, <b>JavaScript</b> and <b>MySQL</b>.
+      - Maintained and supported a <b>VirtueMart</b>-powered e-commerce site (including a storefront, shopping cart and credit card transaction mechanism) on a day-to-day basis.
       - Wrote internal documentation that explained the workings of the website for future replacement(s), none of whom would likely be programmers, and trained one of them.
-      - Was responsible for managing shipment and upkeep of valuable musical equipment.
+      - Was responsible for managing shipment and upkeep of very valuable musical equipment ( thousands of dollars ).
       - Created product descriptions of merchandise with the purpose of inviting customers to buy.
 
 education:
