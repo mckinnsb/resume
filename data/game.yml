@@ -1,9 +1,16 @@
 posts:
   - 
     title: "Monkey Work"
-    gfycat: "UnfinishedBaggyBufflehead"
+    gfycat: "AlarmedEnchantedFawn"
     description: 
       - "Working on a new projectile for the Monkey unit. Not quite sure about the strength + range of the bomb yet, but I kind of like the idea of him causing a lot of chaos."
       - "You'll notice a turn bar at the top that is glitching out a bit. It's because this is in a testing harness and not in a live scene."
       - "The camera bounces around a lot because it doesn't quite know about bombs yet."
+  - 
+    title: "Unit Select & Attack Demo"
+    gfycat: "PotableExcitableGardensnake"
+    description: 
+      - "Working on the first UI pass. The menus are still pretty rough."
+      - "Here we are showing selecting a unit and then attacking them."
+      - "There's a bug here w/ the NICE! callout. It shouldn't be appearing underneath the wall."
   

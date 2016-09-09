@@ -6,6 +6,7 @@ set :domain, "96.126.106.220"
 set :repo_url, 'git@github.com:mckinnsb/resume.git'
 set :scm, :git
 set :user, "root"
+set :ssh_options, { :forward_agent => true }
 
 #set :runner, "nginx"
 # Default branch is :master

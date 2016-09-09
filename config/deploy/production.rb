@@ -1,4 +1,3 @@
-set :ssh_options, { :forward_agent => true }
 set :deploy_to, '/var/www/stew'
 set :branch,  :adding_devlog
 
@@ -17,7 +16,6 @@ namespace :deploy do
 
 end
 
-#before "deploy:symlink:release", "deploy:capture_previous_version"
 after "deploy:updated", "deploy:move_build"
 
 # server-based syntax

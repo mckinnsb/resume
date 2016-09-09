@@ -12,6 +12,11 @@
       br
       | Working Title: "Animal Wars"
 
+  section
+    header.row-fluid
+      h4.when.span5.offset7 
+        | A physics-based strategy game which combines the best of turn-based strategy and ballistic action.
+
 - data.game.posts.each do | post | 
 
   section.job_history
@@ -23,8 +28,9 @@
           b
             | #{ post.title  } 
 
-      div.row-fluid
+      div.row-fluid.preview
         div.gfyitem[ data-id=post.gfycat 
+                     data-responseive="true"
                      data-controls="true"
                      data-autoplay="false" ]
 
