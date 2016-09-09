@@ -1,41 +1,41 @@
-/* line 22, resume.css.sass */
+/* line 27, resume.css.sass */
 .skills {
   display: none; }
 
-/* line 25, resume.css.sass */
+/* line 30, resume.css.sass */
 body {
   font-family: "Helvetica Neue", "Helvetica";
   color: #000000;
   background-color: #f5f5f5; }
 
-/* line 30, resume.css.sass */
+/* line 35, resume.css.sass */
 h1, h2, h3, h5 {
   opacity: 0.87; }
 
-/* line 34, resume.css.sass */
+/* line 39, resume.css.sass */
 h4 *:not(div) {
   opacity: 0.87; }
 
-/* line 37, resume.css.sass */
+/* line 42, resume.css.sass */
 h4 {
   font-size: 18px; }
 
-/* line 40, resume.css.sass */
+/* line 45, resume.css.sass */
 h1, h2 {
   width: 100%;
   float: left;
   clear: both;
   padding-left: 16px; }
-  /* line 46, resume.css.sass */
+  /* line 51, resume.css.sass */
   header h1.title, header h2.title {
     width: 50%; }
-  /* line 49, resume.css.sass */
+  /* line 54, resume.css.sass */
   h1.link, h2.link {
     margin-top: 1.3em; }
-  /* line 52, resume.css.sass */
+  /* line 57, resume.css.sass */
   h1.link:hover, h2.link:hover {
     text-decoration: underline; }
-  /* line 55, resume.css.sass */
+  /* line 60, resume.css.sass */
   h1.email, h2.email {
     opacity: 0.87;
     cursor: pointer;
@@ -47,106 +47,106 @@ h1, h2 {
     padding-left: 0px;
     padding-right: 16px;
     will-change: transform; }
-    /* line 67, resume.css.sass */
+    /* line 72, resume.css.sass */
     .cssanimations h1.email, .cssanimations h2.email {
       -moz-transition: all 400ms;
       -o-transition: all 400ms;
       -webkit-transition: all 400ms;
       transition: all 400ms; }
-  /* line 70, resume.css.sass */
+  /* line 75, resume.css.sass */
   h1.slide.shown + h1.email, h2.slide.shown + h1.email, h1.slide.shown + h2.email, h2.slide.shown + h2.email {
     opacity: 0; }
-  /* line 73, resume.css.sass */
+  /* line 78, resume.css.sass */
   h1 small, h2 small {
     color: #000000;
     font-weight: bold; }
-    /* line 76, resume.css.sass */
+    /* line 81, resume.css.sass */
     h1 small span, h2 small span {
       font-weight: bold;
-      color: #e41b10; }
-  /* line 81, resume.css.sass */
+      color: #e53935; }
+  /* line 86, resume.css.sass */
   h1 small#show_email span:before, h2 small#show_email span:before {
     content: "nnsb ";
     color: #000000; }
-  /* line 84, resume.css.sass */
+  /* line 89, resume.css.sass */
   h1 small#show_email span:after, h2 small#show_email span:after {
     content: "at "; }
-  /* line 86, resume.css.sass */
+  /* line 91, resume.css.sass */
   h1 small#show_email:after, h2 small#show_email:after {
     content: "ail.com"; }
-  /* line 89, resume.css.sass */
+  /* line 94, resume.css.sass */
   h1.slide, h2.slide {
     position: absolute; }
 
-/* line 93, resume.css.sass */
+/* line 98, resume.css.sass */
 .skills {
   clear: both; }
 
-/* line 97, resume.css.sass */
+/* line 102, resume.css.sass */
 .row-fluid .spanbody:first-child {
   width: 65.95745%;
   *width: 65.90426%;
   margin-left: 17.02128%;
   *margin-left: 16.91489%; }
 
-/* line 105, resume.css.sass */
+/* line 110, resume.css.sass */
 #resume {
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: white;
-  border-left: #e41b10 solid 3px;
+  border-left: #e53935 solid 3px;
   max-width: 1080px; }
 
-/* line 112, resume.css.sass */
+/* line 117, resume.css.sass */
 header {
   position: relative; }
-  /* line 116, resume.css.sass */
+  /* line 121, resume.css.sass */
   header.main {
     overflow: hidden; }
-  /* line 119, resume.css.sass */
+  /* line 124, resume.css.sass */
   header h1.slide {
     bottom: 0%;
     right: -52%; }
-    /* line 124, resume.css.sass */
+    /* line 129, resume.css.sass */
     header h1.slide.shown {
       right: 0%;
       z-index: 2; }
-    /* line 128, resume.css.sass */
-    header h1.slide .action {
-      background-color: #e41b10;
-      padding: 0.5em; }
     /* line 133, resume.css.sass */
+    header h1.slide .action {
+      background-color: #e53935;
+      padding: 0.5em; }
+    /* line 138, resume.css.sass */
     header h1.slide span:hover {
       color: black; }
-    /* line 135, resume.css.sass */
+    /* line 140, resume.css.sass */
     .cssanimations header h1.slide span {
       -moz-transition: all 200ms;
       -o-transition: all 200ms;
       -webkit-transition: all 200ms;
       transition: all 200ms; }
-    /* line 138, resume.css.sass */
+    /* line 143, resume.css.sass */
     header h1.slide .shown {
       right: 0%; }
-    /* line 141, resume.css.sass */
+    /* line 146, resume.css.sass */
     header h1.slide small span {
       color: white; }
-    /* line 144, resume.css.sass */
+    /* line 149, resume.css.sass */
     header h1.slide #email_me {
       margin-right: 2em; }
 
-/* line 148, resume.css.sass */
+/* line 153, resume.css.sass */
 .job_brief {
   float: left;
   padding-left: 16px;
   text-align: left; }
-  /* line 156, resume.css.sass */
+  /* line 161, resume.css.sass */
   .job_brief .position {
-    color: #e41b10;
+    color: #e53935;
     position: relative; }
-    /* line 160, resume.css.sass */
+    /* line 165, resume.css.sass */
     .job_brief .position .bullet {
       background-color: white;
-      border-color: #e41b10;
+      border-color: #e53935;
       border-radius: 1em;
       border-style: solid;
       top: -0.1em;
@@ -155,7 +155,7 @@ header {
       position: absolute;
       left: -57px;
       width: 18px; }
-      /* line 172, resume.css.sass */
+      /* line 177, resume.css.sass */
       .job_brief .position .bullet:before {
         background-color: white;
         border-radius: 0em;
@@ -168,76 +168,76 @@ header {
         top: 9px;
         left: 9px;
         width: 0px; }
-        /* line 186, resume.css.sass */
+        /* line 191, resume.css.sass */
         .cssanimations .job_brief .position .bullet:before {
           -moz-transition: all 200ms linear;
           -o-transition: all 200ms linear;
           -webkit-transition: all 200ms linear;
           transition: all 200ms linear; }
-      /* line 189, resume.css.sass */
+      /* line 194, resume.css.sass */
       .job_brief .position .bullet:after {
         content: "";
-        background-color: #e41b10;
+        background-color: #e53935;
         height: 4px;
         top: 7px;
         left: 1em;
         position: absolute;
         width: 0.5em; }
-        /* line 198, resume.css.sass */
+        /* line 203, resume.css.sass */
         .cssanimations .job_brief .position .bullet:after {
           -moz-transition: all 400ms;
           -o-transition: all 400ms;
           -webkit-transition: all 400ms;
           transition: all 400ms; }
 
-/* line 201, resume.css.sass */
+/* line 206, resume.css.sass */
 .when {
   float: right;
   opacity: 0.54;
   text-align: right;
   padding-right: 16px; }
-  /* line 207, resume.css.sass */
+  /* line 212, resume.css.sass */
   .when .hidden {
     display: none; }
-  /* line 210, resume.css.sass */
+  /* line 215, resume.css.sass */
   .when.mobile {
     display: none; }
-  /* line 213, resume.css.sass */
+  /* line 218, resume.css.sass */
   .cssanimations .when {
     -moz-transition: opacity 400ms;
     -o-transition: opacity 400ms;
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms; }
 
-/* line 217, resume.css.sass */
+/* line 222, resume.css.sass */
 .accomplishments {
   float: left;
   clear: both;
   margin-left: 32px; }
 
-/* line 223, resume.css.sass */
+/* line 228, resume.css.sass */
 section, header.main {
   margin: 2em; }
-  /* line 227, resume.css.sass */
+  /* line 232, resume.css.sass */
   section:hover .when, section.hovered .when, header.main:hover .when, header.main.hovered .when {
     opacity: 0.87; }
-    /* line 229, resume.css.sass */
+    /* line 234, resume.css.sass */
     section:hover .when .hidden, section.hovered .when .hidden, header.main:hover .when .hidden, header.main.hovered .when .hidden {
       display: inline; }
-  /* line 232, resume.css.sass */
+  /* line 237, resume.css.sass */
   section:hover .job_brief .bullet:before, section.hovered .job_brief .bullet:before, header.main:hover .job_brief .bullet:before, header.main.hovered .job_brief .bullet:before {
-    background-color: #e41b10;
+    background-color: #e53935;
     border-radius: 14px;
     width: 14px;
     opacity: 1;
     height: 14px;
     top: 2px;
     left: 2px; }
-  /* line 241, resume.css.sass */
+  /* line 246, resume.css.sass */
   section:hover .job_brief .bullet:after, section.hovered .job_brief .bullet:after, header.main:hover .job_brief .bullet:after, header.main.hovered .job_brief .bullet:after {
     width: 0.75em; }
 
-/* line 245, resume.css.sass */
+/* line 250, resume.css.sass */
 ul li {
   opacity: 0.87;
   margin-top: 0.5em; }
