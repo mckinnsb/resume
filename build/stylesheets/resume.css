@@ -235,22 +235,26 @@ header {
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms; }
 
-/* line 243, resume.css.sass */
+/* line 242, resume.css.sass */
+.description {
+  clear: both; }
+
+/* line 245, resume.css.sass */
 .accomplishments {
   float: left;
   clear: both;
   margin-left: 32px; }
 
-/* line 249, resume.css.sass */
+/* line 251, resume.css.sass */
 section, header.main {
   margin: 2em; }
-  /* line 253, resume.css.sass */
+  /* line 255, resume.css.sass */
   section:hover .when, section.hovered .when, header.main:hover .when, header.main.hovered .when {
     opacity: 0.87; }
-    /* line 255, resume.css.sass */
+    /* line 257, resume.css.sass */
     section:hover .when .hidden, section.hovered .when .hidden, header.main:hover .when .hidden, header.main.hovered .when .hidden {
       display: inline; }
-  /* line 258, resume.css.sass */
+  /* line 260, resume.css.sass */
   section:hover .job_brief .bullet:before, section.hovered .job_brief .bullet:before, header.main:hover .job_brief .bullet:before, header.main.hovered .job_brief .bullet:before {
     background-color: #e53935;
     border-radius: 14px;
@@ -259,15 +263,15 @@ section, header.main {
     height: 14px;
     top: 2px;
     left: 2px; }
-  /* line 267, resume.css.sass */
+  /* line 269, resume.css.sass */
   section:hover .job_brief .bullet:after, section.hovered .job_brief .bullet:after, header.main:hover .job_brief .bullet:after, header.main.hovered .job_brief .bullet:after {
     width: 0.75em; }
 
-/* line 271, resume.css.sass */
+/* line 273, resume.css.sass */
 ul li {
   opacity: 0.87;
   margin-top: 0.5em; }
-  /* line 274, resume.css.sass */
+  /* line 276, resume.css.sass */
   ul li b {
     color: #e53935; }
 
@@ -317,22 +321,27 @@ ul li {
     padding-right: 8px; }
 
   /* line 52, _responsive.sass */
+  section .description.span7 {
+    float: right;
+    margin-top: 8px; }
+
+  /* line 56, _responsive.sass */
   .when.mobile {
     display: inline; }
 
-  /* line 55, _responsive.sass */
+  /* line 59, _responsive.sass */
   .when.full {
     display: none; }
 
-  /* line 58, _responsive.sass */
+  /* line 62, _responsive.sass */
   .accomplishments {
     margin-left: 16px; } }
 @media print {
-  /* line 64, _responsive.sass */
+  /* line 68, _responsive.sass */
   #resume {
     border-left: none; }
 
-  /* line 69, _responsive.sass */
+  /* line 73, _responsive.sass */
   .job_brief .position .bullet {
     border-color: transparent;
     border-radius: 0;
@@ -340,15 +349,15 @@ ul li {
     border-width: 0;
     height: 0;
     width: 0; }
-    /* line 77, _responsive.sass */
+    /* line 81, _responsive.sass */
     .job_brief .position .bullet:after {
       display: none;
       content: none; }
 
-  /* line 81, _responsive.sass */
+  /* line 85, _responsive.sass */
   .when.mobile {
     display: none; }
 
-  /* line 84, _responsive.sass */
+  /* line 88, _responsive.sass */
   .when.full {
     display: inline; } }
