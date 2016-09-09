@@ -39,7 +39,7 @@
     mobile_when: 6/11-4/13
     accomplishments:
       - Modified <b>Refinery CMS</b> to use <b>CouchDB</b> instead of a SQL database, which included modifying several required gems, to be used extensively in-house as a ready client solution.
-      - Architected a server solution with <b>Rails 3</b> for a major retailer&rsquo;s central style portal, including integrating a large Rails application with an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
+      - Architected a server solution with <b>Rails 3</b> for a major retailer&rsquo;s central style portal, including integrating an undocumented and mostly legacy inventory system that responded in XML and changed formats regularly.
       - Built a <b>Backbone JS</b> application for <i>Bloomberg Philanthropies</i>.
       - Performed load tests using <b>JMeter</b> to make sure that projects met contractual obligations, and operated at 99.99% uptime.
       - Maintained large test suites using <b>Cruise Control</b>.
