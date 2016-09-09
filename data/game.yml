@@ -1,0 +1,9 @@
+posts:
+  - 
+    title: "Monkey Work"
+    gfycat: "UnfinishedBaggyBufflehead"
+    description: 
+      - "Working on a new projectile for the Monkey unit. Not quite sure about the strength + range of the bomb yet, but I kind of like the idea of him causing a lot of chaos."
+      - "You'll notice a turn bar at the top that is glitching out a bit. It's because this is in a testing harness and not in a live scene."
+      - "The camera bounces around a lot because it doesn't quite know about bombs yet."
+  

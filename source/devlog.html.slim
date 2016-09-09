@@ -1,0 +1,33 @@
+- content_for( :head ) do 
+  title
+    | Stew Mckinney :: Game Dev Log
+  = javascript_include_tag "https://assets.gfycat.com/gfycat.js"
+
+- content_for( :header ) do
+
+  h1.title
+    small
+      span
+        | Game Project
+      br
+      | Working Title: "Animal Wars"
+
+- data.game.posts.each do | post | 
+
+  section.job_history
+    header.row-fluid
+
+      div.job_brief.span7
+        h4.position 
+          .bullet
+          b
+            | #{ post.title  } 
+
+      div.row-fluid
+        div.gfyitem[ data-id=post.gfycat 
+                     data-controls="true"
+                     data-autoplay="false" ]
+
+      div.row-fluid.span7
+        - post.description.each do | description |
+          p = description

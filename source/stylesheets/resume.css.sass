@@ -27,12 +27,15 @@ $speed: 400ms
 .skills 
   display: none
 
+html, body, #main, #content
+  height: 100%
+
 body 
   font-family: "Helvetica Neue", "Helvetica"
   color: $black
   background-color: $background-color
 
-h1, h2, h3, h5
+h1, h2, h3, h5, p
   opacity: $primary
 
 h4
@@ -56,6 +59,15 @@ h1, h2
 
   &.link:hover
     text-decoration: underline
+
+  &.name 
+    position: relative
+    a 
+      color: $red
+      float: right
+      margin-right: 32px
+      small
+        color: $red
     
   &.email 
     opacity: $primary
@@ -107,7 +119,7 @@ h1, h2
     margin-left: 17.02127659574468%
     *margin-left: 16.914893617021278%
 
-#resume 
+#content 
   padding-top: $page_lead
   padding-bottom: $page_lead
   background-color: white
@@ -157,6 +169,9 @@ header
   text-align: left
 
   .location
+
+  a 
+    color: $red
 
   .position
     color: $red

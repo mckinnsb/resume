@@ -1,63 +1,42 @@
 - content_for( :head ) do 
   title
-    | Stew Mckinney :: Developer :: Consulting :: Resume
+    | Stew Mckinney :: Main
 
-header.main
-  .row-fluid
-    .span12
-      h1.name
-        | Stew Mckinney
-      h1.title
-        small
-          span
-            | Developer
-          br
-          | Web, Tech, and Games
+- content_for( :header ) do
 
-      h1.email.slide#email_slide
-        small.action
-          span#email_me
-            | email me! 
-          span#hide_email
-            | X
+  h1.title
+    small
+      span
+        | Welcome!
+      br
+      | This is my pad on the internet.
 
-      h1.email.link
-        small#show_email
-          |mcki
-          span
-          | gm
-        //
-          Location: Brooklyn, NY ( phone # on request )
+      br
+      | Make yourself comfortable.
 
-- data.experience.jobs.each do | job | 
-
-  section.job_history
-    header.row-fluid
-
-      div.job_brief.span7
+section.job_history
+  header.row-fluid
+    div.job_brief.span7
+      = link_to "resume.html" do
         h4.position 
           .bullet
           b
-            | #{ job.position  } 
-        h4
-          span.location= job.company
-          br
-          span.location= job.location 
+            | Resume
 
-      h5.when.full.span5
-       | #{job.when} 
-       span.hidden
-         |  <
-      h5.when.mobile.span5
-       | #{job.mobile_when} 
-       span.hidden
-         |  <
+section.job_history
+  header.row-fluid
+    div.job_brief.span7
+      = link_to "devlog.html" do
+        h4.position 
+          .bullet
+          b 
+            | Game Dev Log
 
-
-    div.row-fluid
-      div.span12
-        ul.accomplishments
-          - job.accomplishments.each do | accomplishment | 
-            li class="point"= accomplishment 
-
-
+section.job_history
+  header.row-fluid
+    div.job_brief.span7
+      = link_to "http://www.github.com/mckinnsb/" do
+        h4.position 
+          .bullet
+          b 
+            | Github 

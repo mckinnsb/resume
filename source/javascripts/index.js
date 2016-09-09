@@ -55,9 +55,17 @@ var RESUME = RESUME || {};
     show_email = showEmail.bind( show_email_link, true );
     hide_email = showEmail.bind( hide_email_link, false );
 
-    email_link.addEventListener( "click", youveGotMail );
-    show_email_link.addEventListener( "click", show_email );
-    hide_email_link.addEventListener( "click", hide_email );
+    if( email_link != null ) {
+      email_link.addEventListener( "click", youveGotMail );
+    }
+
+    if( show_email_link != null ) {
+      show_email_link.addEventListener( "click", show_email );
+    }
+
+    if( hide_email_link != null ) {
+      hide_email_link.addEventListener( "click", hide_email );
+    }
 
   }
 
