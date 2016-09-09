@@ -241,60 +241,88 @@ section, header.main {
 ul li {
   opacity: 0.87;
   margin-top: 0.5em; }
+  /* line 253, resume.css.sass */
+  ul li b {
+    color: #e53935; }
 
 @media (max-width: 700px) {
-  /* line 6, _responsive.sass */
+  /* line 8, _responsive.sass */
   section, header.main {
     margin: 1em; }
 
-  /* line 10, _responsive.sass */
+  /* line 12, _responsive.sass */
   section:hover .job_brief .bullet:after, section:focus .job_brief .bullet:after {
     width: 0.66em; }
 
-  /* line 14, _responsive.sass */
+  /* line 16, _responsive.sass */
   .row-fluid .spanbody:first-child {
     width: 82.97872%;
     *width: 82.92553%;
     margin-left: 8.51064%;
     *margin-left: 8.40426%; }
 
-  /* line 21, _responsive.sass */
+  /* line 23, _responsive.sass */
   h1, h2 {
     padding-left: 8px; }
-    /* line 24, _responsive.sass */
+    /* line 26, _responsive.sass */
     h1.link, h2.link {
       margin-top: 10px; }
-    /* line 27, _responsive.sass */
+    /* line 29, _responsive.sass */
     h1.email, h2.email {
       margin-left: -8px;
       padding-right: 8px;
       width: 90%; }
-    /* line 33, _responsive.sass */
+    /* line 35, _responsive.sass */
     header h1.slide, header h2.slide {
       right: -95%; }
-    /* line 36, _responsive.sass */
+    /* line 38, _responsive.sass */
     header h1.title, header h2.title {
       width: 66%; }
 
-  /* line 39, _responsive.sass */
+  /* line 41, _responsive.sass */
   .job_brief {
     padding-left: 8px; }
-    /* line 43, _responsive.sass */
+    /* line 45, _responsive.sass */
     .job_brief .position .bullet {
       left: -35px; }
 
-  /* line 47, _responsive.sass */
+  /* line 49, _responsive.sass */
   .when {
     padding-right: 8px; }
 
-  /* line 50, _responsive.sass */
+  /* line 52, _responsive.sass */
   .when.mobile {
     display: inline; }
 
-  /* line 53, _responsive.sass */
+  /* line 55, _responsive.sass */
   .when.full {
     display: none; }
 
-  /* line 56, _responsive.sass */
+  /* line 58, _responsive.sass */
   .accomplishments {
     margin-left: 16px; } }
+@media print {
+  /* line 64, _responsive.sass */
+  #resume {
+    border-left: none; }
+
+  /* line 69, _responsive.sass */
+  .job_brief .position .bullet {
+    border-color: transparent;
+    border-radius: 0;
+    border-style: none;
+    border-width: 0;
+    height: 0;
+    width: 0; }
+    /* line 77, _responsive.sass */
+    .job_brief .position .bullet:after {
+      display: none;
+      content: none; }
+
+  /* line 81, _responsive.sass */
+  .when.mobile {
+    display: none; }
+
+  /* line 84, _responsive.sass */
+  .when.full {
+    display: inline; } }
