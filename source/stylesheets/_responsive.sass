@@ -40,7 +40,6 @@ $section_gap: 2em
       padding-right: $gutter / 2
       width: 90%
 
-
     &.name
 
       //kind of a hack? removes the 10px from bootstrap
@@ -60,9 +59,8 @@ $section_gap: 2em
     header &.slide
       right: -95%
       
-    //
-      header &.title
-        width: 66%
+    header &.title
+      width: 66%
 
   .job_brief
     padding-left: $gutter / 2 
@@ -71,6 +69,16 @@ $section_gap: 2em
       .bullet
         left: -35px
         &:after
+
+  .row-fluid
+
+    .job_brief
+      float: left
+      width: 61%
+
+    .when
+      float: right
+      width: 38%
 
   .when
     padding-right: $gutter / 2

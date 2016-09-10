@@ -4,25 +4,26 @@
 
 - content_for( :header ) do
 
-  h1.title
-    small
-      span
-        | Developer
-      br
-      | Web, Tech, and Games
+  .row-fluid
+    h1.title.span5
+      small
+        span
+          | Developer
+        br
+        | Web, Tech, and Games
 
-  h1.email.slide#email_slide
-    small.action
-      span#email_me
-        | email me! 
-      span#hide_email
-        | X
+    h1.email.slide.span5.offset2#email_slide
+      small.action
+        span#email_me
+          | email me! 
+        span#hide_email
+          | X
 
-  h1.email.link
-    small#show_email
-      |mcki
-      span
-      | gm
+    h1.email.link.span5.offset2
+      small#show_email
+        |mcki
+        span
+        | gm
 
 - data.experience.jobs.each do | job | 
 
