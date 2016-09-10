@@ -5,7 +5,16 @@ $section_gap: 2em
 
 @media (max-width: 700px) 
 
-  section, header.main
+  body
+    padding: 0px
+
+  header.main
+    margin: 0 $section_gap / 2 $section_gap / 2 $section_gap / 2
+
+  #content 
+    padding-top: 0px
+
+  section
     margin: $section_gap / 2
 
   section:hover, section:focus
@@ -32,11 +41,28 @@ $section_gap: 2em
       width: 90%
 
 
+    &.name
+
+      //kind of a hack? removes the 10px from bootstrap
+      //and adds it to the link such that when it collapses, we have
+      //a buffer and it looks nice
+
+      margin-top: 0px
+      margin-bottom: 0px
+
+      //0.5em
+      a
+        margin-right: 7px
+
+      span
+        margin-top: $gutter * 4
+
     header &.slide
       right: -95%
       
-    header &.title
-      width: 66%
+    //
+      header &.title
+        width: 66%
 
   .job_brief
     padding-left: $gutter / 2 

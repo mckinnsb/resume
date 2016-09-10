@@ -28,7 +28,7 @@
       - Created a group delivery system which allowed for sellers to pool logistics resources and have multiple farms' orders be delivered by the same delivery agent, with no assistance from the buyer.
       - Extended the ordering system to deal with order substitutions, weight changes, date changes, and route changes.
       - Created a logistics management dashboard which controlled delivery prices, minimums, and additionally facilitated the coordination of third-party delivery solutions.
-      - Developed a product browsing section with two modes, "grid" and "lis"t, which included product filtering and quickly adding products to an order.
+      - Developed a product browsing section with two modes, "grid" and "list", which included product filtering and quickly adding products to an order.
       - Designed an administrative backend which synthesized information for orders, including <b>Braintree</b> transaction codes and <b>Xero</b> invoice records.
       - Found and hired developers within the New York area in order to further the development of the product.
   -
@@ -60,7 +60,7 @@
       - Designed and developed a recommendation system with <b>Rails 2</b> for a major cereal company that guided its users to more relevant content.
         - Developed a "Static Search System" using <b>Elasticsearch</b> to respond to a client need for all content on a site to be searchable, which involved creating an XML pipe from .HTML documents present in the repository.
       - Engineered and maintained a server setup for a large website ( 1m+ users ) involving three dedicated application servers on <b>Passenger</b>, two dedicated database servers, and four asset servers.
-      - Managed a code base with several branches, some environmental, some topic based, and deployed production code during major feature releases using <b>Capistrano</b>.
+      - Managed a code base with several branches via <b>git</b>, some environmental, some topic based, and deployed production code during major feature releases using <b>Capistrano</b>.
       - Responded to crisis events resulting from an underestimated user and load turnout with system diagnostic tools and fixed the production environments within 24 hours.
       - Held daily scrum meetings to prioritize tasks, discuss stories, milestones, tickets, and go over outstanding work in <b>Pivotal Tracker</b>.
       - Worked with Account Services to do what was best for clients by accommodating their requests while also pushing back where necessary.
@@ -93,7 +93,7 @@
       - Constructed a UI framework within the application using <b>mooTools</b> and <b>Flash</b> to produce an integrated application-like cross-browser GUI in a non-traditional web environment (e.g, an iFrame inside Facebook).
       - Designed a normalized database using <b>PostgreSQL</b>, which holds all of the application’s data and monitors user activity while adhering to Facebook Privacy Guidelines.
       - Formulated a plan for future development that transitions the application into a multi-interface application, and developed an internal architecture that laid the foundations for future development.
-      - Used a distributed source control system, git, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
+      - Used a distributed source control system, <b>git</b>, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
       - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
       - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
   -

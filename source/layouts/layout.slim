@@ -9,22 +9,23 @@ html
 
     link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'
 
-    = stylesheet_link_tag :bootstrap, :resume
+    = stylesheet_link_tag :bootstrap, :"bootstrap-responsive", :resume
     = javascript_include_tag :modernizr, :index
     = yield_content :head
 
-  body 
+  body
     #main.row-fluid[ role="main" ]
       #content.spanbody
         header.main
           .row-fluid
             .span12
               h1.name
-                | Stew Mckinney
                 - if current_page.path != "index.html"
                   = link_to "index.html" do
                     small
                       | go back <
+                span
+                  | Stew Mckinney
               = yield_content :header
 
         = yield
