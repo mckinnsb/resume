@@ -101,6 +101,13 @@ $section_gap: 2em
 
 
 @media print 
+
+  .go-back
+    display: none
+
+  #content
+    border-left: none
+
   #resume
     border-left: none
 
@@ -117,6 +124,9 @@ $section_gap: 2em
         &:after
           display: none
           content: none
+  h1.email
+    .cssanimations &
+      @include transition( none )
 
   .when.mobile
     display: none
