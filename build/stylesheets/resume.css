@@ -359,11 +359,19 @@ ul li {
   .accomplishments {
     margin-left: 16px; } }
 @media print {
-  /* line 104, _responsive.sass */
+  /* line 105, _responsive.sass */
+  .go-back {
+    display: none; }
+
+  /* line 108, _responsive.sass */
+  #content {
+    border-left: none; }
+
+  /* line 111, _responsive.sass */
   #resume {
     border-left: none; }
 
-  /* line 109, _responsive.sass */
+  /* line 116, _responsive.sass */
   .job_brief .position .bullet {
     border-color: transparent;
     border-radius: 0;
@@ -371,15 +379,22 @@ ul li {
     border-width: 0;
     height: 0;
     width: 0; }
-    /* line 117, _responsive.sass */
+    /* line 124, _responsive.sass */
     .job_brief .position .bullet:after {
       display: none;
       content: none; }
 
-  /* line 121, _responsive.sass */
+  /* line 128, _responsive.sass */
+  .cssanimations h1.email {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none; }
+
+  /* line 131, _responsive.sass */
   .when.mobile {
     display: none; }
 
-  /* line 124, _responsive.sass */
+  /* line 134, _responsive.sass */
   .when.full {
     display: inline; } }
