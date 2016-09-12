@@ -1,5 +1,5 @@
 set :deploy_to, '/var/www/stew'
-set :branch,  :adding_devlog
+set :branch,  :master
 
 namespace :deploy do
 
