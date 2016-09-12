@@ -18,7 +18,7 @@ $section_gap: 2em
     margin: $section_gap / 2
 
   section:hover, section:focus
-    .job_brief .bullet:after
+    .bullet:after
       width: 0.66em
 
   .row-fluid
@@ -50,10 +50,8 @@ $section_gap: 2em
       margin-bottom: 0px
 
       //0.5em
-      a
+      a, span.no-link
         margin-right: 7px
-
-      span
         margin-top: $gutter * 4
 
     header &.slide
@@ -67,10 +65,26 @@ $section_gap: 2em
   .job_brief
     padding-left: $gutter / 2 
 
-    .position
-      .bullet
-        left: -35px
-        &:after
+  .bullet
+    left: -35px
+    &.big
+      left: -43px
+      &:before
+        background-color: $red
+        border-radius: $gutter
+        width: $gutter
+        opacity: 1
+        height: $gutter
+        top: 2px
+        left: 2px
+        height: 28px
+        width: 28px
+        color: white
+        font-size: 28px
+        line-height: 28px
+        
+
+
 
   .row-fluid
 
@@ -111,19 +125,18 @@ $section_gap: 2em
   #resume
     border-left: none
 
-  .job_brief 
-    .position 
-      .bullet
-        border-color: transparent
-        border-radius: 0
-        border-style: none
-        border-width: 0
-        height: 0
-        width: 0
+  .bullet
+    border-color: transparent
+    border-radius: 0
+    border-style: none
+    border-width: 0
+    height: 0
+    width: 0
 
-        &:after
-          display: none
-          content: none
+    &:after
+      display: none
+      content: none
+
   h1.email
     .cssanimations &
       @include transition( none )

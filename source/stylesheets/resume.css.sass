@@ -45,6 +45,11 @@ h1, h2, h3, h5, p
 p
   margin-top: 1em
 
+h1.name
+  opacity: 1
+
+  *:not(div):not(a)
+    opacity: $primary
 h4
   *:not(div)
     opacity: $primary
@@ -74,9 +79,10 @@ h1, h2
       float: left
 
     a 
-      margin-bottom: $bootstrap-default-margin
-      color: $red
-      float: right
+      color: black
+      //margin-bottom: $bootstrap-default-margin
+      //color: $red
+      //float: right
 
       small
         color: $red
@@ -135,13 +141,15 @@ h1, h2
   max-width: 1080px
   min-height: 100%
 
-header
-
+.drawer
+  overflow: hidden
   position: relative
 
-  &.main
-    overflow: hidden
+.go-back
+  display: block
+  position: relative
 
+header
   h1.slide
     //background-color: white
     bottom: 0%
@@ -186,46 +194,75 @@ header
     color: $red
     position: relative
 
-    .bullet
-      background-color: white
-      border-color: $red
-      border-radius: 1em
-      border-style: solid
-      top: -0.1em
-      text-align: center
-      height: 18px
+.triangle
+  width: 0
+  height: 0
+  border-right: 18px solid white
+  border-top: 9px solid transparent
+  border-bottom: 9px solid transparent
+
+.bullet
+  background-color: white
+  border-color: $red
+  border-radius: 18px
+  border-style: solid
+  top: -2px
+  text-align: center
+  height: 18px
+  position: absolute
+  left: -42px
+  width: 18px
+
+  &.big
+    border-radius: 32px
+    left: -49px
+    height: 32px
+    top: 1px
+    width: 32px
+    //background-color: green
+
+    .triangle
       position: absolute
-      left: -42px
-      width: 18px
+      top: 7px
+      left: 5px
 
-      &:before
-        
-        background-color: white
-        border-radius: 0em
-        content: ""
-        display: inline-block
-        height: 0px
-        opacity: 0
-        position: absolute
-        text-align: center
-        top: 9px
-        left: 9px
-        width: 0px
+    &:before
+      top: 16px
+      left: 16px
 
-        .cssanimations &
-          @include transition( all ($speed / 2 ) linear )
+    &:after
+      height: 6px
+      left: 32px
+      top: ( 32 - 6px ) / 2
 
-      &:after
-        content: "" 
-        background-color: $red
-        height: 4px
-        top: ( 18 - 4px ) / 2
-        left: 1em
-        position: absolute
-        width: 0.5em
+  &:before
+    
+    background-color: white
+    border-radius: 0em
+    content: ""
+    display: inline-block
+    height: 0px
+    opacity: 0
+    position: absolute
+    text-align: center
+    top: 9px
+    left: 9px
+    width: 0px
 
-        .cssanimations &
-          @include transition( all $speed )
+    .cssanimations &
+      @include transition( all ($speed / 2 ) linear )
+
+  &:after
+    content: "" 
+    background-color: $red
+    height: 4px
+    top: ( 18 - 4px ) / 2
+    left: $bootstrap-default-margin * 2
+    position: absolute
+    width: 7px
+
+    .cssanimations &
+      @include transition( all $speed )
 
 .when 
   float: right
@@ -264,7 +301,7 @@ section, header.main
         display: inline
         visibility: visible
 
-    .job_brief .bullet:before
+    .bullet:before
       background-color: $red
       border-radius: $gutter
       width: $gutter
@@ -273,9 +310,16 @@ section, header.main
       top: 2px
       left: 2px
 
-    .job_brief .bullet:after
+    .bullet.big:before
+      height: 28px
+      width: 28px
+      color: white
+      font-size: 28px
+      line-height: 28px
+
+    .bullet:after
       //12px?
-      width: 0.75em
+      width: 14px
 
 ul
   li 

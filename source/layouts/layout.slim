@@ -21,11 +21,20 @@ html
             .span12
               h1.name
                 - if current_page.path != "index.html"
-                  = link_to "index.html", :class => "go-back" do
-                    small
-                      | go back <
-                span
-                  | Stew McKinney
+                  = link_to "index.html", 
+                    :title => "Back to homepage",
+                    :class => "go-back" do
+
+                    span
+                      | Stew McKinney
+
+                    .bullet.big
+                      .triangle 
+                        | &nbsp;
+                - else
+                  span.no-link
+                    | Stew McKinney
+
               = yield_content :header
 
         = yield
