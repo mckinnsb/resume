@@ -6,16 +6,16 @@
     when: April 2013 - Present
     mobile_when: 6/13-Now
     accomplishments:
-      - Using <b>Rails 4.2</b>, <b>PostgresSQL 9.1</b>, and <b>Angular 1.3</b>, I built a robust e-commerce platform for <i>FarmersWeb</i>, a B2B food sales portal between small food producers and restaurants.
+      - Using <b>Rails 4.2</b>, <b>PostgresSQL 9.1</b>, and <b>Angular 1.3</b>, I develeoped a robust e-commerce platform for <i>FarmersWeb</i>, a B2B food sales portal between small food producers and restaurants.
       - Conceived new features directly with the co-founders and CTO, using feedback from the farmers and buyers, to develop our product around the needs of the modern small farm and restaurant.
       - Rewrote and modernized features from a legacy <b>PHP</b> codebase onto the new <b>Rails</b> platform.
       - Developed a scheduled ordering system with the leadership team to permit buyers to place orders on specific dates.
       - Partnered with the CTO of the company and several contractors to make sure that the technological foundations of the business were solid.
       - Created prototype component designs using <b>CSS3</b>, <b>Slim</b>, <b>Suzy</b> and <b>Compass</b> that became final designs over several iterations.
-      - Implemented continuous integration using <b>CircleCI</b> and supported processes that made our development cycle more efficient, such as issue tracking with <b>Pivotal Tracker</b>, code tracking via <b>Github</b>, and collaboration and integration hooks via <b>HipChat</b>, leading to an average time between deploys of 4 days.
       - Created an order life-cycle using a state machine which ensured the integrity of the business processes.
       - Authored an extensive suite of background tasks and workers in <b>Sidekiq</b> to manage the data life-cycle.
       - Wrote over fifteen hundred tests for the application using <b>Jasmine</b>, <b>RSpec</b>, <b>Capybara</b>, and <b>PhantomJS</b>.
+      - Supported processes that made our development cycle more efficient, such as continuous integration via CircleCI, issue tracking with <b>Pivotal Tracker</b>, code tracking via <b>Github</b>, and collaboration and integration hooks via <b>HipChat</b>, leading to an average time between deploys of 4 days.
       - Integrated with <b>Braintree</b>, a major credit card processor, to validate, authorize, and capture credit card transactions.
       - Engineered a role system at the controller level using <b>CanCan</b>, in order to accommodate a multi-tiered subscription model which was integrated with <b>Braintree</b>.
       - Developed, extended, and maintained an order accounting system which integrates with the <b>Xero API</b>.
