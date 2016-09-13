@@ -310,13 +310,13 @@ section, header.main {
     line-height: 28px; }
   /* line 320, resume.css.sass */
   section:hover .bullet:after, section.hovered .bullet:after, header.main:hover .bullet:after, header.main.hovered .bullet:after {
-    width: 14px; }
+    width: 12px; }
 
-/* line 325, resume.css.sass */
+/* line 324, resume.css.sass */
 ul li {
   opacity: 0.87;
   margin-top: 0.5em; }
-  /* line 328, resume.css.sass */
+  /* line 327, resume.css.sass */
   ul li b {
     color: #e53935; }
 
@@ -339,7 +339,7 @@ ul li {
 
   /* line 21, _responsive.sass */
   section:hover .bullet:after, section:focus .bullet:after {
-    width: 0.66em; }
+    width: 10px; }
 
   /* line 25, _responsive.sass */
   .row-fluid .spanbody:first-child {
