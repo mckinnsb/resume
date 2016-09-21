@@ -20,3 +20,5 @@ gem 'middleman-livereload'
 gem "capistrano", '~> 3.6'
 gem "capistrano-rails"
 gem "capistrano-bundler"
+
+gem "sinatra"
