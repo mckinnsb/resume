@@ -426,19 +426,23 @@ ul li {
   .accomplishments {
     margin-left: 16px; } }
 @media print {
-  /* line 119, _responsive.sass */
-  .go-back {
+  /* line 120, _responsive.sass */
+  .go-back .bullet {
     display: none; }
 
-  /* line 122, _responsive.sass */
+  /* line 123, _responsive.sass */
+  a[href]:after {
+    content: none; }
+
+  /* line 126, _responsive.sass */
   #content {
     border-left: none; }
 
-  /* line 125, _responsive.sass */
+  /* line 129, _responsive.sass */
   #resume {
     border-left: none; }
 
-  /* line 128, _responsive.sass */
+  /* line 132, _responsive.sass */
   .bullet {
     border-color: transparent;
     border-radius: 0;
@@ -446,22 +450,22 @@ ul li {
     border-width: 0;
     height: 0;
     width: 0; }
-    /* line 136, _responsive.sass */
+    /* line 140, _responsive.sass */
     .bullet:after {
       display: none;
       content: none; }
 
-  /* line 141, _responsive.sass */
+  /* line 145, _responsive.sass */
   .cssanimations h1.email {
     -moz-transition: none;
     -o-transition: none;
     -webkit-transition: none;
     transition: none; }
 
-  /* line 144, _responsive.sass */
+  /* line 148, _responsive.sass */
   .when.mobile {
     display: none; }
 
-  /* line 147, _responsive.sass */
+  /* line 151, _responsive.sass */
   .when.full {
     display: inline; } }
