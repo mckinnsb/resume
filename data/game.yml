@@ -1,5 +1,16 @@
 posts:
   -
+    title: "Time for a fresh new look."
+    gfycat: "DefiantCavernousButterfly"
+    description: 
+      - "I've been working on improving the UI I started a while ago. This is showing off the turn bar."
+      - "You can click the turn bar to move around the map. You can click the ready/attack buttons to switch between previewing your ready action and attacking
+        your opponent."
+      - "We removed the Move button because we realized it was more or less the default ( and superfluous )."
+      - "The attack and 'ready' buttons are going to to change majorly, so I haven't bothered with animations. They are more or less advanced placeholders."
+      - "Right now there are wayyyy too many arrows. We are currently thinking of a solution to that."
+      - "The monkey is also being refined and is almost ready to actually put in the game."
+  -
     title: "From the front to the back to the top of the block"
     gfycat: "SpryLargeAltiplanochinchillamouse"
     description: 
