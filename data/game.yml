@@ -1,5 +1,13 @@
 posts:
   -
+    title: "Zoom it pinch it drag it clip it"
+    gfycat: "ExcellentDismalHare"
+    description: 
+      - "I added zoom and drag controls for phone and the PC. It was more of a pain than I anticipated. Particularly zoom."
+      - "These are pretty key/necessary elements of any strategy game, so it was about time they made it in. I was cheating using keyboard controls in Unity before, but it's time to start eating our own dogfood."
+      - "The zoom feels a little fast to me but it's something I will play with in the future."
+      - "I also changed the HPs of most of the units to better reflect what I think will be balanced at the beginning of the game. They might progress somehow, but I'm not sure I like the idea of them having 'levels' ."
+  -
     title: "Time for a fresh new look."
     gfycat: "DefiantCavernousButterfly"
     description: 
