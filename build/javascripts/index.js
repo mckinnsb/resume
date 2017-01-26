@@ -45,6 +45,8 @@ var RESUME = RESUME || {};
 
   function initEvents() {
 
+    var nothing_to_see_here_move_along = new Konami('secret.html');
+
     var email_link = window.document.getElementById( "email_me" ),
         show_email_link = window.document.getElementById( "show_email" ),
         hide_email_link = window.document.getElementById( "hide_email" ),
