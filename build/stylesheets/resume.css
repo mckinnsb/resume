@@ -1,448 +1,483 @@
-/* line 28, resume.css.sass */
-.skills {
-  display: none; }
-
-/* line 31, resume.css.sass */
+/* line 18, resume.css.sass */
 html {
   overflow-y: scroll; }
 
-/* line 34, resume.css.sass */
-html, body, #main {
+/* line 21, resume.css.sass */
+html,
+body,
+.main {
   height: 100%; }
 
-/* line 37, resume.css.sass */
+/* line 26, resume.css.sass */
 body {
-  font-family: "Helvetica Neue", "Helvetica";
-  color: #000000;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  color: #000; }
 
-/* line 42, resume.css.sass */
-h1, h2, h3, h5, p {
+/* line 30, resume.css.sass */
+h2,
+h3,
+h5,
+p {
   opacity: 0.87; }
 
-/* line 45, resume.css.sass */
+/* line 36, resume.css.sass */
 p {
   margin-top: 1em; }
 
-/* line 48, resume.css.sass */
-h1.name {
+/* line 40, resume.css.sass */
+h1 .name {
   opacity: 1; }
-  /* line 51, resume.css.sass */
-  h1.name *:not(div):not(a) {
-    opacity: 0.87; }
-
-/* line 54, resume.css.sass */
-h4 *:not(div) {
+/* line 44, resume.css.sass */
+h1 *:not(div):not(a) {
   opacity: 0.87; }
 
-/* line 57, resume.css.sass */
+/* line 47, resume.css.sass */
 h4 {
   font-size: 18px; }
+  /* line 50, resume.css.sass */
+  h4 *:not(div) {
+    opacity: 0.87; }
 
-/* line 60, resume.css.sass */
-h1, h2 {
-  width: 100%;
+/* line 53, resume.css.sass */
+h1,
+h2 {
+  clear: both;
   float: left;
-  clear: both; }
-  /* line 68, resume.css.sass */
-  h1.link, h2.link {
-    margin-top: 1.3em; }
-  /* line 71, resume.css.sass */
-  h1.link:hover, h2.link:hover {
-    text-decoration: underline; }
-  /* line 74, resume.css.sass */
-  h1.name, h2.name {
+  width: 100%; }
+  /* line 59, resume.css.sass */
+  h1.link,
+  h2.link {
+    margin-top: 1.3em;
+    hover-text-decoration: underline; }
+  /* line 65, resume.css.sass */
+  h1.name,
+  h2.name {
     position: relative; }
-    /* line 78, resume.css.sass */
-    h1.name span, h2.name span {
+    /* line 68, resume.css.sass */
+    h1.name span,
+    h2.name span {
       float: left; }
-    /* line 81, resume.css.sass */
-    h1.name a, h2.name a {
-      color: black; }
-      /* line 87, resume.css.sass */
-      h1.name a small, h2.name a small {
+    /* line 71, resume.css.sass */
+    h1.name a,
+    h2.name a {
+      color: #000; }
+      /* line 74, resume.css.sass */
+      h1.name a small,
+      h2.name a small {
         color: #e53935; }
-  /* line 90, resume.css.sass */
-  h1.email, h2.email {
-    opacity: 0.87;
-    cursor: pointer;
+  /* line 77, resume.css.sass */
+  h1.email,
+  h2.email {
     clear: none;
+    cursor: pointer;
     float: right;
+    opacity: 0.87;
     text-align: right;
+    user-select: none;
     will-change: transform; }
-    /* line 98, resume.css.sass */
-    .cssanimations h1.email, .cssanimations h2.email {
+    /* line 86, resume.css.sass */
+    .cssanimations h1.email, .cssanimations
+    h2.email {
       -moz-transition: all 400ms;
       -o-transition: all 400ms;
       -webkit-transition: all 400ms;
       transition: all 400ms; }
-  /* line 101, resume.css.sass */
-  h1.slide.shown + h1.email, h2.slide.shown + h1.email, h1.slide.shown + h2.email, h2.slide.shown + h2.email {
+  /* line 89, resume.css.sass */
+  h1.slide.shown + h1.email,
+  h2.slide.shown + h1.email, h1.slide.shown +
+  h2.email,
+  h2.slide.shown +
+  h2.email {
     opacity: 0; }
-  /* line 104, resume.css.sass */
-  h1 small, h2 small {
-    color: #000000;
+  /* line 92, resume.css.sass */
+  h1 small,
+  h2 small {
+    color: #000;
     font-weight: bold; }
+    /* line 96, resume.css.sass */
+    h1 small span,
+    h2 small span {
+      color: #e53935;
+      font-weight: bold; }
+  /* line 101, resume.css.sass */
+  h1 .show-email span,
+  h2 .show-email span {
+    opacity: 1; }
+    /* line 104, resume.css.sass */
+    h1 .show-email span::before,
+    h2 .show-email span::before {
+      content: "nnsb "; }
     /* line 107, resume.css.sass */
-    h1 small span, h2 small span {
-      font-weight: bold;
-      color: #e53935; }
-  /* line 112, resume.css.sass */
-  h1 small#show_email span:before, h2 small#show_email span:before {
-    content: "nnsb ";
-    color: #000000; }
-  /* line 115, resume.css.sass */
-  h1 small#show_email span:after, h2 small#show_email span:after {
-    content: "at "; }
-  /* line 117, resume.css.sass */
-  h1 small#show_email:after, h2 small#show_email:after {
+    h1 .show-email span::after,
+    h2 .show-email span::after {
+      content: "at "; }
+  /* line 111, resume.css.sass */
+  h1 .show-email::after,
+  h2 .show-email::after {
     content: "ail.com"; }
-  /* line 120, resume.css.sass */
-  h1.slide, h2.slide {
+  /* line 114, resume.css.sass */
+  h1.slide,
+  h2.slide {
     position: absolute; }
 
-/* line 124, resume.css.sass */
+/* line 117, resume.css.sass */
 .skills {
-  clear: both; }
+  clear: both;
+  display: none; }
 
-/* line 128, resume.css.sass */
-.row-fluid .spanbody:first-child {
-  width: 65.95745%;
-  *width: 65.90426%;
+/* line 123, resume.css.sass */
+.row-fluid .body-width:first-child {
   margin-left: 17.02128%;
-  *margin-left: 16.91489%; }
+  width: 65.95745%; }
 
-/* line 136, resume.css.sass */
-#content {
-  padding-top: 42px;
-  padding-bottom: 42px;
-  background-color: white;
+/* line 127, resume.css.sass */
+.content {
+  background-color: #fff;
   border-left: #e53935 solid 3px;
   max-width: 1080px;
-  min-height: 100%; }
+  min-height: 100%;
+  padding-bottom: 42px;
+  padding-top: 42px; }
 
-/* line 144, resume.css.sass */
+/* line 135, resume.css.sass */
 .drawer {
   overflow: hidden;
   position: relative; }
 
-/* line 148, resume.css.sass */
+/* line 139, resume.css.sass */
 .go-back {
   display: block;
   position: relative; }
 
-/* line 153, resume.css.sass */
+/* line 145, resume.css.sass */
 header h1.slide {
   bottom: 0%;
   right: -52%; }
+/* line 150, resume.css.sass */
+header h1.shown {
+  right: 0%;
+  z-index: 2; }
+/* line 154, resume.css.sass */
+header h1 .action {
+  background-color: #e53935;
+  padding: 0.5em 0; }
   /* line 158, resume.css.sass */
-  header h1.slide.shown {
-    right: 0%;
-    z-index: 2; }
-  /* line 162, resume.css.sass */
-  header h1.slide .action {
-    background-color: #e53935;
+  header h1 .action span {
     padding: 0.5em; }
-  /* line 167, resume.css.sass */
-  header h1.slide span:hover {
-    color: black; }
-  /* line 169, resume.css.sass */
-  .cssanimations header h1.slide span {
-    -moz-transition: all 200ms;
-    -o-transition: all 200ms;
-    -webkit-transition: all 200ms;
-    transition: all 200ms; }
-  /* line 172, resume.css.sass */
-  header h1.slide .shown {
-    right: 0%; }
-  /* line 175, resume.css.sass */
-  header h1.slide small span {
-    color: white; }
-  /* line 178, resume.css.sass */
-  header h1.slide #email_me {
-    margin-right: 2em; }
+/* line 162, resume.css.sass */
+header h1 span:hover {
+  color: #000; }
+/* line 165, resume.css.sass */
+.cssanimations header h1 span {
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms; }
+/* line 168, resume.css.sass */
+header h1 .shown {
+  right: 0%; }
+/* line 172, resume.css.sass */
+header h1 small span {
+  color: #000; }
+/* line 175, resume.css.sass */
+header h1 .email-me {
+  margin-right: 2em; }
 
-/* line 182, resume.css.sass */
+/* line 178, resume.css.sass */
 .job-brief {
   float: left;
   text-align: left; }
-  /* line 187, resume.css.sass */
+  /* line 183, resume.css.sass */
   .job-brief a {
     color: #e53935;
     display: block; }
-  /* line 191, resume.css.sass */
+  /* line 187, resume.css.sass */
   .job-brief .position {
     color: #e53935;
     position: relative; }
 
-/* line 195, resume.css.sass */
+/* line 191, resume.css.sass */
 .triangle {
-  width: 0;
-  height: 0;
-  border-right: 18px solid white;
+  border-bottom: 9px solid transparent;
+  border-right: 18px solid #fff;
   border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent; }
+  height: 0;
+  width: 0; }
 
-/* line 202, resume.css.sass */
+/* line 198, resume.css.sass */
 .bullet {
-  background-color: white;
+  background-color: #fff;
   border-color: #e53935;
   border-radius: 18px;
   border-style: solid;
-  top: -2px;
-  text-align: center;
   height: 18px;
-  position: absolute;
   left: -42px;
+  position: absolute;
+  text-align: center;
+  top: -2px;
   width: 18px; }
-  /* line 214, resume.css.sass */
+  /* line 210, resume.css.sass */
   .bullet.big {
     border-radius: 32px;
-    left: -49px;
     height: 32px;
+    left: -49px;
     top: 1px;
     width: 32px; }
-    /* line 222, resume.css.sass */
+    /* line 218, resume.css.sass */
     .bullet.big .triangle {
+      left: 5px;
       position: absolute;
-      top: 7px;
-      left: 5px; }
+      top: 7px; }
+    /* line 223, resume.css.sass */
+    .bullet.big::before {
+      left: 16px;
+      top: 16px; }
     /* line 227, resume.css.sass */
-    .bullet.big:before {
-      top: 16px;
-      left: 16px; }
-    /* line 231, resume.css.sass */
-    .bullet.big:after {
+    .bullet.big::after {
       height: 6px;
       left: 32px;
       top: 13px; }
-  /* line 236, resume.css.sass */
-  .bullet:before {
-    background-color: white;
-    border-radius: 0em;
+  /* line 232, resume.css.sass */
+  .bullet::before {
+    background-color: #000;
+    border-radius: 0;
     content: "";
     display: inline-block;
-    height: 0px;
+    height: 0;
+    left: 9px;
     opacity: 0;
     position: absolute;
     text-align: center;
     top: 9px;
-    left: 9px;
-    width: 0px; }
-    /* line 250, resume.css.sass */
-    .cssanimations .bullet:before {
+    width: 0; }
+    /* line 245, resume.css.sass */
+    .cssanimations .bullet::before {
       -moz-transition: all 200ms linear;
       -o-transition: all 200ms linear;
       -webkit-transition: all 200ms linear;
       transition: all 200ms linear; }
-  /* line 253, resume.css.sass */
-  .bullet:after {
-    content: "";
+  /* line 248, resume.css.sass */
+  .bullet::after {
     background-color: #e53935;
+    content: "";
     height: 4px;
-    top: 7px;
     left: 20px;
     position: absolute;
+    top: 7px;
     width: 7px; }
-    /* line 262, resume.css.sass */
-    .cssanimations .bullet:after {
+    /* line 257, resume.css.sass */
+    .cssanimations .bullet::after {
       -moz-transition: all 400ms;
       -o-transition: all 400ms;
       -webkit-transition: all 400ms;
       transition: all 400ms; }
 
-/* line 265, resume.css.sass */
+/* line 260, resume.css.sass */
 .when {
   float: right;
   opacity: 0.54;
   text-align: right; }
-  /* line 270, resume.css.sass */
+  /* line 265, resume.css.sass */
   .when .hidden {
     display: none; }
-  /* line 273, resume.css.sass */
+  /* line 268, resume.css.sass */
   .when.mobile {
     display: none; }
-  /* line 276, resume.css.sass */
+  /* line 271, resume.css.sass */
   .cssanimations .when {
     -moz-transition: opacity 400ms;
     -o-transition: opacity 400ms;
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms; }
 
-/* line 279, resume.css.sass */
+/* line 274, resume.css.sass */
 .description {
   clear: both;
   float: right;
   opacity: 0.54;
   text-align: right; }
 
-/* line 285, resume.css.sass */
+/* line 280, resume.css.sass */
 .accomplishments {
-  float: left;
   clear: both;
+  float: left;
   margin-left: 16px; }
 
-/* line 292, resume.css.sass */
-section, header.main {
+/* line 286, resume.css.sass */
+section,
+header.main {
   margin: 2em; }
-  /* line 296, resume.css.sass */
-  section:hover .when, section.hovered .when, header.main:hover .when, header.main.hovered .when {
+  /* line 292, resume.css.sass */
+  section:hover .when, section.hovered .when,
+  header.main:hover .when,
+  header.main.hovered .when {
     opacity: 0.87; }
-    /* line 298, resume.css.sass */
-    section:hover .when .hidden, section.hovered .when .hidden, header.main:hover .when .hidden, header.main.hovered .when .hidden {
+    /* line 295, resume.css.sass */
+    section:hover .when .hidden, section.hovered .when .hidden,
+    header.main:hover .when .hidden,
+    header.main.hovered .when .hidden {
       display: inline;
       visibility: visible; }
-  /* line 302, resume.css.sass */
-  section:hover .bullet:before, section.hovered .bullet:before, header.main:hover .bullet:before, header.main.hovered .bullet:before {
+  /* line 300, resume.css.sass */
+  section:hover .bullet::before, section.hovered .bullet::before,
+  header.main:hover .bullet::before,
+  header.main.hovered .bullet::before {
     background-color: #e53935;
     border-radius: 14px;
-    width: 14px;
-    opacity: 1;
     height: 14px;
+    left: 2px;
+    opacity: 1;
     top: 2px;
-    left: 2px; }
-  /* line 311, resume.css.sass */
-  section:hover .bullet.big:before, section.hovered .bullet.big:before, header.main:hover .bullet.big:before, header.main.hovered .bullet.big:before {
-    height: 28px;
-    width: 28px;
-    color: white;
+    width: 14px; }
+  /* line 310, resume.css.sass */
+  section:hover .bullet.big::before, section.hovered .bullet.big::before,
+  header.main:hover .bullet.big::before,
+  header.main.hovered .bullet.big::before {
+    color: #000;
     font-size: 28px;
-    line-height: 28px; }
-  /* line 318, resume.css.sass */
-  section:hover .bullet:after, section.hovered .bullet:after, header.main:hover .bullet:after, header.main.hovered .bullet:after {
+    height: 28px;
+    line-height: 28px;
+    width: 28px; }
+  /* line 317, resume.css.sass */
+  section:hover .bullet::after, section.hovered .bullet::after,
+  header.main:hover .bullet::after,
+  header.main.hovered .bullet::after {
     width: 12px; }
 
-/* line 322, resume.css.sass */
+/* line 321, resume.css.sass */
 ul li {
-  opacity: 0.87;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  opacity: 0.87; }
   /* line 325, resume.css.sass */
   ul li b {
     color: #e53935; }
 
 @media (max-width: 700px) {
-  /* line 8, _responsive.sass */
+  /* line 7, _responsive.sass */
   body {
-    padding: 0px; }
+    padding: 0; }
 
   /* line 11, _responsive.sass */
-  header.main {
+  header .main {
     margin: 0 1em 1em 1em; }
 
   /* line 14, _responsive.sass */
-  #content {
-    padding-top: 0px; }
+  .content {
+    padding-top: 0; }
 
   /* line 17, _responsive.sass */
   section {
     margin: 1em; }
-
-  /* line 21, _responsive.sass */
-  section:hover .bullet:after, section:focus .bullet:after {
-    width: 10px; }
-
-  /* line 25, _responsive.sass */
-  .row-fluid .spanbody:first-child {
-    width: 82.97872%;
-    *width: 82.92553%;
-    margin-left: 8.51064%;
-    *margin-left: 8.40426%; }
+    /* line 21, _responsive.sass */
+    section .description .span7 {
+      float: right;
+      margin-top: 8px; }
+    /* line 28, _responsive.sass */
+    section:hover .bullet ::after, section:focus .bullet ::after {
+      width: 10px; }
 
   /* line 32, _responsive.sass */
-  h1, h2 {
-    padding-left: 8px; }
-    /* line 35, _responsive.sass */
-    h1.link, h2.link {
-      margin-top: 10px; }
-    /* line 38, _responsive.sass */
-    h1.email, h2.email {
-      margin-left: -8px;
-      padding-right: 8px;
-      width: 90%; }
-    /* line 43, _responsive.sass */
-    h1.name, h2.name {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-      /* line 53, _responsive.sass */
-      h1.name a, h1.name span.no-link, h2.name a, h2.name span.no-link {
-        margin-right: 7px;
-        margin-top: 64px; }
-    /* line 57, _responsive.sass */
-    header h1.slide, header h2.slide {
-      right: -95%; }
-
-  /* line 65, _responsive.sass */
-  .job-brief {
-    padding-left: 8px; }
-
-  /* line 68, _responsive.sass */
-  .bullet {
-    left: -35px; }
-    /* line 70, _responsive.sass */
-    .bullet.big {
-      left: -43px; }
-      /* line 72, _responsive.sass */
-      .bullet.big:before {
-        background-color: #e53935;
-        border-radius: 16px;
-        width: 16px;
-        opacity: 1;
-        height: 16px;
-        top: 2px;
-        left: 2px;
-        height: 28px;
-        width: 28px;
-        color: white;
-        font-size: 28px;
-        line-height: 28px; }
-
-  /* line 91, _responsive.sass */
+  .row-fluid .spanbody {
+    first-child-margin-left: 8.51064%;
+    first-child-width: 82.97872%; }
+  /* line 37, _responsive.sass */
   .row-fluid .job-brief {
     float: left;
     width: 61%; }
-  /* line 95, _responsive.sass */
+  /* line 41, _responsive.sass */
   .row-fluid .when {
     float: right;
     width: 38%; }
 
-  /* line 99, _responsive.sass */
+  /* line 45, _responsive.sass */
+  h1,
+  h2 {
+    padding-left: 8px; }
+    /* line 49, _responsive.sass */
+    h1.link,
+    h2.link {
+      margin-top: 10px; }
+    /* line 52, _responsive.sass */
+    h1.email,
+    h2.email {
+      margin-left: -8px;
+      padding-right: 8px;
+      width: 90%; }
+    /* line 57, _responsive.sass */
+    h1.name,
+    h2.name {
+      margin-bottom: 0;
+      margin-top: 0; }
+      /* line 69, _responsive.sass */
+      h1.name a .no-link,
+      h1.name span .no-link,
+      h2.name a .no-link,
+      h2.name span .no-link {
+        margin-right: 7px;
+        margin-top: 64px; }
+    /* line 73, _responsive.sass */
+    header h1.slide, header
+    h2.slide {
+      right: -95%; }
+    /* line 77, _responsive.sass */
+    header h1.title, header
+    h2.title {
+      width: 66%; }
+
+  /* line 80, _responsive.sass */
+  .job-brief {
+    padding-left: 8px; }
+
+  /* line 83, _responsive.sass */
+  .bullet {
+    left: -35px; }
+    /* line 86, _responsive.sass */
+    .bullet.big {
+      left: -43px; }
+      /* line 89, _responsive.sass */
+      .bullet.big::before {
+        background-color: #e53935;
+        border-radius: 16px;
+        color: #fff;
+        font-size: 28px;
+        height: 16px;
+        left: 2px;
+        line-height: 28px;
+        opacity: 1;
+        top: 2px;
+        width: 16px; }
+
+  /* line 101, _responsive.sass */
   .when {
     padding-right: 8px; }
+    /* line 104, _responsive.sass */
+    .when .mobile {
+      display: inline; }
+    /* line 107, _responsive.sass */
+    .when .full {
+      display: none; }
 
-  /* line 102, _responsive.sass */
-  section .description.span7 {
-    float: right;
-    margin-top: 8px; }
-
-  /* line 106, _responsive.sass */
-  .when.mobile {
-    display: inline; }
-
-  /* line 109, _responsive.sass */
-  .when.full {
-    display: none; }
-
-  /* line 112, _responsive.sass */
+  /* line 110, _responsive.sass */
   .accomplishments {
     margin-left: 16px; } }
 @media print {
-  /* line 120, _responsive.sass */
+  /* line 116, _responsive.sass */
   .go-back .bullet {
     display: none; }
 
-  /* line 123, _responsive.sass */
-  a[href]:after {
+  /* line 121, _responsive.sass */
+  a [href] ::after {
     content: none; }
 
-  /* line 126, _responsive.sass */
-  #content {
-    border-left: none; }
+  /* line 124, _responsive.sass */
+  .content {
+    border-left: 0; }
 
-  /* line 129, _responsive.sass */
-  #resume {
-    border-left: none; }
+  /* line 127, _responsive.sass */
+  .resume {
+    border-left: 0; }
 
-  /* line 132, _responsive.sass */
+  /* line 130, _responsive.sass */
   .bullet {
     border-color: transparent;
     border-radius: 0;
@@ -450,12 +485,12 @@ ul li {
     border-width: 0;
     height: 0;
     width: 0; }
-    /* line 140, _responsive.sass */
-    .bullet:after {
-      display: none;
-      content: none; }
+    /* line 138, _responsive.sass */
+    .bullet::after {
+      content: none;
+      display: none; }
 
-  /* line 145, _responsive.sass */
+  /* line 144, _responsive.sass */
   .cssanimations h1.email {
     -moz-transition: none;
     -o-transition: none;
@@ -465,7 +500,6 @@ ul li {
   /* line 148, _responsive.sass */
   .when.mobile {
     display: none; }
-
   /* line 151, _responsive.sass */
   .when.full {
     display: inline; } }
