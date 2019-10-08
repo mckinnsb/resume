@@ -9,18 +9,18 @@
     h1.title.span5
       small
         span
-          | Game 
+          | Game Project
         br
-        | Working Title: 
-        br
-        | "Animal Wars"
+        span
+          | Working Title: 
+        i #{data.game.send(game).title}
 
 
   .row-fluid
     h4.description.span7.offset5 
-      | A physics-based strategy game which combines the best of turn-based strategy and ballistic action.
+      | #{data.game.send(game).tagline}
 
-- data.game.posts.each do | post | 
+- data.game.send(game).posts.each do | post | 
 
   section.job_history
     header.row-fluid
@@ -31,18 +31,17 @@
           b
             | #{ post.title  } 
 
-      div.row-fluid.preview
-        div style='position:relative; padding-bottom:calc(70.80% + 44px)'
-          iframe[src="https://gfycat.com/ifr/#{post.gfycat}?autoplay=0"
-                 frameborder='0' 
-                 scrolling='no' 
-                 width='100%' 
-                 height='100%' 
-                 style='position:absolute;top:0;left:0;' 
-                 allowfullscreen]
-
-
+      - if post.gfycat
+        div.row-fluid.preview
+          div style='position:relative; padding-bottom:calc(70.80% + 44px)'
+            iframe[src="https://gfycat.com/ifr/#{post.gfycat}?autoplay=0"
+                  frameborder='0' 
+                  scrolling='no' 
+                  width='100%' 
+                  height='100%' 
+                  style='position:absolute;top:0;left:0;' 
+                  allowfullscreen]
 
       div.row-fluid.span10
         - post.description.each do | description |
-          p = description
+          p= description

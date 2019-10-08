@@ -1,60 +1,80 @@
-posts:
-  -
-    title: "Zoom it pinch it drag it clip it"
-    gfycat: "ExcellentDismalHare"
-    description: 
-      - "I added zoom and drag controls for phone and the PC. It was more of a pain than I anticipated. Particularly zoom."
-      - "These are pretty key/necessary elements of any strategy game, so it was about time they made it in. I was cheating using keyboard controls in Unity before, but it's time to start eating our own dogfood."
-      - "The zoom feels a little fast to me but it's something I will play with in the future."
-      - "I also changed the HPs of most of the units to better reflect what I think will be balanced at the beginning of the game. They might progress somehow, but I'm not sure I like the idea of them having 'levels' ."
-  -
-    title: "Time for a fresh new look."
-    gfycat: "DefiantCavernousButterfly"
-    description: 
-      - "I've been working on improving the UI I started a while ago. This is showing off the turn bar."
-      - "You can click the turn bar to move around the map. You can click the ready/attack buttons to switch between previewing your ready action and attacking
-        your opponent."
-      - "We removed the Move button because we realized it was more or less the default ( and superfluous )."
-      - "The attack and 'ready' buttons are going to to change majorly, so I haven't bothered with animations. They are more or less advanced placeholders."
-      - "Right now there are wayyyy too many arrows. We are currently thinking of a solution to that."
-      - "The monkey is also being refined and is almost ready to actually put in the game."
-  -
-    title: "From the front to the back to the top of the block"
-    gfycat: "SpryLargeAltiplanochinchillamouse"
-    description: 
-      - "It's been a while between updates. I've been working hard on a preview system."
-      - "A core element of a lot of strategy games is a little bit of a heads up regarding the result of an action."
-      - "I really like the idea of being able to pull complex combos off - like hitting an enemy to your buddy and having him hit the enemy over you - but sometimes it gets to be a little too much to process."
-      - "I wanted something that would give a physical representation of the motion in each action. Right now this visual treatment is very temporary, as we are going to overhaul the trap appearance AND the preview."
-      - "Those buttons are also temporary. So temporary."
+animalwars:
+  title: "Animal Wars"
+  tagline: "A physics-based strategy game which combines the best of turn-based tactics and ballistic action."
+  posts:
+    -
+      title: "Zoom it pinch it drag it clip it"
+      gfycat: "ExcellentDismalHare"
+      description: 
+        - "I added zoom and drag controls for phone and the PC. It was more of a pain than I anticipated. Particularly zoom."
+        - "These are pretty key/necessary elements of any strategy game, so it was about time they made it in. I was cheating using keyboard controls in Unity before, but it's time to start eating our own dogfood."
+        - "The zoom feels a little fast to me but it's something I will play with in the future."
+        - "I also changed the HPs of most of the units to better reflect what I think will be balanced at the beginning of the game. They might progress somehow, but I'm not sure I like the idea of them having 'levels' ."
+    -
+      title: "Time for a fresh new look."
+      gfycat: "DefiantCavernousButterfly"
+      description: 
+        - "I've been working on improving the UI I started a while ago. This is showing off the turn bar."
+        - "You can click the turn bar to move around the map. You can click the ready/attack buttons to switch between previewing your ready action and attacking
+          your opponent."
+        - "We removed the Move button because we realized it was more or less the default ( and superfluous )."
+        - "The attack and 'ready' buttons are going to to change majorly, so I haven't bothered with animations. They are more or less advanced placeholders."
+        - "Right now there are wayyyy too many arrows. We are currently thinking of a solution to that."
+        - "The monkey is also being refined and is almost ready to actually put in the game."
+    -
+      title: "From the front to the back to the top of the block"
+      gfycat: "SpryLargeAltiplanochinchillamouse"
+      description: 
+        - "It's been a while between updates. I've been working hard on a preview system."
+        - "A core element of a lot of strategy games is a little bit of a heads up regarding the result of an action."
+        - "I really like the idea of being able to pull complex combos off - like hitting an enemy to your buddy and having him hit the enemy over you - but sometimes it gets to be a little too much to process."
+        - "I wanted something that would give a physical representation of the motion in each action. Right now this visual treatment is very temporary, as we are going to overhaul the trap appearance AND the preview."
+        - "Those buttons are also temporary. So temporary."
 
-  -
-    title: "It's ok, Jiorny. Carles is in a better place."
-    gfycat: "AmbitiousWindingGordonsetter"
-    description: 
-      - "I am experimenting with a new biome. We are going to start making some new environments soon. The walls are terrible, I'm sorry."
-      - "This is kind of showing off the combo preview mechanic (in progress ). Not 100% sure on how the menu on the bottom is working, but its also a work in progress"
-      - "There's also a new attack animation for the penguin combo, which you can see here. I think it still needs some work."
-      - "The beginning of the video is a little abrupt, but I'm trying to work with gfycat right now. Might have to switch to a WebM service."
-  - 
-    title: "Steve... we know."
-    gfycat: "PessimisticDirectIcterinewarbler"
-    description: 
-      - "I removed the button panel when you select enemies. At first I was thinking there might be some interesting 'mode' stuff to do there, but it ends up being very confusing."
-      - "For now I have put in a description. I don't think we will have any penguin as dark as Steve: these are all jokeholders and definitely not making it into the final game. But they are funny for me while I develop."
-      - "Also shows the push mechanic. Your penguin will shove the unit / do more damage based on his distance from the unit."
-  - 
-    title: "Monkey Work"
-    gfycat: "AlarmedEnchantedFawn"
-    description: 
-      - "Working on a new projectile for the Monkey unit. Not quite sure about the strength + range of the bomb yet, but I kind of like the idea of him causing a lot of chaos."
-      - "You'll notice a turn bar at the top that is glitching out a bit. It's because this is in a testing harness and not in a live scene."
-      - "The camera bounces around a lot because it doesn't quite know about bombs yet."
-  - 
-    title: "Unit Select & Attack Demo"
-    gfycat: "PotableExcitableGardensnake"
-    description: 
-      - "Working on the first UI pass. The menus are still pretty rough."
-      - "Here we are showing selecting a unit and then attacking them."
-      - "There's a bug here w/ the NICE! callout. It shouldn't be appearing underneath the wall."
-  
+    -
+      title: "It's ok, Jiorny. Carles is in a better place."
+      gfycat: "AmbitiousWindingGordonsetter"
+      description: 
+        - "I am experimenting with a new biome. We are going to start making some new environments soon. The walls are terrible, I'm sorry."
+        - "This is kind of showing off the combo preview mechanic (in progress ). Not 100% sure on how the menu on the bottom is working, but its also a work in progress"
+        - "There's also a new attack animation for the penguin combo, which you can see here. I think it still needs some work."
+        - "The beginning of the video is a little abrupt, but I'm trying to work with gfycat right now. Might have to switch to a WebM service."
+    - 
+      title: "Steve... we know."
+      gfycat: "PessimisticDirectIcterinewarbler"
+      description: 
+        - "I removed the button panel when you select enemies. At first I was thinking there might be some interesting 'mode' stuff to do there, but it ends up being very confusing."
+        - "For now I have put in a description. I don't think we will have any penguin as dark as Steve: these are all jokeholders and definitely not making it into the final game. But they are funny for me while I develop."
+        - "Also shows the push mechanic. Your penguin will shove the unit / do more damage based on his distance from the unit."
+    - 
+      title: "Monkey Work"
+      gfycat: "AlarmedEnchantedFawn"
+      description: 
+        - "Working on a new projectile for the Monkey unit. Not quite sure about the strength + range of the bomb yet, but I kind of like the idea of him causing a lot of chaos."
+        - "You'll notice a turn bar at the top that is glitching out a bit. It's because this is in a testing harness and not in a live scene."
+        - "The camera bounces around a lot because it doesn't quite know about bombs yet."
+    - 
+      title: "Unit Select & Attack Demo"
+      gfycat: "PotableExcitableGardensnake"
+      description: 
+        - "Working on the first UI pass. The menus are still pretty rough."
+        - "Here we are showing selecting a unit and then attacking them."
+        - "There's a bug here w/ the NICE! callout. It shouldn't be appearing underneath the wall."
+    
+tnd:
+  title: "TND"
+  tagline: "A real-time survival game in which you race to save a planet-city from total destruction."
+  posts:
+    - 
+      title: "Stay tuned"
+      description: 
+        - "The game is still a little too rough to show footage of."
+        - "There are some working systems, but integrating them has caused a few bugs."
+        - "While I sort that out, here are a few interesting images I can share, all WIP."
+        - "The city is entirely randomly generated. Here is the first level:"
+        - "<img src='/images/city.png'/>"
+        - "Building meshes are also dynamically generated by code and change based on location on the map."
+        - "<img src='/images/building.png'/>"
+        - "Here's a quick look at an 'arena', where real time conflict occurs."
+        - "<img src='/images/arena.png'/>"
+        - "I'm excited to show you the rest of this when it's ready."
