@@ -6,7 +6,7 @@
     when: August 2018 - Present
     mobile_when: 6/13-Now
     accomplishments:
-       - Worked with the founder of <i>Olleyes</i> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA trials.
+       - Worked with the founder of <i>Olleyes</i> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA class 1 medical device trials.
        - Transitioned the device, its webserver and its database into a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
        - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture on the <b>Pico 4k</b> (Android).
        - Audited a <b>Django</b> application and re-wrote it to support multiple users, accounts, offices, devices, managers, employees, and patients.
