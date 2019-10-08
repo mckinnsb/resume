@@ -1,5 +1,8 @@
 # If you do not have OpenSSL installed, update
 # the following line to use 'http://' instead
+#
+ruby "2.2.10"
+
 source 'https://rubygems.org'
 gem 'slim', '>= 3.0'
 

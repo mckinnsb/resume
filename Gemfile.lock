@@ -170,3 +170,9 @@ DEPENDENCIES
   slim (>= 3.0)
   tzinfo-data
   wdm (~> 0.1.0)
+
+RUBY VERSION
+   ruby 2.2.10p489
+
+BUNDLED WITH
+   1.16.6

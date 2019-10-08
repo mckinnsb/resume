@@ -20,6 +20,12 @@ log/
 */*.sw*
 *.vim
 
+# tools from Nodeland
+node_modules/*
+
+# vscode
+.vscode/*
+
 # YARD artifacts
 .yardoc
 _yardoc
