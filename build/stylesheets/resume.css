@@ -304,21 +304,25 @@ header h1 .email-me {
   margin-left: 16px; }
 
 /* line 286, resume.css.sass */
+.preview {
+  margin-top: 3em; }
+
+/* line 289, resume.css.sass */
 section,
 header.main {
   margin: 2em; }
-  /* line 292, resume.css.sass */
+  /* line 295, resume.css.sass */
   section:hover .when, section.hovered .when,
   header.main:hover .when,
   header.main.hovered .when {
     opacity: 0.87; }
-    /* line 295, resume.css.sass */
+    /* line 298, resume.css.sass */
     section:hover .when .hidden, section.hovered .when .hidden,
     header.main:hover .when .hidden,
     header.main.hovered .when .hidden {
       display: inline;
       visibility: visible; }
-  /* line 300, resume.css.sass */
+  /* line 303, resume.css.sass */
   section:hover .bullet::before, section.hovered .bullet::before,
   header.main:hover .bullet::before,
   header.main.hovered .bullet::before {
@@ -329,7 +333,7 @@ header.main {
     opacity: 1;
     top: 2px;
     width: 14px; }
-  /* line 310, resume.css.sass */
+  /* line 313, resume.css.sass */
   section:hover .bullet.big::before, section.hovered .bullet.big::before,
   header.main:hover .bullet.big::before,
   header.main.hovered .bullet.big::before {
@@ -338,17 +342,17 @@ header.main {
     height: 28px;
     line-height: 28px;
     width: 28px; }
-  /* line 317, resume.css.sass */
+  /* line 320, resume.css.sass */
   section:hover .bullet::after, section.hovered .bullet::after,
   header.main:hover .bullet::after,
   header.main.hovered .bullet::after {
     width: 12px; }
 
-/* line 321, resume.css.sass */
+/* line 324, resume.css.sass */
 ul li {
   margin-top: 0.5em;
   opacity: 0.87; }
-  /* line 325, resume.css.sass */
+  /* line 328, resume.css.sass */
   ul li b {
     color: #e53935; }
 
