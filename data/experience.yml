@@ -7,16 +7,17 @@
     mobile_when: 6/13-Now
     accomplishments:
        - Worked with the founder of <i>Olleyes</i> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA trials.
-       - Transitioned the device, its webserver and its database into a secure cloud-based platform using <b>AWS</b>.
-       - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture using the <b>Pico 4k</b>.
+       - Transitioned the device, its webserver and its database into a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
+       - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture on the <b>Pico 4k</b> (Android).
        - Audited a <b>Django</b> application and re-wrote it to support multiple users, accounts, offices, devices, managers, employees, and patients.
+       - Leveraged UniRx (RxNET for Unity) and Unidux to create a state-driven architecture that separated the data and network layer from the UI layer.
        - Ported an <b>Electron</b> application to a web-native <b>Angular</b> application, which included the addition of new API endpoints.
        - Customized and refined the <b>Angular</b> application for mobile phone and tablet usage in client settings.
        - Extended the <b>Angular</b> application to include real-time test monitoring with secure <b>Websockets</b> and <b>Django Channels</b>.
        - Created a <b>Docker Compose</b> setup for local development that boots all required services and additional development services (such as a fake mail server).
        - Deployed the new application to the <b>AWS</b> platform using <b>ECS</b> on <b>Docker Compose</b>.
        - Worked closely with vendors to establish technical specifications and debug hardware issues.
-       - Wrote basic installation scripts (.bat) for Windows using <b>AWS CLI</b> and PowerShell.
+       - Wrote basic installation scripts (.bat) for Windows using the <b>AWS CLI</b> and PowerShell.
 
   -
     company: Wandermight, LLC
@@ -25,11 +26,11 @@
     when: January 2019 - Present
     mobile_when: 1/19-Now
     accomplishments:
-       - Worked with a business partner (artist) to start work on a 3d "real-time survival" game in <b>Unity3D</b>, which stands at over 380+ classes and 50k lines of code at this point in time.
+       - Worked with a business partner start work on a 3d "real-time survival" game in <b>Unity3D</b>, which stands at over <b>380+</b> classes and <b>50k</b> lines of code at this point in time.
        - Created a system to procedurally generate a overland map representing a large, futuristic city with random encounters [<a href="/images/city.png">Image</a>].
        - Created a system to procedurally generate a city mesh, complete with roads, building placement, zoning, cars, and lights [<a href="/images/arena.png">Image</a>].
        - Created a system to dynamically generate buildings based on zone, intelligent placement of doors/windows, and splitting floors into rooms [<a href="/images/building.png">Image</a>].
-       - Worked with my buisness partner to design asset pipelines for all of the above systems so that he could create resources that could be used dynamically.
+       - Worked with a 3d artist to design asset pipelines for all of the above systems so that they could create resources that could be used dynamically.
        - Interviewed musicians and other contributors to work with the company.
        - Wrote hundreds of tests to verify game functionality using <b>NUnit</b> and <b>NSubstitute</b>.
 
@@ -40,7 +41,7 @@
     when: January 2017 - January 2018
     mobile_when: 1/17-1/18
     accomplishments:
-       - Helped complete the transition from <b>Rails 2</b> to <b>Rails 4</b> for a large Rails codebase with a great deal of technical debt.
+       - Helped complete the transition from <b>Rails 2</b> to <b>Rails 4</b> for a large Rails codebase (250k+ lines in one major component) with a great deal of technical debt.
        - Worked with a small team to develop a complete mobile version of the website, including virtual card creation, in <b>React/Redux</b> (using <b>RxJS</b> and <b>Redux-Observable</b>)
        - Created a developer setup for the application and all required services (13+) using <b>Docker</b>, which included charting dependencies.
        - Performed fundamental, decoupling changes required to <b>Rails</b> and <b>Go</b> services to facilitate <b>Dockerization</b>.
@@ -50,6 +51,7 @@
        - Worked with the iOS Team Leader to ensure API consistency across versions, experience consistency between mobile app and mobile web, prevent service disruptions, and agree on new changes/additions.
        - Wrote many tests to cover critical previously uncovered parts of the <b>Rails</b> and desktop <b>React</b> applications.
        - Worked with load response teams to prepare the application to handle high volumes of users during the holidays and Valentine's Day.
+       - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
 
   -
     company: SBM Consulting (Contract w/ FarmersWeb)
@@ -149,6 +151,8 @@
       - Used a distributed source control system, <b>git</b>, to safely manage over sixteen thousand lines of code (not including 3rd party code) across five separate environments.
       - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
       - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
+
+archived_jobs:
   -
     company: Amedia Creative
     location: Ramsey, NJ
@@ -162,6 +166,7 @@
       - Created timelines for projects based on client contracts, established project milestones on the timeline and personally assured both clients and my employer that milestones were achieved according to schedule.
       - Communicated directly with clients to address user experience, functionality, technical issues, deadlines, quality of service issues, or necessary clarifications concerning any of the preceding topics in person, through e-mail, or over the phone.
       - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
+
   -
     company: The Guitar Hangar
     location: Brookfield, CT

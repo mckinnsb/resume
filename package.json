@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "lint": "sass-lint -v",
+    "lint:fix": "sass-lint-auto-fix -c .sass-lint-fix.yml -d"
+  },
+  "devDependencies": {
+    "sass-lint-auto-fix": "^0.17.0"
+  }
+}

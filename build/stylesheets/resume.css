@@ -163,15 +163,15 @@ header h1.slide {
     margin-right: 2em; }
 
 /* line 182, resume.css.sass */
-.job_brief {
+.job-brief {
   float: left;
   text-align: left; }
   /* line 187, resume.css.sass */
-  .job_brief a {
+  .job-brief a {
     color: #e53935;
     display: block; }
   /* line 191, resume.css.sass */
-  .job_brief .position {
+  .job-brief .position {
     color: #e53935;
     position: relative; }
 
@@ -372,7 +372,7 @@ ul li {
       right: -95%; }
 
   /* line 65, _responsive.sass */
-  .job_brief {
+  .job-brief {
     padding-left: 8px; }
 
   /* line 68, _responsive.sass */
@@ -397,7 +397,7 @@ ul li {
         line-height: 28px; }
 
   /* line 91, _responsive.sass */
-  .row-fluid .job_brief {
+  .row-fluid .job-brief {
     float: left;
     width: 61%; }
   /* line 95, _responsive.sass */

@@ -1,41 +1,55 @@
 $gutter: 16px
-$section_gap: 2em
-  
-  
+$section-gap: 2em
+$black: #fff
 
-@media (max-width: 700px) 
+@media (max-width: 700px)
 
   body
-    padding: 0px
+    padding: 0
 
-  header.main
-    margin: 0 $section_gap / 2 $section_gap / 2 $section_gap / 2
+  header
+    .main
+      margin: 0 $section-gap / 2 $section-gap / 2 $section-gap / 2
 
-  #content 
-    padding-top: 0px
+  .content
+    padding-top: 0
 
   section
-    margin: $section_gap / 2
+    margin: $section-gap / 2
 
-  section:hover, section:focus
-    .bullet:after
-      width: 10px
+    .description
+      .span7
+        float: right
+        margin-top: $gutter / 2
+
+    &:hover,
+    &:focus
+      .bullet
+        ::after
+          width: 10px
 
   .row-fluid
-    .spanbody:first-child 
-      width: 82.97872340425532%
-      *width: 82.92553191489361%
-      margin-left: 8.51063829787234%
-      *margin-left: 8.404255319148938%
+    .spanbody
+      :first-child
+        margin-left: 8.51063829787234%
+        width: 82.97872340425532%
 
+    .job-brief
+      float: left
+      width: 61%
 
-  h1, h2
+    .when
+      float: right
+      width: 38%
+
+  h1,
+  h2
     padding-left: $gutter / 2
 
     &.link
       margin-top: 10px
-  
-    &.email 
+
+    &.email
       margin-left: -$gutter / 2
       padding-right: $gutter / 2
       width: 90%
@@ -46,88 +60,72 @@ $section_gap: 2em
       //and adds it to the link such that when it collapses, we have
       //a buffer and it looks nice
 
-      margin-top: 0px
-      margin-bottom: 0px
+      margin-bottom: 0
+      margin-top: 0
 
       //0.5em
-      a, span.no-link
-        margin-right: 7px
-        margin-top: $gutter * 4
+      a,
+      span
+        .no-link
+          margin-right: 7px
+          margin-top: $gutter * 4
 
     header &.slide
       right: -95%
-      
-     
-    //
-     header &.title
-       width: 66%
 
-  .job_brief
-    padding-left: $gutter / 2 
+    //
+    header &.title
+      width: 66%
+
+  .job-brief
+    padding-left: $gutter / 2
 
   .bullet
     left: -35px
+
     &.big
       left: -43px
-      &:before
+
+      &::before
         background-color: $red
         border-radius: $gutter
-        width: $gutter
-        opacity: 1
-        height: $gutter
-        top: 2px
-        left: 2px
-        height: 28px
-        width: 28px
-        color: white
+        color: $black
         font-size: 28px
+        height: $gutter
+        left: 2px
         line-height: 28px
-        
-
-
-
-  .row-fluid
-
-    .job_brief
-      float: left
-      width: 61%
-
-    .when
-      float: right
-      width: 38%
+        opacity: 1
+        top: 2px
+        width: $gutter
 
   .when
     padding-right: $gutter / 2
 
-  section .description.span7
-    float: right
-    margin-top: $gutter / 2
+    .mobile
+      display: inline
 
-  .when.mobile
-    display: inline
-
-  .when.full
-    display: none
+    .full
+      display: none
 
   .accomplishments
     margin-left: $gutter
 
-
-
-@media print 
+@media print
 
   .go-back
     .bullet
       display: none
 
-  a[ href ]:after
-    content: none
+  a
+    [ href ]
+      ::after
+        content: none
 
-  #content
-    border-left: none
+  .content
+    border-left: 0
 
-  #resume
-    border-left: none
+  .resume
+    border-left: 0
 
   .bullet
     border-color: transparent
@@ -137,16 +135,18 @@ $section_gap: 2em
     height: 0
     width: 0
 
-    &:after
-      display: none
+    &::after
       content: none
+      display: none
 
-  h1.email
-    .cssanimations &
-      @include transition( none )
+  h1
+    &.email
+      .cssanimations &
+        @include transition(none)
 
-  .when.mobile
-    display: none
+  .when
+    &.mobile
+      display: none
 
-  .when.full
-    display: inline
+    &.full
+      display: inline

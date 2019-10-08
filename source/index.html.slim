@@ -1,7 +1,6 @@
 - content_for( :head ) do 
   title
     | Stew Mckinney :: Main
-  = javascript_include_tag :konami
   = javascript_include_tag :index
 
 - content_for( :header ) do
@@ -12,14 +11,14 @@
           span
             | Welcome!
           br
-          | This is my pad on the internet.
+          | This is my home on the internet.
 
           br
           | Make yourself comfortable.
 
 section.job_history
   header.row-fluid
-    div.job_brief.span7
+    div.job-brief.span7
       = link_to "resume.html" do
         h4.position 
           .bullet
@@ -28,7 +27,7 @@ section.job_history
 
 section.job_history
   header.row-fluid
-    div.job_brief.span7
+    div.job-brief.span7
       = link_to "devlog.html" do
         h4.position 
           .bullet
@@ -37,7 +36,7 @@ section.job_history
 
 section.job_history
   header.row-fluid
-    div.job_brief.span7
+    div.job-brief.span7
       = link_to "http://www.github.com/mckinnsb/" do
         h4.position 
           .bullet
@@ -46,7 +45,7 @@ section.job_history
 
 section.job_history
   header.row-fluid
-    div.job_brief.span7
+    div.job-brief.span7
       = link_to "http://mckinnsb.github.io/gogosnek/" do
         h4.position 
           .bullet

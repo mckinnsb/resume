@@ -10,12 +10,12 @@ html
     link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'
 
     = stylesheet_link_tag :bootstrap, :"bootstrap-responsive", :resume
-    = javascript_include_tag :modernizr
+    = javascript_include_tag :modernizr, :konami
     = yield_content :head
 
   body
-    #main.row-fluid[ role="main" ]
-      #content.spanbody
+    .main.row-fluid[ role="main" ]
+      .content.body-width
         header.main
           .row-fluid
             .span12

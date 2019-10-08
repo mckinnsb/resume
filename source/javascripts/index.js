@@ -1,131 +1,117 @@
-var RESUME = RESUME || {};
+var RESUME = {};
 
-( function () {
+(function () {
+  'use strict';
 
   RESUME.mailMe = youveGotMail;
 
   var eventAttached = false,
-      shown;
+    shown;
 
-  function checkVisible( e ) {
-
+  function checkVisible(e) {
     var buffer,
-        elements = window.document.getElementsByClassName( "job_history" ),
+        elements = window.document.getElementsByClassName("job_history"),
         element,
-        event,
         height = window.clientHeight || window.innerHeight,
         rect;
 
     buffer = height / 4;
 
-    for( var i = 0; i < elements.length; i++ ) {
-
-      element = elements[ i ];
+    elements.forEach(function (element) {
       rect = element.getBoundingClientRect();
 
-      if( rect.top > 0 && ( rect.top + buffer ) < height ) {
-        break;
+      if (rect.top > 0 && (rect.top + buffer) < height) {
+        return;
       }
       else {
         element = null;
       }
+    });
 
+    if (shown != null && shown != element) {
+      shown.classList.remove("hovered");
     }
 
-    if( shown != null && shown != element ) {
-      shown.classList.remove( "hovered" );
-    }
-
-    if( element != null ) {
+    if (element != null) {
       shown = element;
-      shown.classList.add( "hovered" );
+      shown.classList.add("hovered");
     }
-
   }
 
   function initEvents() {
-
     var nothing_to_see_here_move_along = new Konami('secret.html');
 
-    var email_link = window.document.getElementById( "email_me" ),
-        show_email_link = window.document.getElementById( "show_email" ),
-        hide_email_link = window.document.getElementById( "hide_email" ),
-        show_email,
-        hide_email;
+    var sendEmail = window.document.getElementById("email_slide"),
+        showEmail = window.document.getElementById("show_email"),
+        hideEmail = window.document.getElementById("hide_email"),
+        showFunction,
+        hideFunction;
 
 
-    show_email = showEmail.bind( show_email_link, true );
-    hide_email = showEmail.bind( hide_email_link, false );
+    showFunction = showEmailButton.bind(showEmail, true);
+    hideFunction = showEmailButton.bind(hideEmail, false);
 
-    if( email_link != null ) {
-      email_link.addEventListener( "click", youveGotMail );
+    if (sendEmail != null) {
+      sendEmail.addEventListener("click", youveGotMail);
     }
 
-    if( show_email_link != null ) {
-      show_email_link.addEventListener( "click", show_email );
+    if (showEmail != null) {
+      showEmail.addEventListener("click", showFunction);
     }
 
-    if( hide_email_link != null ) {
-      hide_email_link.addEventListener( "click", hide_email );
+    if (hideEmail != null) {
+      hideEmail.addEventListener("click", hideFunction);
     }
-
   }
 
-  function touchInit () {
-
-    if( !eventAttached ) {
-
+  function touchInit() {
+    if (!eventAttached) {
       checkVisible();
-
-      console.log( "attaching event listener" );
-      window.addEventListener( "scroll", checkVisible );
+      window.addEventListener("scroll", checkVisible);
       eventAttached = true;
-
     }
-
   }
 
-  function showEmail ( show, e ) {
+  function showEmailButton(show, e) {
+    e.stopPropagation();
 
-    var slider = window.document.getElementById( "email_slide" );
+    var slider = window.document.getElementById("email_slide");
 
-    console.log( 'args' );
-    console.log( arguments );
-    console.log( "shown :" + show );
-
-    if( show ) {
-      slider.classList.add( "shown" );
+    if (show) {
+      slider.classList.add("shown");
     }
     else {
-      slider.classList.remove( "shown" );
+      slider.classList.remove("shown");
     }
-
   }
 
-  function youveGotMail () {
-
+  function youveGotMail() {
     var coded = "YnhExxdL@qYyEv.nUY",
-        key = "HAtLcDvPMUwhKdi0rjp7BInZmJGg5fVWEa2QN3T8xuY96q4bSFlyzoXkRse1CO",
-        shift=coded.length,
-        link="";
+      key = "HAtLcDvPMUwhKdi0rjp7BInZmJGg5fVWEa2QN3T8xuY96q4bSFlyzoXkRse1CO",
+      shift = coded.length,
+      link = "";
 
-    for (i=0; i<coded.length; i++) {
-      if (key.indexOf(coded.charAt(i))==-1) {
-        ltr = coded.charAt(i)
-        link += (ltr)
+    var ltr;
+
+    for (var i = 0; i < coded.length; i++) {
+      if (key.indexOf(coded.charAt(i)) == -1) {
+        ltr = coded.charAt(i);
+        link += (ltr);
       }
       else {
-        ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
-        link += (key.charAt(ltr))
+        ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length;
+        link += (key.charAt(ltr));
       }
     }
 
-    window.location.href = "mailto:"+link;
-
+    var mailTo = "mailto:" + link;
+    window.location.href = mailTo;
+    console.log(mailTo);
+    return false;
   }
 
   window.onload = initEvents;
-  window.document.addEventListener( "touchstart", touchInit );
+  window.document.addEventListener("touchstart", touchInit);
 
-} () );
+}());
 

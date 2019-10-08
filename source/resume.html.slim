@@ -11,31 +11,31 @@
         span
           | Developer
         br
-        | Web, Tech, and Games
+        | Web, VR, and Games
 
     h1.email.slide.span5.offset2#email_slide
       small.action
-        span#email_me
+        span#email_me.email-me
           | email me! 
         span#hide_email
           | X
 
     h1.email.link.span5.offset2
-      small#show_email
+      small#show_email.show-email
         |mcki
         span
         | gm
 
 - data.experience.jobs.each do | job | 
 
-  section.job_history
+  section.job-history
     header.row-fluid
 
-      div.job_brief.span7
+      div.job-brief.span7
         h4.position 
           .bullet
           b
-            | #{ job.position  } 
+            | #{job.position} 
         h4
           span.location= job.company
           br
@@ -49,7 +49,6 @@
        | #{job.mobile_when} 
        span.hidden
          |  <
-
 
     div.row-fluid
       div.span12
