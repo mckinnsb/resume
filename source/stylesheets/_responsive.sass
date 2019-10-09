@@ -112,6 +112,34 @@ $black: #fff
 
 @media print
 
+  h2,
+  h3,
+  h5,
+  p
+    opacity: 1
+
+  h1
+    *:not(div)
+      &:not(a)
+        opacity: 1
+
+  h4
+    *:not(div)
+      opacity: 1
+
+  .row-fluid
+    .body-width
+      &:first-child
+        margin: auto
+        width: 100%
+
+  .download
+    display: none
+
+  .email
+    &.slide
+      display: none
+
   .go-back
     .bullet
       display: none

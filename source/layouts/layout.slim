@@ -12,12 +12,6 @@ html
 
     meta name="format-detection" content="telephone=no"
 
-    link[
-      href='//fonts.googleapis.com/css?family=Lato:300,400'
-      rel='stylesheet'
-       type='text/css'
-    ]
-
     = stylesheet_link_tag :bootstrap, :"bootstrap-responsive", :resume
     = javascript_include_tag :modernizr, :konami
     = yield_content :head
@@ -40,6 +34,15 @@ html
                     .bullet.big
                       .triangle
                         | &nbsp;
+
+                  - if current_page.path == 'resume.html'
+                    = link_to 'resume.pdf',
+                      title: 'Download PDF' do
+
+                      h1
+                        small.download
+                          | [download pdf]
+
                 - else
                   span.no-link
                     | Stew McKinney
