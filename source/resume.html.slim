@@ -1,9 +1,9 @@
-- content_for( :head ) do 
+- content_for(:head) do
   title
     | Stew Mckinney :: Developer :: Consulting :: Resume
   = javascript_include_tag :index
 
-- content_for( :header ) do
+- content_for(:header) do
 
   .row-fluid.drawer
     h1.title.span5
@@ -16,7 +16,7 @@
     h1.email.slide.span5.offset2#email_slide
       small.action
         span#email_me.email-me
-          | email me! 
+          | email me!
         span#hide_email
           | X
 
@@ -26,34 +26,32 @@
         span
         | gm
 
-- data.experience.jobs.each do | job | 
+- data.experience.jobs.each do |job|
 
   section.job-history
     header.row-fluid
 
-      div.job-brief.span7
-        h4.position 
+      .job-brief.span7
+        h4.position
           .bullet
           b
-            | #{job.position} 
+            | #{job.position}
         h4
-          span.location= job.company
+          span.location = job.company
           br
-          span.location= job.location 
+          span.location = job.location
 
       h5.when.full.span5
-       | #{job.when} 
+       | #{job.when}
        span.hidden
          |  <
       h5.when.mobile.span5
-       | #{job.mobile_when} 
+       | #{job.mobile_when}
        span.hidden
          |  <
 
-    div.row-fluid
-      div.span12
+    .row-fluid
+      .span12
         ul.accomplishments
-          - job.accomplishments.each do | accomplishment | 
-            li class="point"= accomplishment 
-
-
+          - job.accomplishments.each do |accomplishment|
+            li class="point" = accomplishment

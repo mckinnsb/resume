@@ -1,9 +1,10 @@
-- content_for( :head ) do 
+- content_for(:head) do
+
   title
     | Stew Mckinney :: Game Dev Log
   = javascript_include_tag :index
 
-- content_for( :header ) do
+- content_for(:header) do
 
   .row-fluid
     h1.title.span5
@@ -12,36 +13,35 @@
           | Game Project
         br
         span
-          | Working Title: 
-        i #{data.game.send(game).title}
-
+          | Working Title:
+        i #{ data.game.send(game).title}
 
   .row-fluid
-    h4.description.span7.offset5 
+    h4.description.span7.offset5
       | #{data.game.send(game).tagline}
 
-- data.game.send(game).posts.each do | post | 
+- data.game.send(game).posts.each do |post|
 
   section.job_history
     header.row-fluid
 
-      div.job-brief.span7
-        h4.position 
+      .job-brief.span7
+        h4.position
           .bullet
           b
-            | #{ post.title  } 
+            | #{ post.title  }
 
       - if post.gfycat
-        div.row-fluid.preview
+        .row-fluid.preview
           div style='position:relative; padding-bottom:calc(70.80% + 44px)'
             iframe[src="https://gfycat.com/ifr/#{post.gfycat}?autoplay=0"
-                  frameborder='0' 
-                  scrolling='no' 
-                  width='100%' 
-                  height='100%' 
-                  style='position:absolute;top:0;left:0;' 
+                  frameborder='0'
+                  scrolling='no'
+                  width='100%'
+                  height='100%'
+                  style='position:absolute;top:0;left:0;'
                   allowfullscreen]
 
-      div.row-fluid.span10
-        - post.description.each do | description |
-          p= description
+      .row-fluid.span10
+        - post.description.each do |description|
+          p = description

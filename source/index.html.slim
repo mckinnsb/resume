@@ -1,12 +1,12 @@
-- content_for( :head ) do 
+- content_for(:head) do
   title
     | Stew Mckinney :: Main
   = javascript_include_tag :index
 
-- content_for( :header ) do
+- content_for(:header) do
 
     .row-fluid
-      h1.title.span5
+      h1.title.span7
         small
           span
             | Welcome!
@@ -18,51 +18,51 @@
 
 section.job_history
   header.row-fluid
-    div.job-brief.span7
-      = link_to "resume.html" do
-        h4.position 
+    .job-brief.span7
+      = link_to 'resume.html' do
+        h4.position
           .bullet
           b
             | Resume
 
 section.job_history
   header.row-fluid
-    div.job-brief.span7
-      = link_to "http://www.github.com/mckinnsb/" do
-        h4.position 
+    .job-brief.span7
+      = link_to 'http://www.github.com/mckinnsb/' do
+        h4.position
           .bullet
-          b 
-            | Github 
+          b
+            | Github
 
 section.job_history
   header.row-fluid
-    div.job-brief.span7
-      = link_to "tnd.html" do
-        h4.position 
+    .job-brief.span7
+      = link_to 'tnd.html' do
+        h4.position
           .bullet
-          b 
-            i 
-              | TND 
+          b
+            i
+              | TND
             | Dev Log
 
 section.job_history
   header.row-fluid
-    div.job-brief.span7
-      = link_to "animalwars.html" do
-        h4.position 
+    .job-brief.span7
+      = link_to 'animalwars.html' do
+        h4.position
           .bullet
-          b 
-            i 
-              | Animal Wars 
+          b
+            i
+              | Animal Wars
             | Dev Log
 
 section.job_history
   header.row-fluid
-    div.job-brief.span7
-      = link_to "http://mckinnsb.github.io/gogosnek/" do
-        h4.position 
+    .job-brief.span7
+      = link_to 'http://mckinnsb.github.io/gogosnek/' do
+        h4.position
           .bullet
-          b 
+          b
             | Go Go Snek!
 
       | ( a simple game written in a day in go )
