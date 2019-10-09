@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'slim'
 
 ###
@@ -18,8 +20,12 @@ activate :relative_assets
 # page '/path/to/file.html', layout: :otherlayout
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-["animalwars", "tnd"].each do |name|
-  proxy "#{name}.html", "devlog.html", :locals => { :game => name }, :ignore => true
+%w[animalwars tnd].each do |name|
+  proxy "#{name}.html", 'devlog.html', locals: { game: name }, ignore: true
+end
+
+class PDFBuild < Middleman::Extension
+  def initialize(app, options = {}, &block); end
 end
 
 ###
@@ -42,7 +48,6 @@ end
 configure :build do
   # Minify CSS on build
   # activate :minify_css
- 
 
   # Minify Javascript on build
   # activate :minify_javascript

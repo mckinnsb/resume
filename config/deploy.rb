@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
 set :application, 'stew'
-set :domain, "96.126.106.220"
+set :domain, '96.126.106.220'
 set :repo_url, 'git@github.com:mckinnsb/resume.git'
 set :scm, :git
-set :user, "root"
-set :ssh_options, { :forward_agent => true }
+set :user, 'root'
+set :ssh_options, forward_agent: true
 
-#set :runner, "nginx"
+# set :runner, "nginx"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

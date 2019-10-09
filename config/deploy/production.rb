@@ -1,25 +1,21 @@
+# frozen_string_literal: true
+
 set :deploy_to, '/var/www/stew'
-set :branch,  :master
+set :branch, :master
 
 namespace :deploy do
-
   task :move_build do
-
-    on roles :all do | host |
-
-      #for "hiding"
-      #execute "cd #{release_path} && mv old_build/ public/resume/"
-      #execute "cd #{release_path} && mv build/ public/_resume_preview/"
+    on roles :all do |_host|
+      # for "hiding"
+      # execute "cd #{release_path} && mv old_build/ public/resume/"
+      # execute "cd #{release_path} && mv build/ public/_resume_preview/"
 
       execute "cd #{release_path} && mv build/ public/"
-
     end
-
   end
-
 end
 
-after "deploy:updated", "deploy:move_build"
+after 'deploy:updated', 'deploy:move_build'
 
 # server-based syntax
 # ======================
@@ -53,8 +49,6 @@ role :db, "#{user}@#{domain}"
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-
-
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
@@ -81,5 +75,3 @@ role :db, "#{user}@#{domain}"
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-
-
