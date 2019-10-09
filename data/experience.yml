@@ -7,10 +7,10 @@
     mobile_when: 6/13-Now
     accomplishments:
        - Worked with the founder of <i>Olleyes</i> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA class 1 medical device trials.
-       - Transitioned the device, its webserver and its database into a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
+       - Transitioned the device from an all-in-one prototype to a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
        - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture on the <b>Pico 4k</b> (Android).
        - Audited a <b>Django</b> application and re-wrote it to support multiple users, accounts, offices, devices, managers, employees, and patients.
-       - Leveraged UniRx (RxNET for Unity) and Unidux to create a state-driven architecture that separated the data and network layer from the UI layer.
+       - Leveraged <b>UniRx</b> (RxNET for Unity) and <b>Unidux</b> (Redux for Unity) to create a state-driven architecture that separated the data and network layer from the UI layer.
        - Ported an <b>Electron</b> application to a web-native <b>Angular</b> application, which included the addition of new API endpoints.
        - Customized and refined the <b>Angular</b> application for mobile phone and tablet usage in client settings.
        - Extended the <b>Angular</b> application to include real-time test monitoring with secure <b>Websockets</b> and <b>Django Channels</b>.
@@ -56,7 +56,7 @@
   -
     company: SBM Consulting (Contract w/ FarmersWeb)
     location: New York, NY
-    position: Founder, Director of Engineering
+    position: Director of Engineering
     when: April 2013 - January 2017
     mobile_when: 6/13-Now
     accomplishments:
