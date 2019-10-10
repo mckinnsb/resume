@@ -3,6 +3,8 @@ var RESUME = {};
 (function () {
   'use strict';
 
+  var secret = "c2VjcmV0Lmh0bWw=";
+
   RESUME.mailMe = youveGotMail;
 
   var eventAttached = false,
@@ -39,7 +41,8 @@ var RESUME = {};
   }
 
   function initEvents() {
-    var nothing_to_see_here_move_along = new Konami('secret.html');
+    console.log("Your greatest challenge lies ahead... and downwards.");
+    new Konami(atob(secret));
 
     var sendEmail = window.document.getElementById("email_slide"),
         showEmail = window.document.getElementById("show_email"),
