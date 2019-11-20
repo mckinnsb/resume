@@ -1,8 +1,8 @@
 @import 'compass/css3/transition'
 
-$primary: .87
-$secondary: .54
 $black: #000
+$grey: rgb(34, 34, 34)
+$light-grey: rgb(118, 118, 118)
 $white: #fff
 $red: #e53935
 $green: #1fca3e
@@ -31,7 +31,7 @@ h2,
 h3,
 h5,
 p
-  opacity: $primary
+  color: $grey
 
 p
   margin-top: 1em
@@ -40,10 +40,6 @@ h1
   .name
     opacity: 1
 
-  *:not(div)
-    &:not(a)
-      opacity: $primary
-
   .download
     &:hover
       &::before
@@ -51,9 +47,6 @@ h1
 
 h4
   font-size: 18px
-
-  *:not(div)
-    opacity: $primary
 
 h1,
 h2
@@ -81,9 +74,9 @@ h2
 
   &.email
     clear: none
+    color: $grey
     cursor: pointer
     float: right
-    opacity: $primary
     text-align: right
     user-select: none
     will-change: transform
@@ -263,8 +256,8 @@ header
       @include transition(all $speed)
 
 .when
+  color: $light-grey
   float: right
-  opacity: $secondary
   text-align: right
 
   .hidden
@@ -274,12 +267,12 @@ header
     display: none
 
   .cssanimations &
-    @include transition(opacity $speed)
+    @include transition(color $speed)
 
 .description
   clear: both
+  color: $light-grey
   float: right
-  opacity: $secondary
   text-align: right
 
 .accomplishments
@@ -292,13 +285,13 @@ header
   margin-top: 3em
 
 section,
-header.main
+.banner
   margin: $section-gap
 
   &:hover,
   &.hovered
     .when
-      opacity: $primary
+      color: $grey
 
       .hidden
         display: inline
@@ -327,8 +320,8 @@ header.main
 
 ul
   li
+    color: $grey
     margin-top: .5em
-    opacity: $primary
 
     b
       color: $red
