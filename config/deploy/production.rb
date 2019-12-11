@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-set :deploy_to, '/var/www/stew'
+set :deploy_to, '/var/www/html'
 set :branch, :master
 
 namespace :deploy do
@@ -10,7 +10,7 @@ namespace :deploy do
       # execute "cd #{release_path} && mv old_build/ public/resume/"
       # execute "cd #{release_path} && mv build/ public/_resume_preview/"
 
-      execute "cd #{release_path} && mv build/ public/"
+      execute "cd #{release_path} && mv build/* #{deploy_to}/"
     end
   end
 end
