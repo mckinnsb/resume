@@ -22,7 +22,13 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:react/recommended"
+    ]
+  },
+  "jshintConfig": {
+    "esversion": 6
   },
   "browserslist": {
     "production": [
