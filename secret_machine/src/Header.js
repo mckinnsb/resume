@@ -1,31 +1,32 @@
 // @flow
-import type {Dimensions, Rectangle} from './types.js';
+import type {ObjectPosition, Rectangle} from './types.js';
 
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {Container, Text} from '@inlet/react-pixi';
 import {TextStyle} from 'pixi.js';
 
-import PropTypes from 'prop-types';
 
 const HeaderStyle = new TextStyle({
   fill: '#ffffff',
 });
 
-function getLeftDimensions(size: Rectangle): Rectangle {
+function getLeftDimensions(size: Rectangle): ObjectPosition {
   return {
     x: 0,
     y: 0,
-    width: 0,
-    height: 0,
+    anchor: [0, 0]
   };
 }
 
-function getRightDimensions(size: Rectangle): Rectangle {
+function getRightDimensions(size: Rectangle): ObjectPosition {
+  let { width } = size;
+
   return {
-    x: 0,
+    x: width,
     y: 0,
-    width: 0,
-    height: 0,
+    anchor: [1, 0]
   };
 }
 

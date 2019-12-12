@@ -1,19 +1,46 @@
 // @flow
-import type { Dimensions, Rectangle } from "./types.js";
+import type {
+  Dimensions,
+  ObjectPosition,
+  Rectangle
+} from "./types.js";
 
 import React from 'react';
-import {Text} from '@inlet/react-pixi';
 import PropTypes from 'prop-types';
+
+import {Container, Text} from '@inlet/react-pixi';
+import {TextStyle} from 'pixi.js';
+
 
 // main display, not main class
 type MainProps = Rectangle & {
   main: string,
 }
 
-function Main(props: MainProps) {
-  const {main, ...size} = props;
+const MainStyle = new TextStyle({
+  fill: '#ffffff',
+});
 
-  return <Text {...size} text={main} />;
+function getTextDimensions(size: Rectangle): ObjectPosition {
+  let { height } = size;
+
+  return {
+    x: 0,
+    y: height,
+    anchor: [0, 1]
+  }
+}
+
+function Main(props: MainProps) {
+  const {main, x, y, height, width} = props;
+  const size = {x, y, height, width};
+  const pos = getTextDimensions(size);
+
+  return (
+    <Container {...size}>
+      <Text {...pos} style={MainStyle} text={main} />
+    </Container>
+  );
 }
 
 Main.propTypes = {

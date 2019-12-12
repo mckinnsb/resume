@@ -13,3 +13,8 @@ export type Position = {
 }
 
 export type Rectangle = Dimensions & Position;
+
+export type ObjectPosition = Position & {
+  anchor: number | [number, number]
+}
+
