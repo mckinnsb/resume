@@ -4,9 +4,10 @@ import type {ObjectPosition, Rectangle} from './types.js';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {connect} from 'react-redux';
+
 import {Container, Text} from '@inlet/react-pixi';
 import {TextStyle} from 'pixi.js';
-
 
 const HeaderStyle = new TextStyle({
   fill: '#ffffff',
@@ -16,28 +17,32 @@ function getLeftDimensions(size: Rectangle): ObjectPosition {
   return {
     x: 0,
     y: 0,
-    anchor: [0, 0]
+    anchor: [0, 0],
   };
 }
 
 function getRightDimensions(size: Rectangle): ObjectPosition {
-  let { width } = size;
+  let {width} = size;
 
   return {
     x: width,
     y: 0,
-    anchor: [1, 0]
+    anchor: [1, 0],
   };
 }
 
-type HeaderProps = {
-  ...Rectangle,
-  left: string,
-  right: string,
+type DisplayProps = {
+  left?: string,
+  right?: string,
 };
 
+type HeaderProps = Rectangle & DisplayProps;
+
+
 function Header(props: HeaderProps) {
-  const {left, right, ...size} = props;
+  const {left, right, x, y, height, width} = props;
+
+  let size = {x, y, height, width};
 
   const leftDim = getLeftDimensions(size);
   const rightDim = getRightDimensions(size);
@@ -60,4 +65,9 @@ Header.propTypes = {
   y: PropTypes.number,
 };
 
-export default Header;
+function mapStateToProps({display}): DisplayProps {
+  let {left, right} = display;
+  return {left, right};
+}
+
+export default connect(mapStateToProps)(Header);

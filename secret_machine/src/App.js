@@ -5,8 +5,15 @@ import React, {useState} from 'react';
 import './App.css';
 import {Stage} from '@inlet/react-pixi';
 
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {rootReducer} from './reducer.js'
+
 import Header from './Header.js';
 import Main from './Main.js';
+
+const store = createStore(rootReducer);
+
 
 
 function getDimensions(): Dimensions {
@@ -64,8 +71,10 @@ function App() {
 
   return (
     <Stage {...size}>
-      <Header left="left" right="right" {...header} ></Header>
-      <Main main="main" {...main} ></Main>
+      <Provider store={store}>
+        <Header {...header} ></Header>
+        <Main {...main} ></Main>
+      </Provider>
     </Stage>
   );
 }
