@@ -3,7 +3,8 @@ import type {Dimensions, Rectangle} from './types.js';
 
 import React, {useState} from 'react';
 import './App.css';
-import {Stage} from '@inlet/react-pixi';
+import {Container, Stage, withFilters} from '@inlet/react-pixi';
+import {CRTFilter} from 'pixi-filters';
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -60,6 +61,8 @@ function getMainDimensions(size): Rectangle {
   };
 }
 
+const CRTFilterContainer = withFilters(Container, [CRTFilter]);
+
 function App() {
   const size = useDimensions();
   let {x, y, width, height} = getHeaderDimensions(size);
@@ -71,9 +74,11 @@ function App() {
   return (
     <Stage {...size}>
       <Provider store={store}>
-        <Header {...header}></Header>
-        <Main {...main}></Main>
-        <ZMachineConnector/>
+        <CRTFilterContainer vignettingAlpha={0.5} noise={0.5}>
+          <Header {...header}></Header>
+          <Main {...main}></Main>
+          <ZMachineConnector/>
+        </CRTFilterContainer>
       </Provider>
     </Stage>
   );

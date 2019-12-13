@@ -7,11 +7,8 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import {Container, Text} from '@inlet/react-pixi';
-import {TextStyle} from 'pixi.js';
 
-const HeaderStyle = new TextStyle({
-  fill: '#ffffff',
-});
+import {BrightGreenText} from './styles.js';
 
 function getLeftDimensions(size: Rectangle): ObjectPosition {
   return {
@@ -48,8 +45,8 @@ function Header(props: HeaderProps) {
 
   return (
     <Container {...size}>
-      <Text {...leftDim} text={left} style={HeaderStyle} />
-      <Text {...rightDim} text={right} style={HeaderStyle} />
+      <Text {...leftDim} text={left} style={BrightGreenText} />
+      <Text {...rightDim} text={right} style={BrightGreenText} />
     </Container>
   );
 }

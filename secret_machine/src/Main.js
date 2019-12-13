@@ -6,16 +6,13 @@ import PropTypes from 'prop-types';
 
 import {connect} from 'react-redux';
 import {Container, Text} from '@inlet/react-pixi';
-import {TextStyle} from 'pixi.js';
+
+import {BrightGreenText} from './styles.js';
 
 // main display, not main class
 type MainProps = Rectangle & {
   main?: string,
 };
-
-const MainStyle = new TextStyle({
-  fill: '#ffffff',
-});
 
 function getTextDimensions(size: Rectangle): ObjectPosition {
   let {height} = size;
@@ -38,7 +35,7 @@ export function Main(props: MainProps) {
 
   return (
     <Container {...size}>
-      <Text {...pos} style={MainStyle} text={main} />
+      <Text {...pos} style={BrightGreenText} text={main} />
     </Container>
   );
 }
