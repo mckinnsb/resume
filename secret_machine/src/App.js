@@ -1,5 +1,5 @@
 // @flow
-import type { Dimensions, Rectangle } from "./types.js";
+import type {Dimensions, Rectangle} from './types.js';
 
 import React, {useState} from 'react';
 import './App.css';
@@ -7,14 +7,13 @@ import {Stage} from '@inlet/react-pixi';
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import {rootReducer} from './reducer.js'
+import {rootReducer} from './reducer.js';
 
 import Header from './Header.js';
 import Main from './Main.js';
+import ZMachineConnector from './ZMachineConnector.js';
 
 const store = createStore(rootReducer);
-
-
 
 function getDimensions(): Dimensions {
   return {
@@ -29,7 +28,7 @@ function useDimensions() {
   return dimensions;
 }
 
-function getHeaderDimensions(size) : Rectangle {
+function getHeaderDimensions(size): Rectangle {
   const {width, height} = size;
 
   const getHeight = height => {
@@ -44,7 +43,7 @@ function getHeaderDimensions(size) : Rectangle {
   };
 }
 
-function getMainDimensions(size) : Rectangle {
+function getMainDimensions(size): Rectangle {
   const {width, height} = size;
 
   const getHeight = (height, headerHeight) => {
@@ -63,17 +62,18 @@ function getMainDimensions(size) : Rectangle {
 
 function App() {
   const size = useDimensions();
-  let { x, y, width, height } = getHeaderDimensions(size);
-  const header = { x, y, width, height };
+  let {x, y, width, height} = getHeaderDimensions(size);
+  const header = {x, y, width, height};
 
-  ({ x, y, width, height } = getMainDimensions(size));
-  const main = { x, y, width, height };
+  ({x, y, width, height} = getMainDimensions(size));
+  const main = {x, y, width, height};
 
   return (
     <Stage {...size}>
       <Provider store={store}>
-        <Header {...header} ></Header>
-        <Main {...main} ></Main>
+        <Header {...header}></Header>
+        <Main {...main}></Main>
+        <ZMachineConnector/>
       </Provider>
     </Stage>
   );

@@ -1,8 +1,5 @@
 // @flow
-import type {
-  ObjectPosition,
-  Rectangle
-} from "./types.js";
+import type {ObjectPosition, Rectangle} from './types.js';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -14,26 +11,25 @@ import {TextStyle} from 'pixi.js';
 // main display, not main class
 type MainProps = Rectangle & {
   main?: string,
-}
+};
 
 const MainStyle = new TextStyle({
   fill: '#ffffff',
 });
 
 function getTextDimensions(size: Rectangle): ObjectPosition {
-  let { height } = size;
+  let {height} = size;
 
   return {
     x: 0,
     y: height,
-    anchor: [0, 1]
-  }
+    anchor: [0, 1],
+  };
 }
 
 type DisplayProps = {
-  main?: string
-}
-
+  main?: string,
+};
 
 export function Main(props: MainProps) {
   const {main, x, y, height, width} = props;
@@ -61,4 +57,3 @@ function mapStateToProps({display}): DisplayProps {
 }
 
 export default connect(mapStateToProps)(Main);
-

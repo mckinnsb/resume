@@ -38,7 +38,6 @@ type DisplayProps = {
 
 type HeaderProps = Rectangle & DisplayProps;
 
-
 function Header(props: HeaderProps) {
   const {left, right, x, y, height, width} = props;
 
