@@ -1,7 +1,7 @@
 // @flow
 import type {Dimensions, Rectangle} from './types.js';
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Container, Stage, withFilters} from '@inlet/react-pixi';
 import {CRTFilter} from 'pixi-filters';
@@ -13,6 +13,7 @@ import {rootReducer} from './reducer.js';
 import Header from './Header.js';
 import Main from './Main.js';
 import ZMachineConnector from './ZMachineConnector.js';
+import KeyboardInput from './KeyboardInput.js';
 
 const store = createStore(rootReducer);
 
@@ -71,13 +72,36 @@ function App() {
   ({x, y, width, height} = getMainDimensions(size));
   const main = {x, y, width, height};
 
+  let [time, setTime] = useState(0);
+
+  useEffect(() => {
+    let cb: number;
+
+    let draw = dt => {
+      setTime(dt);
+      cb = window.requestAnimationFrame(draw);
+    };
+
+    cb = window.requestAnimationFrame(draw);
+
+    return () => {
+      window.cancelAnimationFrame(cb);
+    };
+  });
+
   return (
     <Stage {...size}>
       <Provider store={store}>
-        <CRTFilterContainer vignettingAlpha={0.5} noise={0.5}>
+        <CRTFilterContainer
+          vignettingAlpha={0.5}
+          noise={0.3}
+          seed={0.5}
+          time={time}
+          animating={true}>
           <Header {...header}></Header>
           <Main {...main}></Main>
-          <ZMachineConnector/>
+          <ZMachineConnector />
+          <KeyboardInput />
         </CRTFilterContainer>
       </Provider>
     </Stage>

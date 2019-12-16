@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+// @flow
+
+import {useState} from 'react';
 import {Observable} from 'rxjs';
 import {connect} from 'react-redux';
 
@@ -14,10 +15,19 @@ import RustyZ from './RustyZ.js';
 
 // trying to deliberately do this without redux-observables
 
-export function ZMachineConnector(props) {
+type ConnectorProps = {
+  setLeftDisplay: (string) => void,
+  setRightDisplay: (string) => void,
+  addToMainDisplay: (string) => void,
+  focusInput: () => void,
+}
+
+export function ZMachineConnector(props: ConnectorProps) {
   const [initialized, setInitialized] = useState(false);
   let {setLeftDisplay, setRightDisplay, addToMainDisplay, focusInput} = props;
 
+  // i'm pretty sure this is very similar to use effect, but i want to be sure
+  // that it's fired only once
   if (!initialized) {
     const observer = new Observable(subscriber => {
       RustyZ.subscribe(output => {
@@ -35,21 +45,17 @@ export function ZMachineConnector(props) {
           break;
         case 'input': focusInput();
           break;
+        default: break;
       }
     });
+
+    setInitialized(true);
   }
 
   return null;
 }
 
-ZMachineConnector.propTypes = {
-  /**
-  setLeftDisplay: PropTypes.function,
-  setRightDisplay: PropTypes.function,
-  addToMainDisplay: PropTypes.function,
-  focusInput: PropTypes.function,
-  **/
-};
+ZMachineConnector.propTypes = {};
 
 const mapDispatchToProps = {
   setLeftDisplay,

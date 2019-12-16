@@ -1,14 +1,15 @@
 // @flow
 
 import {
-  displayReducer,
   addToMainDisplay,
+  deleteLastCharacter,
+  displayReducer,
   focusInput,
   setLeftDisplay,
   setRightDisplay,
 } from './reducer.js';
 
-import type { DisplayState } from './reducer.js';
+import type {DisplayState} from './reducer.js';
 
 test('adds to main content on ADD_TO_MAIN_DISPLAY', () => {
   let state: DisplayState = {
@@ -16,6 +17,7 @@ test('adds to main content on ADD_TO_MAIN_DISPLAY', () => {
     left: '',
     right: '',
     inputting: false,
+    inputting_at: 0,
   };
 
   let {main: _, ...untouched} = state;
@@ -33,6 +35,7 @@ test('sets left content on SET_LEFT_DISPLAY', () => {
     left: 'at home',
     right: '',
     inputting: false,
+    inputting_at: 0,
   };
 
   let {left: _, ...untouched} = state;
@@ -49,6 +52,7 @@ test('sets right content on SET_RIGHT_DISPLAY', () => {
     left: 'jolly',
     right: 'olly',
     inputting: false,
+    inputting_at: 0,
   };
 
   let {right: _, ...untouched} = state;
@@ -59,12 +63,13 @@ test('sets right content on SET_RIGHT_DISPLAY', () => {
   expect(remaining).toEqual(untouched);
 });
 
-test('sets inputting to true on FOCUS_INPUT', () => {
+test('sets inputting to true and inputting_at to main len on FOCUS_INPUT', () => {
   let state: DisplayState = {
     main: 'elf',
     left: 'tree',
     right: 'bear',
     inputting: false,
+    inputting_at: 0,
   };
 
   let {inputting: _, ...untouched} = state;
@@ -72,5 +77,64 @@ test('sets inputting to true on FOCUS_INPUT', () => {
   let {inputting, ...remaining} = state;
 
   expect(inputting).toBe(true);
-  expect(remaining).toEqual(untouched);
+  expect(remaining).toEqual({...untouched, inputting_at: 3});
+});
+
+test('sets inputting to true and inputting_at to main len on FOCUS_INPUT', () => {
+  let state: DisplayState = {
+    main: 'elf',
+    left: 'tree',
+    right: 'bear',
+    inputting: false,
+    inputting_at: 0,
+  };
+
+  let {inputting: _, ...untouched} = state;
+  state = displayReducer(state, focusInput());
+  let {inputting, ...remaining} = state;
+
+  expect(inputting).toBe(true);
+  expect(remaining).toEqual({...untouched, inputting_at: 3});
+});
+
+test('just returns state on FOCUS_INPUT if inputting already true', () => {
+  let state: DisplayState = {
+    main: 'elfs are cool',
+    left: 'tree',
+    right: 'bear',
+    inputting: true,
+    inputting_at: 3,
+  };
+
+  let same = displayReducer(state, focusInput());
+
+  expect(state).toBe(same);
+});
+
+test('removes last character on DELETE_LAST_CHARACTER', () => {
+  let state: DisplayState = {
+    main: 'elfss',
+    left: '',
+    right: '',
+    inputting: true,
+    inputting_at: 3,
+  };
+
+  state = displayReducer(state, deleteLastCharacter());
+
+  expect(state.main).toEqual('elfs');
+});
+
+test('does not remove the last character on DELETE_LAST_CHARACTER if at inputting_at', () => {
+  let state: DisplayState = {
+    main: 'elf',
+    left: '',
+    right: '',
+    inputting: true,
+    inputting_at: 3,
+  };
+
+  state = displayReducer(state, deleteLastCharacter());
+
+  expect(state.main).toEqual('elf');
 });

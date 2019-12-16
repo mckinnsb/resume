@@ -28,14 +28,19 @@ type DisplayProps = {
   main?: string,
 };
 
+const MainText = BrightGreenText.clone();
+
 export function Main(props: MainProps) {
   const {main, x, y, height, width} = props;
   const size = {x, y, height, width};
   const pos = getTextDimensions(size);
 
+  MainText.wordWrap = true;
+  MainText.wordWrapWidth = width;
+
   return (
     <Container {...size}>
-      <Text {...pos} style={BrightGreenText} text={main} />
+      <Text {...pos} style={MainText} text={main} />
     </Container>
   );
 }
