@@ -19,13 +19,30 @@ import KeyboardInput from './KeyboardInput.js';
 const store = createStore(rootReducer);
 
 function getHeaderDimensions(size): Rectangle {
-  const {width, height} = size;
+  const {width} = size;
+
+  // 26px is the default text size,
+  //
+  // Unlike web browsers, games and graphics engines have a strict 1-1 relationship
+  // between "text size" and area taken by the font including top padding.
+  //
+  // In other words, game engines don't consider "bottom padding" to be part of the line.
+  //
+  // So web browsers: text size is size from baseline to topline of capital letters,
+  // this is what designers like.
+  //
+  // Games: text size is size from baseline to "top of line", including spacing,
+  // such that if there were another text line above it, it would be the distance
+  // between baselines. This is what developers like.
+
+  let font_size = 26;
+  let top_padding = 4;
 
   return {
     x: 0,
     y: 0,
     width: width,
-    height: height,
+    height: font_size + top_padding,
   };
 }
 
@@ -58,27 +75,8 @@ function getStageOptions() {
 
 function App() {
   const size = useDimensions();
-  let {width} = size;
 
-  // 26px is the default text size,
-  //
-  // Unlike web browsers, games and graphics engines have a strict 1-1 relationship
-  // between "text size" and area taken by the font including top padding.
-  //
-  // In other words, game engines don't consider "bottom padding" to be part of the line.
-  //
-  // So web browsers: text size is size from baseline to topline of capital letters,
-  // this is what designers like.
-  //
-  // Games: text size is size from baseline to "top of line", including spacing,
-  // such that if there were another text line above it, it would be the distance
-  // between baselines. This is what developers like.
-
-  let font_size = 26;
-  let top_padding = 4;
-  let dims = getHeaderDimensions({width, height: font_size + top_padding});
-  ({width} = dims);
-  let {x, y, height} = dims;
+  let {x, y, width, height} = getHeaderDimensions(size);
   const header = {x, y, width, height};
 
   ({x, y, width, height} = getMainDimensions(size));

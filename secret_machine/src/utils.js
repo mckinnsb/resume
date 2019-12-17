@@ -1,4 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
+import { debounce } from 'underscore';
 
 function getDimensions(): Dimensions {
   return {
@@ -8,7 +9,20 @@ function getDimensions(): Dimensions {
 }
 
 export function useDimensions() {
-  const [dimensions] = useState(getDimensions());
+  const [dimensions, setDimensions] = useState(getDimensions());
+
+  /**
+  useEffect(() => {
+    let onResize = () => {
+      setDimensions(getDimensions());
+    };
+
+    onResize = debounce(onResize, 250);
+    window.addEventListener('resize', onResize);
+
+    return () => window.removeEventListener(onResize);
+  }, [])
+  **/
 
   return dimensions;
 }
