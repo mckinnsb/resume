@@ -10,7 +10,7 @@ namespace :deploy do
       # execute "cd #{release_path} && mv old_build/ public/resume/"
       # execute "cd #{release_path} && mv build/ public/_resume_preview/"
 
-      execute "cd #{release_path} && mv build/* #{deploy_to}/"
+      execute "cd #{release_path} && cp -r build/* #{deploy_to}/"
     end
   end
 end
