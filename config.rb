@@ -41,8 +41,31 @@ class PDFBuild < Middleman::Extension
   end
 end
 
+# Simple class to build the react wrapper for RustyZ
+class ReactBuild < Middleman::Extension
+  def initialize(app, options = {}, &block)
+    super
+  end
+
+  def after_build(_)
+    Dir.chdir 'secret_machine' do
+      # move into secret machine, build, and move files out to the
+      # middleman build directory
+      `yarn build`
+      target = '../build'
+      FileUtils.cp Dir.glob('build/*.js'), target
+      FileUtils.cp 'build/index.html', File.join(target, 'secret.html')
+      FileUtils.cp_r 'build/static', target
+    end
+  end
+end
+
 ::Middleman::Extensions.register :pdf_build, PDFBuild
+::Middleman::Extensions.register :react_build, ReactBuild
+
+# these have to be on separate lines
 activate :pdf_build
+activate :react_build
 
 ###
 # Helpers
