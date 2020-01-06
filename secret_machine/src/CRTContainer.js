@@ -1,7 +1,10 @@
+import React from 'react';
 import {Container, withFilters} from '@inlet/react-pixi';
 import {CRTFilter} from 'pixi-filters';
 
-export function getCRTEffects(time: number) {
+import {useFrameTime} from './utils.js';
+
+function getCRTEffects(time: number) {
   return {
     vignettingAlpha: 0.5,
     noise: 0.1,
@@ -14,4 +17,13 @@ export function getCRTEffects(time: number) {
   };
 }
 
-export const CRTFilterContainer = withFilters(Container, [CRTFilter]);
+const CRTFilterContainer = withFilters(Container, [CRTFilter]);
+
+export default function CRTContainer (props) {
+  let time = useFrameTime() / 2.71;
+  let effects = getCRTEffects(time);
+
+  return (
+    <CRTFilterContainer {...effects} {...props} />
+  )
+}

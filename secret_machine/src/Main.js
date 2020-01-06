@@ -5,9 +5,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {connect} from 'react-redux';
-import {Container, Text} from '@inlet/react-pixi';
+import {Container, Graphics, Text} from '@inlet/react-pixi';
 
-import {BrightGreenText} from './styles.js';
+import {ScreenBlack, BrightGreenText} from './styles.js';
 
 // main display, not main class
 type MainProps = Rectangle & {
@@ -28,6 +28,13 @@ type DisplayProps = {
   main?: string,
 };
 
+function drawScreen(g, color, position: Rectangle) {
+  g.beginFill(color, 1);
+  let {x, y, width, height} = position;
+  g.drawRect(x, y, width, height);
+  g.endFill();
+}
+
 const MainText = BrightGreenText.clone();
 
 export function Main(props: MainProps) {
@@ -40,6 +47,9 @@ export function Main(props: MainProps) {
 
   return (
     <Container {...size}>
+      <Graphics
+        draw={g => drawScreen(g, ScreenBlack, {x, y, height, width})}
+      />
       <Text {...pos} style={MainText} text={main} />
     </Container>
   );

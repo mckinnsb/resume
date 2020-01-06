@@ -8,13 +8,13 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import {rootReducer} from './reducer.js';
 
-import {CRTFilterContainer, getCRTEffects} from './CRTContainer.js';
+import CRTFilterContainer from './CRTContainer.js';
 import Header from './Header.js';
 import Main from './Main.js';
 import ZMachineConnector from './ZMachineConnector.js';
 import KeyboardInput from './KeyboardInput.js';
 
-import {useDimensions, useFrameTime} from './utils.js';
+import {useDimensions} from './utils.js';
 
 // unfortunately, firefox does not support SVGs on canvas
 // unless they have explicit w/h set in the meta-attributes
@@ -75,23 +75,19 @@ function getInnerFrame(size): Rectangle {
     x: 44 * (width / 773.0),
     y: 44 * (height / 543.0),
     width: 450 * (width / 773.0),
-    height: 400 * (height / 543.0),
+    height: 310 * (height / 543.0),
   }
 }
 
 function getMainDimensions(size: Rectangle): Rectangle {
-  const {width, height, x} = size;
+  const {width, height, x, y} = size;
 
-  const getHeight = (height, headerHeight) => {
-    return height - headerHeight;
-  };
-
-  let {height: headerHeight} = getHeaderDimensions(size);
+  let {height: header_height} = getHeaderDimensions(size);
 
   return {
     x: x,
-    y: headerHeight,
-    height: getHeight(height, headerHeight),
+    y: y + header_height / 2,
+    height: height,
     width: width,
   };
 }
@@ -102,14 +98,15 @@ function getStageOptions() {
     // take strings for color values, it only takes
     // literal hex values. Probably the only time
     // I've seen that in Js.
-    backgroundColor: 0x272727,
+    backgroundColor: 0x000000,
   };
 }
 
+
 function App() {
   const size = useDimensions();
-  let {width: frame_width, height: frame_height} = getFrameDimensions(size);
-  let inner_size = getInnerFrame(size);
+  let frame_size = getFrameDimensions(size);
+  let inner_size = getInnerFrame(frame_size);
 
   let {x, y, width, height} = getHeaderDimensions(inner_size);
   const header = {x, y, width, height};
@@ -117,9 +114,6 @@ function App() {
   ({x, y, width, height} = getMainDimensions(inner_size));
   const main = {x, y, width, height};
 
-  let time = useFrameTime() / 2.71;
-
-  let crt_effects = getCRTEffects(time);
   let stage_options = getStageOptions();
 
   // Stage is also kinda strange in that it accepts an object
@@ -131,11 +125,11 @@ function App() {
         <Sprite
           image={frame}
           anchor={(0, 0)}
-          height={frame_height}
-          width={frame_width}
+          height={frame_size.height}
+          width={frame_size.width}
           zIndex={2}
         />
-        <CRTFilterContainer zIndex={1} {...crt_effects}>
+        <CRTFilterContainer zIndex={1}>
           <Header {...header}></Header>
           <Main {...main}></Main>
           <ZMachineConnector />
