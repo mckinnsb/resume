@@ -1,25 +1,38 @@
 // @flow
-import type {Rectangle} from './types.js';
+import type {Dimensions, Rectangle} from './types.js';
 
 import React from 'react';
-import './App.css';
-import {Stage} from '@inlet/react-pixi';
+import {Stage, Sprite} from '@inlet/react-pixi';
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import {rootReducer} from './reducer.js';
-import {useDimensions, useFrameTime} from './utils.js';
 
-import {CRTFilterContainer, getCRTEffects} from './CRTContainer.js'
+import {CRTFilterContainer, getCRTEffects} from './CRTContainer.js';
 import Header from './Header.js';
 import Main from './Main.js';
 import ZMachineConnector from './ZMachineConnector.js';
 import KeyboardInput from './KeyboardInput.js';
 
+import {useDimensions, useFrameTime} from './utils.js';
+
+// unfortunately, firefox does not support SVGs on canvas
+// unless they have explicit w/h set in the meta-attributes
+//
+// additionally it renders exactly like a PNG, anyway.
+
+import frame from './trial.png';
+import './App.css';
+
 const store = createStore(rootReducer);
 
-function getHeaderDimensions(size): Rectangle {
-  const {width} = size;
+function getFrameDimensions(size: Dimensions): Rectangle {
+  let {width, height} = size;
+  return {width, height, x: 0, y: 0};
+}
+
+function getHeaderDimensions(size: Rectangle): Rectangle {
+  const {width, x, y} = size;
 
   // 26px is the default text size,
   //
@@ -39,15 +52,35 @@ function getHeaderDimensions(size): Rectangle {
   let top_padding = 4;
 
   return {
-    x: 0,
-    y: 0,
+    x: x,
+    y: y,
     width: width,
     height: font_size + top_padding,
   };
 }
 
-function getMainDimensions(size): Rectangle {
-  const {width, height} = size;
+// this is highly dependent on the image we are using and there's
+// no real way to autocalculate it; we scale based on expected aspect
+// ratio and image w/h
+//  right now:
+//
+//  width: 773px
+//  height: 543px
+//
+//  this is roughly 10:7 aspect ratio
+function getInnerFrame(size): Rectangle {
+  let {width, height} = size;
+
+  return {
+    x: 44 * (width / 773.0),
+    y: 44 * (height / 543.0),
+    width: 450 * (width / 773.0),
+    height: 400 * (height / 543.0),
+  }
+}
+
+function getMainDimensions(size: Rectangle): Rectangle {
+  const {width, height, x} = size;
 
   const getHeight = (height, headerHeight) => {
     return height - headerHeight;
@@ -56,7 +89,7 @@ function getMainDimensions(size): Rectangle {
   let {height: headerHeight} = getHeaderDimensions(size);
 
   return {
-    x: 0,
+    x: x,
     y: headerHeight,
     height: getHeight(height, headerHeight),
     width: width,
@@ -69,31 +102,40 @@ function getStageOptions() {
     // take strings for color values, it only takes
     // literal hex values. Probably the only time
     // I've seen that in Js.
-    backgroundColor: 0x272727
-  }
+    backgroundColor: 0x272727,
+  };
 }
 
 function App() {
   const size = useDimensions();
+  let {width: frame_width, height: frame_height} = getFrameDimensions(size);
+  let inner_size = getInnerFrame(size);
 
-  let {x, y, width, height} = getHeaderDimensions(size);
+  let {x, y, width, height} = getHeaderDimensions(inner_size);
   const header = {x, y, width, height};
 
-  ({x, y, width, height} = getMainDimensions(size));
+  ({x, y, width, height} = getMainDimensions(inner_size));
   const main = {x, y, width, height};
 
   let time = useFrameTime() / 2.71;
 
-  let crtEffects = getCRTEffects(time);
-  let stageOptions = getStageOptions();
+  let crt_effects = getCRTEffects(time);
+  let stage_options = getStageOptions();
 
   // Stage is also kinda strange in that it accepts an object
   // in "options", but doesn't expose all of those props
   // to the component (but as far as I'm aware, it could)
   return (
-    <Stage {...size} options={stageOptions} >
+    <Stage {...size} options={stage_options}>
       <Provider store={store}>
-        <CRTFilterContainer {...crtEffects}>
+        <Sprite
+          image={frame}
+          anchor={(0, 0)}
+          height={frame_height}
+          width={frame_width}
+          zIndex={2}
+        />
+        <CRTFilterContainer zIndex={1} {...crt_effects}>
           <Header {...header}></Header>
           <Main {...main}></Main>
           <ZMachineConnector />

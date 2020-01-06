@@ -11,19 +11,21 @@ import {Container, Graphics, Text} from '@inlet/react-pixi';
 import {BrightGreen, BrightGreenText} from './styles.js';
 
 function getLeftDimensions(size: Rectangle): ObjectPosition {
+  let { x, y } = size;
+
   return {
-    x: 0,
-    y: 0,
+    x: x,
+    y: y,
     anchor: [0, 0],
   };
 }
 
 function getRightDimensions(size: Rectangle): ObjectPosition {
-  let {width} = size;
+  let {width, x, y} = size;
 
   return {
-    x: width,
-    y: 0,
+    x: x + width,
+    y: y,
     anchor: [1, 0],
   };
 }

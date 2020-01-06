@@ -1,5 +1,6 @@
+// @flow
+import type {Dimensions} from './types.js';
 import {useEffect, useRef, useState} from 'react';
-import { debounce } from 'underscore';
 
 function getDimensions(): Dimensions {
   return {
@@ -8,8 +9,8 @@ function getDimensions(): Dimensions {
   };
 }
 
-export function useDimensions() {
-  const [dimensions, setDimensions] = useState(getDimensions());
+export function useDimensions(): Dimensions {
+  const [dimensions] = useState(getDimensions());
 
   /**
   useEffect(() => {

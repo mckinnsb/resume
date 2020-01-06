@@ -15,11 +15,11 @@ type MainProps = Rectangle & {
 };
 
 function getTextDimensions(size: Rectangle): ObjectPosition {
-  let {height} = size;
+  let {height, x, y} = size;
 
   return {
-    x: 0,
-    y: height,
+    x: x,
+    y: y + height,
     anchor: [0, 1],
   };
 }
