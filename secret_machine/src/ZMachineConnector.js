@@ -1,30 +1,30 @@
 // @flow
 
-import {useState} from 'react';
-import {Observable} from 'rxjs';
-import {connect} from 'react-redux';
+import { useState } from "react";
+import { Observable } from "rxjs";
+import { connect } from "react-redux";
 
 import {
   setLeftDisplay,
   setRightDisplay,
   addToMainDisplay,
-  focusInput,
-} from './reducer.js';
+  focusInput
+} from "./reducer.js";
 
-import RustyZ from './RustyZ.js';
+import RustyZ from "./RustyZ.js";
 
 // trying to deliberately do this without redux-observables
 
 type ConnectorProps = {
-  setLeftDisplay: (string) => void,
-  setRightDisplay: (string) => void,
-  addToMainDisplay: (string) => void,
-  focusInput: () => void,
-}
+  setLeftDisplay: string => void,
+  setRightDisplay: string => void,
+  addToMainDisplay: string => void,
+  focusInput: () => void
+};
 
 export function ZMachineConnector(props: ConnectorProps) {
   const [initialized, setInitialized] = useState(false);
-  let {setLeftDisplay, setRightDisplay, addToMainDisplay, focusInput} = props;
+  let { setLeftDisplay, setRightDisplay, addToMainDisplay, focusInput } = props;
 
   // i'm pretty sure this is very similar to use effect, but i want to be sure
   // that it's fired only once
@@ -37,15 +37,20 @@ export function ZMachineConnector(props: ConnectorProps) {
 
     observer.subscribe(x => {
       switch (x.source) {
-        case 'left': setLeftDisplay(x.content);
+        case "left":
+          setLeftDisplay(x.content);
           break;
-        case 'right': setRightDisplay(x.content);
+        case "right":
+          setRightDisplay(x.content);
           break;
-        case 'main': addToMainDisplay(x.content);
+        case "main":
+          addToMainDisplay(x.content);
           break;
-        case 'input': focusInput();
+        case "input":
+          focusInput();
           break;
-        default: break;
+        default:
+          break;
       }
     });
 
@@ -61,7 +66,7 @@ const mapDispatchToProps = {
   setLeftDisplay,
   setRightDisplay,
   addToMainDisplay,
-  focusInput,
+  focusInput
 };
 
 export default connect(null, mapDispatchToProps)(ZMachineConnector);

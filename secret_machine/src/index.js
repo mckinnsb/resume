@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-const rootEle = document.getElementById('root');
+const rootEle = document.getElementById("root");
 
 ReactDOM.render(<App />, rootEle);
 
@@ -12,4 +12,3 @@ ReactDOM.render(<App />, rootEle);
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-

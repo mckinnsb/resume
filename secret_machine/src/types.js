@@ -4,7 +4,7 @@
 export type Action<T> = {
   type: string,
   payload: T
-}
+};
 
 export type Dimensions = {
   height: number,
@@ -14,11 +14,10 @@ export type Dimensions = {
 export type Position = {
   x: number,
   y: number
-}
+};
 
 export type Rectangle = Dimensions & Position;
 
 export type ObjectPosition = Position & {
   anchor: number | [number, number]
-}
-
+};

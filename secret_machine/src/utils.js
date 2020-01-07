@@ -1,11 +1,11 @@
 // @flow
-import type {Dimensions} from './types.js';
-import {useEffect, useRef, useState} from 'react';
+import type { Dimensions } from "./types.js";
+import { useEffect, useRef, useState } from "react";
 
 function getDimensions(): Dimensions {
   return {
     width: window.innerWidth,
-    height: window.innerHeight,
+    height: window.innerHeight
   };
 }
 

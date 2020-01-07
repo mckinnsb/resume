@@ -1,38 +1,38 @@
 // @flow
-import type {Dimensions, Rectangle} from './types.js';
+import type { Dimensions, Rectangle } from "./types.js";
 
-import React from 'react';
-import {Stage, Sprite} from '@inlet/react-pixi';
+import React from "react";
+import { Stage, Sprite } from "@inlet/react-pixi";
 
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import {rootReducer} from './reducer.js';
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { rootReducer } from "./reducer.js";
 
-import CRTFilterContainer from './CRTContainer.js';
-import Header from './Header.js';
-import Main from './Main.js';
-import ZMachineConnector from './ZMachineConnector.js';
-import KeyboardInput from './KeyboardInput.js';
+import CRTFilterContainer from "./CRTContainer.js";
+import Header from "./Header.js";
+import Main from "./Main.js";
+import ZMachineConnector from "./ZMachineConnector.js";
+import KeyboardInput from "./KeyboardInput.js";
 
-import {useDimensions} from './utils.js';
+import { useDimensions } from "./utils.js";
 
 // unfortunately, firefox does not support SVGs on canvas
 // unless they have explicit w/h set in the meta-attributes
 //
 // additionally it renders exactly like a PNG, anyway.
 
-import frame from './trial.png';
-import './App.css';
+import frame from "./trial.png";
+import "./App.css";
 
 const store = createStore(rootReducer);
 
 function getFrameDimensions(size: Dimensions): Rectangle {
-  let {width, height} = size;
-  return {width, height, x: 0, y: 0};
+  let { width, height } = size;
+  return { width, height, x: 0, y: 0 };
 }
 
 function getHeaderDimensions(size: Rectangle): Rectangle {
-  const {width, x, y} = size;
+  const { width, x, y } = size;
 
   // 26px is the default text size,
   //
@@ -55,7 +55,7 @@ function getHeaderDimensions(size: Rectangle): Rectangle {
     x: x,
     y: y,
     width: width,
-    height: font_size + top_padding,
+    height: font_size + top_padding
   };
 }
 
@@ -69,26 +69,26 @@ function getHeaderDimensions(size: Rectangle): Rectangle {
 //
 //  this is roughly 10:7 aspect ratio
 function getInnerFrame(size): Rectangle {
-  let {width, height} = size;
+  let { width, height } = size;
 
   return {
     x: 44 * (width / 773.0),
     y: 44 * (height / 543.0),
     width: 450 * (width / 773.0),
-    height: 310 * (height / 543.0),
-  }
+    height: 310 * (height / 543.0)
+  };
 }
 
 function getMainDimensions(size: Rectangle): Rectangle {
-  const {width, height, x, y} = size;
+  const { width, height, x, y } = size;
 
-  let {height: header_height} = getHeaderDimensions(size);
+  let { height: header_height } = getHeaderDimensions(size);
 
   return {
     x: x,
     y: y + header_height / 2,
     height: height,
-    width: width,
+    width: width
   };
 }
 
@@ -98,21 +98,20 @@ function getStageOptions() {
     // take strings for color values, it only takes
     // literal hex values. Probably the only time
     // I've seen that in Js.
-    backgroundColor: 0x000000,
+    backgroundColor: 0x000000
   };
 }
-
 
 function App() {
   const size = useDimensions();
   let frame_size = getFrameDimensions(size);
   let inner_size = getInnerFrame(frame_size);
 
-  let {x, y, width, height} = getHeaderDimensions(inner_size);
-  const header = {x, y, width, height};
+  let { x, y, width, height } = getHeaderDimensions(inner_size);
+  const header = { x, y, width, height };
 
-  ({x, y, width, height} = getMainDimensions(inner_size));
-  const main = {x, y, width, height};
+  ({ x, y, width, height } = getMainDimensions(inner_size));
+  const main = { x, y, width, height };
 
   let stage_options = getStageOptions();
 
