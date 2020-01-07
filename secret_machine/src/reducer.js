@@ -9,6 +9,7 @@ export const INPUT_TO_DISPLAY = "DISPLAY.INPUT_TO_DISPLAY";
 export const FOCUS_INPUT = "DISPLAY.FOCUS_INPUT";
 export const SET_LEFT_DISPLAY = "DISPLAY.SET_LEFT_DISPLAY";
 export const SET_RIGHT_DISPLAY = "DISPLAY.SET_RIGHT_DISPLAY";
+export const REFRESH_DISPLAY = "DISPLAY.REFRESH";
 
 export type DisplayState = {
   main: string,
@@ -51,6 +52,13 @@ export function focusInput() {
   return {
     type: FOCUS_INPUT,
     payload: { message: "focus" }
+  };
+}
+
+export function refreshDisplay() {
+  return {
+    type: REFRESH_DISPLAY,
+    payload: { message: "refresh" }
   };
 }
 
@@ -112,6 +120,26 @@ export function displayReducer(
 
       let inputting_at = state.main.length;
       return { ...state, inputting_at, inputting: true };
+
+    case REFRESH_DISPLAY: {
+      let { left, right, main } = state;
+
+      // this is kind of a hack, but basically
+      // pixi js will only make graphics calls when props
+      // change, there's no "refresh" call. if the draw
+      // call happens before the font is loaded,
+      // it will be blank, so refresh_display "refreshes"
+      // the display by adding characters where they wont
+      // be noticed - left of the left header, right of the right
+      // header, and at the beginning of the main input (since the
+      // text input is bottom anchored, the text will not shift)
+
+      left += " ";
+      right = " " + right;
+      main = " " + main;
+
+      return { ...state, left, right, main };
+    }
 
     case SET_LEFT_DISPLAY:
       let { message: left } = action.payload;

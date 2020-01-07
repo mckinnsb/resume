@@ -13,6 +13,7 @@ import Header from "./Header.js";
 import Main from "./Main.js";
 import ZMachineConnector from "./ZMachineConnector.js";
 import KeyboardInput from "./KeyboardInput.js";
+import FontFix from "./FontFix.js";
 
 import { useDimensions } from "./utils.js";
 
@@ -107,6 +108,7 @@ function getStageOptions() {
 
 function App() {
   const size = useDimensions();
+
   let frame_size = getFrameDimensions(size);
   let inner_size = getInnerFrame(frame_size);
 
@@ -136,6 +138,7 @@ function App() {
           <Main {...main}></Main>
           <ZMachineConnector />
           <KeyboardInput />
+          <FontFix css="./App.css" font="Commodore" />
         </CRTFilterContainer>
       </Provider>
     </Stage>
