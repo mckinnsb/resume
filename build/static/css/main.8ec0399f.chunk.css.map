@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACE,eACF,CAEA,KACE,qBAAuB,CACvB,QAAS,CACT,SACF","file":"main.8ec0399f.chunk.css","sourcesContent":["html {\n  overflow: hidden;\n}\n\nbody {\n  background-color: black;\n  margin: 0;\n  padding: 0;\n}\n"]}
