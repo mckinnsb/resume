@@ -2,6 +2,9 @@
 import type { Dimensions } from "./types.js";
 import { useEffect, useRef, useState } from "react";
 
+// import {useApp} from "@inlet/react-pixi";
+import {debounce} from 'underscore';
+
 function getDimensions(): Dimensions {
   return {
     width: window.innerWidth,
@@ -10,22 +13,31 @@ function getDimensions(): Dimensions {
 }
 
 export function useDimensions(): Dimensions {
-  const [dimensions] = useState(getDimensions());
+  const [dimensions, setDimensions] = useState(getDimensions());
+  const [resizing, setResizing] = useState(false);
 
-  /**
   useEffect(() => {
-    let onResize = () => {
-      setDimensions(getDimensions());
+    let debouncedResize = () => {
+      let dimensions = getDimensions();
+      setDimensions(dimensions);
+      setResizing(false);
     };
 
-    onResize = debounce(onResize, 250);
+    debouncedResize = debounce(debouncedResize, 250);
+    window.addEventListener('resize', debouncedResize);
+
+    let onResize = () => {
+      setResizing(true);
+    }
     window.addEventListener('resize', onResize);
 
-    return () => window.removeEventListener(onResize);
+    return () => {
+      window.removeEventListener(onResize);
+      window.removeEventListener(debouncedResize);
+    }
   }, [])
-  **/
 
-  return dimensions;
+  return [dimensions, resizing];
 }
 
 export function useFrameTime() {

@@ -107,7 +107,7 @@ function getStageOptions() {
 }
 
 function App() {
-  const size = useDimensions();
+  const [size, resizing] = useDimensions();
 
   let frame_size = getFrameDimensions(size);
   let inner_size = getInnerFrame(frame_size);
@@ -124,6 +124,7 @@ function App() {
   // in "options", but doesn't expose all of those props
   // to the component (but as far as I'm aware, it could)
   return (
+    resizing ? null :
     <Stage {...size} options={stage_options}>
       <Provider store={store}>
         <Sprite
