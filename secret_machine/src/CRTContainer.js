@@ -6,7 +6,7 @@ import { useFrameTime } from "./utils.js";
 
 function getCRTEffects(time: number) {
   return {
-    vignettingAlpha: 0.5,
+    vignettingAlpha: 0.7,
     noise: 0.1,
     noiseSize: 3.3,
     seed: Math.random(),

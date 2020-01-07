@@ -22,6 +22,7 @@ import { useDimensions } from "./utils.js";
 // additionally it renders exactly like a PNG, anyway.
 
 import frame from "./trial.png";
+import "./fonts/commodore.woff";
 import "./App.css";
 
 const store = createStore(rootReducer);
@@ -64,16 +65,18 @@ function getHeaderDimensions(size: Rectangle): Rectangle {
 // ratio and image w/h
 //  right now:
 //
-//  width: 773px
-//  height: 543px
+//  tv frame width: 773px
+//  tv frame height: 543px
 //
 //  this is roughly 10:7 aspect ratio
 function getInnerFrame(size): Rectangle {
   let { width, height } = size;
 
+  // these values are pulled from the image utility used to create the frame
+  // we scale the offsets based on the ratio and pray its close
   return {
     x: 44 * (width / 773.0),
-    y: 44 * (height / 543.0),
+    y: 43 * (height / 543.0),
     width: 450 * (width / 773.0),
     height: 310 * (height / 543.0)
   };
@@ -115,7 +118,7 @@ function App() {
 
   let stage_options = getStageOptions();
 
-  // Stage is also kinda strange in that it accepts an object
+  // Stage is strange in that it accepts an object
   // in "options", but doesn't expose all of those props
   // to the component (but as far as I'm aware, it could)
   return (

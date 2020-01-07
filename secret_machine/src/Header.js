@@ -30,10 +30,10 @@ function getRightDimensions(size: Rectangle): ObjectPosition {
   };
 }
 
-type DisplayProps = {
+type DisplayProps = {|
   left?: string,
   right?: string
-};
+|};
 
 type HeaderProps = Rectangle & DisplayProps;
 const HeaderText = BrightGreenText.clone();
