@@ -2,7 +2,7 @@ import React from "react";
 import { Container, withFilters } from "@inlet/react-pixi";
 import { CRTFilter } from "pixi-filters";
 
-import { useFrameTime } from "./utils.js";
+import { useFrameTime } from "../common/utils";
 
 function getCRTEffects(time: number) {
   return {

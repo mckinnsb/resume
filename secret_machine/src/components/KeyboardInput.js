@@ -1,11 +1,12 @@
 // @flow
-import type { DisplaySlice } from "./reducer.js";
+import type { DisplaySlice } from "../reducer";
 
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { inputToDisplay, deleteLastCharacter } from "./reducer.js";
+import { inputToDisplay, deleteLastCharacter } from "../reducer";
+import { isDelete, isEnter, isText } from "../common/utils";
 
-import RustyZ from "./RustyZ.js";
+import RustyZ from "../common/RustyZ";
 
 type KeyboardProps = {
   inputToDisplay: string => void,
@@ -16,40 +17,26 @@ type KeyboardProps = {
 
 export function KeyboardInput(props: KeyboardProps) {
   let { inputToDisplay, deleteLastCharacter } = props;
+  let { update } = RustyZ;
 
   let [input, setInput] = useState("");
 
-  let { update } = RustyZ;
-
   useEffect(() => {
     let handleInput = (e: KeyboardEvent) => {
-      if (e.key === "Backspace" || e.key === "Delete") {
+      if (isDelete(e)) {
         deleteLastCharacter();
 
         if (input.length > 0) {
           setInput(input.slice(0, -1));
         }
-
-        return;
-      }
-
-      if (e.key === "Enter") {
+      } else if (isEnter(e)) {
         inputToDisplay("\n");
         update(input);
-        setInput("");
-        return;
-      }
 
-      // sometimes, stack overflow does have a very nice solution
-      // this matches the keycode against word/string characters
-      // and only outputs to string if it is a visible char
-      //
-      // we can't use "key" here because they are all strings,
-      // but we can get the literal string and match the escaped
-      // chars against a regex. that would have taken me a while to think
-      // of
-      if (String.fromCharCode(e.keyCode).match(/(\w|\s)/g)) {
+        setInput("");
+      } else if (isText(e)) {
         inputToDisplay(e.key);
+
         setInput(input + e.key);
         return;
       }

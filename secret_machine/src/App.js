@@ -1,28 +1,22 @@
 // @flow
-import type { Dimensions, Rectangle } from "./types.js";
+import type { Dimensions, Rectangle } from "./common/types";
 
 import React from "react";
 import { Stage, Sprite } from "@inlet/react-pixi";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { rootReducer } from "./reducer.js";
+import { rootReducer } from "./reducer";
 
-import CRTFilterContainer from "./CRTContainer.js";
-import Header from "./Header.js";
-import Main from "./Main.js";
-import ZMachineConnector from "./ZMachineConnector.js";
-import KeyboardInput from "./KeyboardInput.js";
-import FontFix from "./FontFix.js";
-
-import { useDimensions } from "./utils.js";
+import { CRTFilterContainer, Header, Main, ZMachineConnector, KeyboardInput, FontFix } from "./components";
+import { useDimensions } from "./common/utils";
 
 // unfortunately, firefox does not support SVGs on canvas
 // unless they have explicit w/h set in the meta-attributes
 //
 // additionally it renders exactly like a PNG, anyway.
 
-import frame from "./trial.png";
+import frame from "./images/trial.png";
 import "./fonts/commodore.woff";
 import "./App.css";
 
@@ -123,8 +117,7 @@ function App() {
   // Stage is strange in that it accepts an object
   // in "options", but doesn't expose all of those props
   // to the component (but as far as I'm aware, it could)
-  return (
-    resizing ? null :
+  return resizing ? null : (
     <Stage {...size} options={stage_options}>
       <Provider store={store}>
         <Sprite

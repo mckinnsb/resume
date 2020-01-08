@@ -9,9 +9,9 @@ import {
   setRightDisplay,
   addToMainDisplay,
   focusInput
-} from "./reducer.js";
+} from "../reducer";
 
-import RustyZ from "./RustyZ.js";
+import RustyZ from "../common/RustyZ";
 
 // trying to deliberately do this without redux-observables
 

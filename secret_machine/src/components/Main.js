@@ -1,5 +1,5 @@
 // @flow
-import type { ObjectPosition, Rectangle } from "./types.js";
+import type { ObjectPosition, Rectangle } from "../common/types";
 
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Container, Graphics, Text } from "@inlet/react-pixi";
 
-import { ScreenBlack, BrightGreenText } from "./styles.js";
+import { ScreenBlack, BrightGreenText } from "../common/styles";
 
 // main display, not main class
 type MainProps = Rectangle & {

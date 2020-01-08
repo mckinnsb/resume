@@ -2,7 +2,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import { refreshDisplay } from "./reducer.js";
+import { refreshDisplay } from "../reducer";
 
 import { connect } from "react-redux";
 
@@ -14,7 +14,9 @@ type FontFixProps = {
   refreshDisplay: () => void
 };
 
-function FontFix(props: FontFixProps) {
+// So the font doesn't load before the canvas renders unless cached, we
+// need to make sure the font loads before rendering the canvas.
+export function FontFix(props: FontFixProps) {
   const { css, font, refreshDisplay } = props;
   const [initialized, setInitialized] = useState(false);
 

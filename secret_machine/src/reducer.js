@@ -1,7 +1,7 @@
 // @flow
 
 import { combineReducers } from "redux";
-import type { Action } from "./types.js";
+import type { Action } from "./common/types";
 
 export const ADD_TO_MAIN_DISPLAY = "DISPLAY.ADD_TO_MAIN_DISPLAY";
 export const DELETE_LAST_CHARACTER = "DISPLAY.DELETE_LAST_CHARACTER";

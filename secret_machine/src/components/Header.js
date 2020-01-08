@@ -1,5 +1,5 @@
 // @flow
-import type { ObjectPosition, Rectangle } from "./types.js";
+import type { ObjectPosition, Rectangle } from "../common/types";
 
 import React from "react";
 import PropTypes from "prop-types";
@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 
 import { Container, Graphics, Text } from "@inlet/react-pixi";
 
-import { BrightGreen, BrightGreenText } from "./styles.js";
+import { BrightGreen, BrightGreenText } from "../common/styles";
 
 function getLeftDimensions(size: Rectangle): ObjectPosition {
   let { x, y } = size;

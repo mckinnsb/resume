@@ -1,9 +1,9 @@
 // @flow
-import type { Dimensions } from "./types.js";
+import type { Dimensions } from "./types";
 import { useEffect, useRef, useState } from "react";
 
 // import {useApp} from "@inlet/react-pixi";
-import {debounce} from 'underscore';
+import { debounce } from "underscore";
 
 function getDimensions(): Dimensions {
   return {
@@ -12,7 +12,19 @@ function getDimensions(): Dimensions {
   };
 }
 
-export function useDimensions(): Dimensions {
+export function isDelete(e: KeyboardEvent) {
+  return e.key === "Backspace" || e.key === "Delete";
+}
+
+export function isEnter(e: KeyboardEvent) {
+  return e.key === "Enter";
+}
+
+export function isText(e: KeyboardEvent) {
+  return Boolean(String.fromCharCode(e.keyCode).match(/(\w|\s)/g));
+}
+
+export function useDimensions(): [Dimensions, boolean] {
   const [dimensions, setDimensions] = useState(getDimensions());
   const [resizing, setResizing] = useState(false);
 
@@ -24,18 +36,18 @@ export function useDimensions(): Dimensions {
     };
 
     debouncedResize = debounce(debouncedResize, 250);
-    window.addEventListener('resize', debouncedResize);
+    window.addEventListener("resize", debouncedResize);
 
     let onResize = () => {
       setResizing(true);
-    }
-    window.addEventListener('resize', onResize);
+    };
+    window.addEventListener("resize", onResize);
 
     return () => {
       window.removeEventListener(onResize);
       window.removeEventListener(debouncedResize);
-    }
-  }, [])
+    };
+  }, []);
 
   return [dimensions, resizing];
 }
