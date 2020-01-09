@@ -10,7 +10,7 @@ import { Container, Graphics, Text } from "@inlet/react-pixi";
 
 import { BrightGreen, BrightGreenText } from "../common/styles";
 
-function getLeftDimensions(size: Rectangle): ObjectPosition {
+export function getLeftDimensions(size: Rectangle): ObjectPosition {
   let { x, y } = size;
 
   return {
@@ -20,7 +20,7 @@ function getLeftDimensions(size: Rectangle): ObjectPosition {
   };
 }
 
-function getRightDimensions(size: Rectangle): ObjectPosition {
+export function getRightDimensions(size: Rectangle): ObjectPosition {
   let { width, x, y } = size;
 
   return {

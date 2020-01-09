@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 // import {useApp} from "@inlet/react-pixi";
 import { debounce } from "underscore";
 
-function getDimensions(): Dimensions {
+export function getDimensions(): Dimensions {
   return {
     width: window.innerWidth,
     height: window.innerHeight
@@ -41,6 +41,7 @@ export function useDimensions(): [Dimensions, boolean] {
     let onResize = () => {
       setResizing(true);
     };
+
     window.addEventListener("resize", onResize);
 
     return () => {
