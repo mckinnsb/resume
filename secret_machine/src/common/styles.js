@@ -10,3 +10,4 @@ export const BrightGreenText = new TextStyle({
 
 export const ScreenBlack = 0x3e32a2;
 export const DeadBlack = 0x272727;
+export const SeventiesBrown = 0x643e29;

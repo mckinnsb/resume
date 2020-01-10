@@ -11,8 +11,6 @@ import { Container, Graphics, Text } from "@inlet/react-pixi";
 import { BrightGreen, BrightGreenText } from "../common/styles";
 
 export function getLeftDimensions(size: Rectangle): ObjectPosition {
-  let { x, y } = size;
-
   return {
     x: 0,
     y: 0,
@@ -21,7 +19,7 @@ export function getLeftDimensions(size: Rectangle): ObjectPosition {
 }
 
 export function getRightDimensions(size: Rectangle): ObjectPosition {
-  let { width, x, y } = size;
+  let { width } = size;
 
   return {
     x: width,

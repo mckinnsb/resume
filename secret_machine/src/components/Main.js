@@ -16,7 +16,7 @@ type MainProps = Rectangle & {
 };
 
 export function getTextDimensions(size: Rectangle): ObjectPosition {
-  let { height, x, y } = size;
+  let { height } = size;
 
   return {
     x: 0,

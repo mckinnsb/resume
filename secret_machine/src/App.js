@@ -17,7 +17,7 @@ import {
   FontFix,
 } from './components';
 import {drawScreen, useDimensions} from './common/utils';
-import {DeadBlack} from './common/styles';
+import {DeadBlack, SeventiesBrown} from './common/styles';
 
 // unfortunately, firefox does not support SVGs on canvas
 // unless they have explicit w/h set in the meta-attributes
@@ -26,24 +26,49 @@ import {DeadBlack} from './common/styles';
 
 import frame from './images/monitor.svg';
 import lamp from './images/desklamp.svg';
+import wood from './images/background.jpg';
 
 import './fonts/commodore.woff';
 import './App.css';
 
 const store = createStore(rootReducer);
 
-// assumes you are giving it the inner frame
-// this is similar to getInnerFrame
+// these are the units for the outer/inner height
+// based on the image, basically the smallest "good" display size
+// is used and then we roughly size the whole image (outer) and the
+// size of the display area (inner)
+const INNER_WIDTH = 578.0;
+const INNER_HEIGHT = 400.0;
+
+const OUTER_WIDTH = 800.0;
+const OUTER_HEIGHT = 800.0;
+
+const TABLE_SIZE = 20.0;
+
+function getBackdropDimensions(size: Dimensions): Rectangle {
+  let {width, height: totalHeight} = size;
+  let {height: monitorHeight} = getFrameDimensions(size);
+
+  let x = 0,
+    y = 0;
+  let diff = (totalHeight - monitorHeight) / 2;
+  let height = monitorHeight + diff;
+
+  return {x, y, height, width};
+}
+
+// assumes you are giving it the crt frame dimensions
 function getCRTBlackDimensions(size: Dimensions): Rectangle {
   let {width: frameWidth, height: frameHeight, x, y} = size;
-  const scale = 1.05;
+  const padding = 162;
 
-  let width = frameWidth * scale;
-  let height = frameHeight * scale;
-  //x -= (frameWidth - width) / 2;
-  //y -= (frameHeight - height) / 2;
+  let width = frameWidth + padding;
+  let height = frameHeight + padding;
 
-  return { height, width, x, y };
+  x -= (width - frameWidth) / 2.0;
+  y -= (height - frameHeight) / 2.0;
+
+  return {width, height, x, y};
 }
 
 function getFrameDimensions(size: Dimensions): Rectangle {
@@ -93,22 +118,16 @@ function getHeaderDimensions(size: Rectangle): Rectangle {
 // this is highly dependent on the image we are using and there's
 // no real way to autocalculate it; we scale based on expected aspect
 // ratio and image w/h
-//  right now:
-//
-//  tv frame width: 773px
-//  tv frame height: 543px
-//
-//  this is roughly 10:7 aspect ratio
 function getInnerFrame(size): Rectangle {
   let {width, height, x, y} = size;
 
   // these values are pulled from the image utility used to create the frame
-  // we scale the offsets based on the ratio and pray its close
+  // we scale the offsets based on the ratio and pray its near exact (it usually is very close)
   return {
-    x: 112 * (width / 800.0) + x,
-    y: 120 * (height / 800.0) + y,
-    width: 578 * (width / 800.0),
-    height: 400 * (height / 800.0),
+    x: 112 * (width / OUTER_WIDTH) + x,
+    y: 120 * (height / OUTER_HEIGHT) + y,
+    width: INNER_WIDTH * (width / OUTER_WIDTH),
+    height: INNER_HEIGHT * (height / OUTER_HEIGHT),
   };
 }
 
@@ -120,7 +139,7 @@ function getMainDimensions(size: Rectangle): Rectangle {
   return {
     x: x,
     y: y + header_height,
-    height: height,
+    height: height - header_height,
     width: width,
   };
 }
@@ -145,17 +164,35 @@ function getStageOptions() {
   };
 }
 
+function getTableSize(background: Dimensions, view: Dimensions) {
+  let {width, height, y: offset} = background;
+
+  let y = offset + height;
+
+  return {
+    y,
+    x: 0,
+    height: TABLE_SIZE * (view.height / OUTER_HEIGHT),
+    width,
+  };
+}
+
 function App() {
   const [size, resizing] = useDimensions();
 
+  // all of these are relative to the full size window
   let frame_size = getFrameDimensions(size);
+  let backdrop_size = getBackdropDimensions(size);
+
+  // we calculate this from the backdrop, and the total size
+  let table_size = getTableSize(backdrop_size, size);
 
   //  all of these are size relative to the monitor (frame size)
   let lamp_size = getLampDimensions(frame_size, 0.6);
   let inner_size = getInnerFrame(frame_size);
-  let crt_black_size = getCRTBlackDimensions(inner_size);
 
   // these are sized relative to the "actual" game display (inner frame);
+  let crt_black_size = getCRTBlackDimensions(inner_size);
   let {x, y, width, height} = getHeaderDimensions(inner_size);
   const header = {x, y, width, height};
 
@@ -170,7 +207,9 @@ function App() {
   return resizing ? null : (
     <Stage {...size} options={stage_options}>
       <Provider store={store}>
-        {/* <Sprite image={lamp} anchor={(0, 0)} {...lamp_size} /> */}
+        <Sprite image={wood} anchor={(0, 0)} {...backdrop_size} />
+        <Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />
+        <Graphics draw={g => drawScreen(g, SeventiesBrown, table_size)} />
         <CRTFilterContainer zIndex={1}>
           <Header {...header}></Header>
           <Main {...main}></Main>
@@ -178,7 +217,6 @@ function App() {
           <KeyboardInput />
           <FontFix css="./App.css" font="Commodore" />
         </CRTFilterContainer>
-        {/*<Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />*/}
         <Sprite image={frame} anchor={(0, 0)} {...frame_size} />
       </Provider>
     </Stage>
