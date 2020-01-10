@@ -172,7 +172,7 @@ function App() {
     <Stage {...size} options={stage_options}>
       <Provider store={store}>
         <CRTFilterContainer zIndex={1}>
-          <Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />
+          {/*<Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />*/}
           <Header {...header}></Header>
           <Main {...main}></Main>
           <ZMachineConnector />
