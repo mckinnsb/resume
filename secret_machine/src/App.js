@@ -35,7 +35,6 @@ const store = createStore(rootReducer);
 // assumes you are giving it the inner frame
 // this is similar to getInnerFrame
 function getCRTBlackDimensions(size: Dimensions): Rectangle {
-  return size;
   let {width: frameWidth, height: frameHeight, x, y} = size;
   const scale = 1.05;
 
@@ -106,8 +105,8 @@ function getInnerFrame(size): Rectangle {
   // these values are pulled from the image utility used to create the frame
   // we scale the offsets based on the ratio and pray its close
   return {
-    x: 56 * (width / 800.0) + x / 2,
-    y: 60 * (height / 800.0) + y / 2,
+    x: 112 * (width / 800.0) + x,
+    y: 120 * (height / 800.0) + y,
     width: 578 * (width / 800.0),
     height: 400 * (height / 800.0),
   };
@@ -120,7 +119,7 @@ function getMainDimensions(size: Rectangle): Rectangle {
 
   return {
     x: x,
-    y: y + header_height / 2,
+    y: y + header_height,
     height: height,
     width: width,
   };
@@ -171,14 +170,15 @@ function App() {
   return resizing ? null : (
     <Stage {...size} options={stage_options}>
       <Provider store={store}>
+        {/* <Sprite image={lamp} anchor={(0, 0)} {...lamp_size} /> */}
         <CRTFilterContainer zIndex={1}>
-          {/*<Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />*/}
           <Header {...header}></Header>
           <Main {...main}></Main>
           <ZMachineConnector />
           <KeyboardInput />
           <FontFix css="./App.css" font="Commodore" />
         </CRTFilterContainer>
+        {/*<Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />*/}
         <Sprite image={frame} anchor={(0, 0)} {...frame_size} />
       </Provider>
     </Stage>

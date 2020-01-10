@@ -19,8 +19,8 @@ export function getTextDimensions(size: Rectangle): ObjectPosition {
   let { height, x, y } = size;
 
   return {
-    x: x,
-    y: y + height,
+    x: 0,
+    y: height,
     anchor: [0, 1]
   };
 }
@@ -34,7 +34,9 @@ const MainText = BrightGreenText.clone();
 export function Main(props: MainProps) {
   const { main, x, y, height, width } = props;
   const size = { x, y, height, width };
-  const pos = getTextDimensions(size);
+  const main_area = { height, width }
+
+  const pos = getTextDimensions(main_area);
   const mask = useRef();
 
   MainText.wordWrap = true;
@@ -43,10 +45,10 @@ export function Main(props: MainProps) {
   return (
     <Container {...size}>
       <Graphics
-        draw={g => drawScreen(g, ScreenBlack, { x, y, height, width })}
+        draw={g => drawScreen(g, ScreenBlack, main_area)}
       />
       <Graphics
-        draw={g => drawScreen(g, ScreenBlack, { x, y, height, width })}
+        draw={g => drawScreen(g, ScreenBlack, main_area)}
         ref={mask}
       />
       <Text {...pos} style={MainText} text={main} mask={mask.current} />

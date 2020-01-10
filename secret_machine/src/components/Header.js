@@ -14,8 +14,8 @@ export function getLeftDimensions(size: Rectangle): ObjectPosition {
   let { x, y } = size;
 
   return {
-    x: x,
-    y: y,
+    x: 0,
+    y: 0,
     anchor: [0, 0]
   };
 }
@@ -24,8 +24,8 @@ export function getRightDimensions(size: Rectangle): ObjectPosition {
   let { width, x, y } = size;
 
   return {
-    x: x + width,
-    y: y,
+    x: width,
+    y: 0,
     anchor: [1, 0]
   };
 }
@@ -58,14 +58,15 @@ function drawTop(g, color, position: Rectangle) {
 function Header(props: HeaderProps) {
   const { left, right, x, y, height, width } = props;
 
-  let size = { x, y, height, width };
+  const size = { x, y, height, width };
+  const header_bar = { height, width }
 
-  const leftDim = getLeftDimensions(size);
-  const rightDim = getRightDimensions(size);
+  const leftDim = getLeftDimensions(header_bar);
+  const rightDim = getRightDimensions(header_bar);
 
   return (
     <Container {...size}>
-      <Graphics draw={g => drawTop(g, BrightGreen, size)} />
+      <Graphics draw={g => drawTop(g, BrightGreen, header_bar)} />
       <Text {...leftDim} text={left} style={HeaderText} />
       <Text {...rightDim} text={right} style={HeaderText} />
     </Container>
