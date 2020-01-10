@@ -6,13 +6,13 @@ import { useFrameTime } from "../common/utils";
 
 function getCRTEffects(time: number) {
   return {
-    vignettingAlpha: 0.7,
+    vignettingAlpha: 0.4,
     noise: 0.1,
-    noiseSize: 3.3,
+    noiseSize: 2.3,
     seed: Math.random(),
     time: time,
-    lineWidth: 5,
-    lineContrast: 0.05,
+    lineWidth: 6,
+    lineContrast: 0.03,
     animating: true
   };
 }

@@ -5,6 +5,13 @@ import { useEffect, useRef, useState } from "react";
 // import {useApp} from "@inlet/react-pixi";
 import { debounce } from "underscore";
 
+export function drawScreen(g, color, position: Rectangle) {
+  g.beginFill(color, 1);
+  let { x, y, width, height } = position;
+  g.drawRect(x, y, width, height);
+  g.endFill();
+}
+
 export function getDimensions(): Dimensions {
   return {
     width: window.innerWidth,

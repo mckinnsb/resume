@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { Container, Graphics, Text } from "@inlet/react-pixi";
 
 import { ScreenBlack, BrightGreenText } from "../common/styles";
+import { drawScreen } from "../common/utils";
 
 // main display, not main class
 type MainProps = Rectangle & {
@@ -27,13 +28,6 @@ export function getTextDimensions(size: Rectangle): ObjectPosition {
 type DisplayProps = {
   main?: string
 };
-
-function drawScreen(g, color, position: Rectangle) {
-  g.beginFill(color, 1);
-  let { x, y, width, height } = position;
-  g.drawRect(x, y, width, height);
-  g.endFill();
-}
 
 const MainText = BrightGreenText.clone();
 
