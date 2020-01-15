@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 
 import { Container, Graphics, Text } from "@inlet/react-pixi";
 
-import { BrightGreen, BrightGreenText } from "../common/styles";
+import { fontSize, BrightGreen, BrightGreenText } from "../common/styles";
 
 export function getLeftDimensions(size: Rectangle): ObjectPosition {
   return {
@@ -57,10 +57,11 @@ function Header(props: HeaderProps) {
   const { left, right, x, y, height, width } = props;
 
   const size = { x, y, height, width };
-  const header_bar = { height, width }
+  const header_bar = { height, width };
 
   const leftDim = getLeftDimensions(header_bar);
   const rightDim = getRightDimensions(header_bar);
+  HeaderText.fontSize = fontSize();
 
   return (
     <Container {...size}>

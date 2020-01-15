@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Container, Graphics, Text } from "@inlet/react-pixi";
 
-import { ScreenBlack, BrightGreenText } from "../common/styles";
+import { fontSize, ScreenBlack, BrightGreenText } from "../common/styles";
 import { drawScreen } from "../common/utils";
 
 // main display, not main class
@@ -34,7 +34,7 @@ const MainText = BrightGreenText.clone();
 export function Main(props: MainProps) {
   const { main, x, y, height, width } = props;
   const size = { x, y, height, width };
-  const main_area = { height, width }
+  const main_area = { height, width };
 
   const pos = getTextDimensions(main_area);
   const mask = useRef();
@@ -42,15 +42,12 @@ export function Main(props: MainProps) {
   MainText.wordWrap = true;
   MainText.wordWrapWidth = width;
 
+  MainText.fontSize = fontSize();
+
   return (
     <Container {...size}>
-      <Graphics
-        draw={g => drawScreen(g, ScreenBlack, main_area)}
-      />
-      <Graphics
-        draw={g => drawScreen(g, ScreenBlack, main_area)}
-        ref={mask}
-      />
+      <Graphics draw={g => drawScreen(g, ScreenBlack, main_area)} />
+      <Graphics draw={g => drawScreen(g, ScreenBlack, main_area)} ref={mask} />
       <Text {...pos} style={MainText} text={main} mask={mask.current} />
     </Container>
   );

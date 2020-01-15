@@ -4,6 +4,7 @@ import type {Dimensions, Rectangle} from './common/types';
 import React from 'react';
 import {Graphics, Stage, Sprite} from '@inlet/react-pixi';
 
+import { isMobile } from "react-device-detect";
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import {rootReducer} from './reducer';
@@ -16,6 +17,9 @@ import {
   KeyboardInput,
   FontFix,
 } from './components';
+
+import styled from 'styled-components';
+
 import {drawScreen, useDimensions} from './common/utils';
 import {DeadBlack, SeventiesBrown} from './common/styles';
 
@@ -25,7 +29,7 @@ import {DeadBlack, SeventiesBrown} from './common/styles';
 // additionally it renders exactly like a PNG, anyway.
 
 import frame from './images/monitor.svg';
-import lamp from './images/desklamp.svg';
+// import lamp from './images/desklamp.svg';
 import wood from './images/background.jpg';
 
 import './fonts/commodore.woff';
@@ -45,6 +49,10 @@ const OUTER_HEIGHT = 800.0;
 
 const TABLE_SIZE = 20.0;
 
+const Body = styled.div`
+  position: absolute;
+`;
+
 function getBackdropDimensions(size: Dimensions): Rectangle {
   let {width, height: totalHeight} = size;
   let {height: monitorHeight} = getFrameDimensions(size);
@@ -60,7 +68,7 @@ function getBackdropDimensions(size: Dimensions): Rectangle {
 // assumes you are giving it the crt frame dimensions
 function getCRTBlackDimensions(size: Dimensions): Rectangle {
   let {width: frameWidth, height: frameHeight, x, y} = size;
-  const padding = 162;
+  const padding = isMobile ? 80 : 162;
 
   let width = frameWidth + padding;
   let height = frameHeight + padding;
@@ -144,6 +152,7 @@ function getMainDimensions(size: Rectangle): Rectangle {
   };
 }
 
+/**
 function getLampDimensions(size: Rectangle, scale: number): Rectangle {
   let {x, y, width, height: monitorHeight} = size;
   x = 0;
@@ -153,6 +162,7 @@ function getLampDimensions(size: Rectangle, scale: number): Rectangle {
 
   return {x, y, width, height};
 }
+**/
 
 function getStageOptions() {
   return {
@@ -188,7 +198,7 @@ function App() {
   let table_size = getTableSize(backdrop_size, size);
 
   //  all of these are size relative to the monitor (frame size)
-  let lamp_size = getLampDimensions(frame_size, 0.6);
+  //  let lamp_size = getLampDimensions(frame_size, 0.6);
   let inner_size = getInnerFrame(frame_size);
 
   // these are sized relative to the "actual" game display (inner frame);
@@ -205,21 +215,25 @@ function App() {
   // in "options", but doesn't expose all of those props
   // to the component (but as far as I'm aware, it could)
   return resizing ? null : (
-    <Stage {...size} options={stage_options}>
-      <Provider store={store}>
-        <Sprite image={wood} anchor={(0, 0)} {...backdrop_size} />
-        <Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />
-        <Graphics draw={g => drawScreen(g, SeventiesBrown, table_size)} />
-        <CRTFilterContainer zIndex={1}>
-          <Header {...header}></Header>
-          <Main {...main}></Main>
-          <ZMachineConnector />
+    <Body>
+        <Stage {...size} options={stage_options}>
+          <Provider store={store}>
+            <Sprite image={wood} anchor={(0, 0)} {...backdrop_size} />
+            <Graphics draw={g => drawScreen(g, DeadBlack, crt_black_size)} />
+            <Graphics draw={g => drawScreen(g, SeventiesBrown, table_size)} />
+            <CRTFilterContainer zIndex={1}>
+              <Header {...header}></Header>
+              <Main {...main}></Main>
+              <ZMachineConnector />
+              <FontFix css="./App.css" font="Commodore" />
+            </CRTFilterContainer>
+            <Sprite image={frame} anchor={(0, 0)} {...frame_size} />
+          </Provider>
+        </Stage>
+        <Provider store={store}>
           <KeyboardInput />
-          <FontFix css="./App.css" font="Commodore" />
-        </CRTFilterContainer>
-        <Sprite image={frame} anchor={(0, 0)} {...frame_size} />
-      </Provider>
-    </Stage>
+        </Provider>
+    </Body>
   );
 }
 

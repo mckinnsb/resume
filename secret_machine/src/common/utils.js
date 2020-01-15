@@ -52,8 +52,8 @@ export function useDimensions(): [Dimensions, boolean] {
     window.addEventListener("resize", onResize);
 
     return () => {
-      window.removeEventListener(onResize);
-      window.removeEventListener(debouncedResize);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", debouncedResize);
     };
   }, []);
 
