@@ -21,7 +21,7 @@ import {
 import styled from "styled-components";
 
 import { drawScreen, useDimensions } from "./common/utils";
-import { DeadBlack, SeventiesBrown } from "./common/styles";
+import { fontSize, DeadBlack, SeventiesBrown } from "./common/styles";
 
 // unfortunately, firefox does not support SVGs on canvas
 // unless they have explicit w/h set in the meta-attributes
@@ -98,8 +98,6 @@ function getFrameDimensions(size: Dimensions): Rectangle {
 function getHeaderDimensions(size: Rectangle): Rectangle {
   const { width, x, y } = size;
 
-  // 26px is the default text size,
-  //
   // Unlike web browsers, games and graphics engines have a strict 1-1 relationship
   // between "text size" and area taken by the font including top padding.
   //
@@ -112,7 +110,7 @@ function getHeaderDimensions(size: Rectangle): Rectangle {
   // such that if there were another text line above it, it would be the distance
   // between baselines. This is what developers like.
 
-  let font_size = 26;
+  let font_size = fontSize();
   let top_padding = 4;
 
   return {
