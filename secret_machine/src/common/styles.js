@@ -1,7 +1,7 @@
 import { TextStyle } from "pixi.js";
 import { isMobile } from "react-device-detect";
 
-const MOBILE_SIZE = 11;
+const MOBILE_SIZE = 10;
 const DESKTOP_SIZE = 24;
 
 export const BrightGreen = isMobile ? 0xFFFFFF : 0x7c71da;
