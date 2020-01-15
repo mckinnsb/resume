@@ -51,7 +51,7 @@ class ReactBuild < Middleman::Extension
     Dir.chdir 'secret_machine' do
       # move into secret machine, build, and move files out to the
       # middleman build directory
-      `yarn build`
+      `yarn build --prod`
       target = '../build'
       FileUtils.cp Dir.glob('build/*.js'), target
       FileUtils.cp 'build/index.html', File.join(target, 'secret.html')
