@@ -130,7 +130,7 @@ describe("reducer", () => {
       right: " oh god",
       inputting: true,
       inputting_at: 3
-    }
+    };
 
     expect(newState).toEqual(expected);
   });
