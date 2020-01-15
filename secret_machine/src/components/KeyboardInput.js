@@ -1,20 +1,20 @@
 // @flow
-import type {DisplaySlice} from '../reducer';
+import type { DisplaySlice } from "../reducer";
 
-import React from 'react';
-import {connect} from 'react-redux';
-import {isMobile} from 'react-device-detect';
-import styled from 'styled-components';
-import {inputToDisplay, deleteLastCharacter} from '../reducer';
-import {isDelete, isEnter, isText} from '../common/utils';
+import React from "react";
+import { connect } from "react-redux";
+import { isMobile } from "react-device-detect";
+import styled from "styled-components";
+import { inputToDisplay, deleteLastCharacter } from "../reducer";
+import { isDelete, isEnter, isText } from "../common/utils";
 
-import RustyZ from '../common/RustyZ';
+import RustyZ from "../common/RustyZ";
 
 type KeyboardProps = {
   inputToDisplay: string => void,
   deleteLastCharacter: () => void,
   inputting: boolean,
-  main: string,
+  main: string
 };
 
 const InputContainer = styled.input`
@@ -31,10 +31,10 @@ const InputContainer = styled.input`
 `;
 
 export function KeyboardInput(props: KeyboardProps) {
-  let {inputToDisplay, deleteLastCharacter} = props;
-  let {update} = RustyZ;
+  let { inputToDisplay, deleteLastCharacter } = props;
+  let { update } = RustyZ;
 
-  let [input, setInput] = React.useState('');
+  let [input, setInput] = React.useState("");
 
   React.useEffect(() => {
     let handleInput = (e: KeyboardEvent) => {
@@ -45,10 +45,10 @@ export function KeyboardInput(props: KeyboardProps) {
           setInput(input.slice(0, -1));
         }
       } else if (isEnter(e)) {
-        inputToDisplay('\n');
+        inputToDisplay("\n");
         update(input);
 
-        setInput('');
+        setInput("");
       } else if (isText(e)) {
         inputToDisplay(e.key);
 
@@ -57,10 +57,10 @@ export function KeyboardInput(props: KeyboardProps) {
       }
     };
 
-    document.addEventListener('keydown', handleInput);
+    document.addEventListener("keydown", handleInput);
 
     return () => {
-      document.removeEventListener('keydown', handleInput);
+      document.removeEventListener("keydown", handleInput);
     };
   });
 
@@ -75,14 +75,14 @@ export function KeyboardInput(props: KeyboardProps) {
         inputEl.current.focus();
       };
 
-      document.addEventListener('click', clickFn);
-      document.addEventListener('touchend', clickFn);
+      document.addEventListener("click", clickFn);
+      document.addEventListener("touchend", clickFn);
     }
 
     return setListeners
       ? () => {
-          document.removeEventListener('click', clickFn);
-          document.removeEventListener('touchend', clickFn);
+          document.removeEventListener("click", clickFn);
+          document.removeEventListener("touchend", clickFn);
         }
       : () => {};
   });
@@ -94,14 +94,14 @@ KeyboardInput.propTypes = {};
 
 const mapStateToProps = (state: DisplaySlice) => {
   let {
-    display: {main, inputting},
+    display: { main, inputting }
   } = state;
-  return {main, inputting};
+  return { main, inputting };
 };
 
 const mapDispatchToProps = {
   inputToDisplay,
-  deleteLastCharacter,
+  deleteLastCharacter
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(KeyboardInput);
