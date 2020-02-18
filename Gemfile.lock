@@ -123,10 +123,10 @@ GEM
       activesupport (>= 3.1)
     parallel (1.9.0)
     pdfkit (0.8.4.1)
-    rack (1.6.4)
+    rack (1.6.13)
     rack-livereload (0.3.16)
       rack
-    rack-protection (1.5.3)
+    rack-protection (1.5.5)
       rack
     rake (11.2.2)
     rb-fsevent (0.9.7)
