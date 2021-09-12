@@ -85,6 +85,10 @@ activate :react_build
 
 # Build-specific configuration
 configure :build do
+  activate :livereload,
+           host: '127.0.0.1',
+           livereload_css_target: nil
+
   # Minify CSS on build
   # activate :minify_css
 

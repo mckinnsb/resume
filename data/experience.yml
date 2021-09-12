@@ -1,38 +1,78 @@
 ﻿jobs:
   -
+    company: CapitalRX
+    location: Remote (New York, NY)
+    position: Vice President, Software Development
+    when: February 2021 - Present
+    mobile_when: 2/21 - Now
+    accomplishments:
+      - Oversaw the rapid growth of the department, personally hiring <b>20</b> developers and <b>8</b> QA Engineers, which saw the overall Engineering team scale to <b>70</b> from <b>27</b> in the space of a few months.
+      - Partnered with the CTO of <b>CapitalRX</b> to build out the Engineering tech leadership by promoting from within and hiring outside of the company.
+      - Worked with the SVP of Product to establish a system of metrics (<b>KPIs</b>) to measure team progress and ensure steady progress to hit important deadlines and milestones.
+      - Oversaw the growth of the department from <b>2</b> scrum teams to <b>10</b>, working with the Director of Agile and product leadership to balance resources to meet needs.
+      - Coached and directly managed <b>23</b> Engineers, including <b>2</b> Engineering Managers.
+      - Collaborated with the new <b>Senior Director of Engineering</b> to deliver a <b>de-identification</b> framework to fully test highly data-driven behavior.
+      - Spearheaded and organized a cross-team effort to develop a <b>microfrontend</b> framework, to enable fully indpendent teams.
+      - Supervised the growth and development of the QA department, to group of <b>14</b> Engineers and a Director of QA.
+      - Established standards with the CTO and engineering leadership for our service migration, and new <b>microservice</b> development.
+      - Worked with the <b>Director of QA</b> to formalize processes and set new process standards within the QA department to meet growing needs, using a "shift left" mentality.
+      - Made critical changes to automation strategy to deal with scaling issues, including introducing smoke tests and parallizing full runs.
+      - Set work standards and processes for the Engineering and QA departments.
+      - Developed a reputation as a soft problem solver, working to address critical issues as they arose.
+
+  -
+    company: CapitalRX
+    location: Remote (New York, NY)
+    position: Senior Director, Software Engineering
+    when: March 2020 - February 2021
+    mobile_when: 3/20 - 2/21
+    accomplishments:
+      - Worked with the CTO of <b>CapitalRX</b> to lead a team of 27 developers in delivering a pharmacy claims adjudication service, <b>JUDI</b>, the first launched in 25 years.
+      - Coached, managed and worked alongside 14 Engineers during the development of <b>JUDI</b>.
+      - Worked with SVP of Product to develop an Agile Pilot, which led to a successful adaptation of Scrum methodologies using <b>JIRA</b>.
+      - Worked with the CTO to build out subdepartments where we found gaps, including QA, DevOps and IT.
+      - Hired developers, scrummasters, and QA engineers to meet our launch goals for the year.
+      - Wrote an integration test pipeline using <b>CypressJS</b> and <b>Codebuild</b>.
+      - Developed several core packages to facilitate automated testing in <b>CypressJS</b> and <b>Pytest</b>, using <b>Python</b>, <b>NodeJS</b> and <b>AWS Lambda</b>.
+      - Built core tooling for the dev experience, including automatic code linters and a seeding framework, written in <b>Python</b>, <b>NodeJS</b> and <b>Typescript</b>.
+      - Built out a QA department and set up QA processes, including bug triage and testing requirements.
+      - Worked with both vendors and clients on several critical integrations for launch.
+
+
+  -
     company: SBM Consulting (Contract w/Olleyes)
     location: New York, NY
     position: CTO
-    when: August 2018 - Present
-    mobile_when: 6/13-Now
+    when: August 2018 - November 2019
+    mobile_when: 8/18 - 11/19
     accomplishments:
-       - Worked with the founder of <i>Olleyes</i> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA class 1 medical device trials.
-       - Transitioned the device from an all-in-one prototype to a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
-       - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture on the <b>Pico 4k</b> (Android).
-       - Audited a <b>Django</b> application and re-wrote it to support multiple users, accounts, offices, devices, managers, employees, and patients.
-       - Leveraged <b>UniRx</b> (RxNET for Unity) and <b>Unidux</b> (Redux for Unity) to create a state-driven architecture that separated the data and network layer from the UI layer.
-       - Ported an <b>Electron</b> application to a web-native <b>Angular</b> application, which included the addition of new API endpoints.
-       - Customized and refined the <b>Angular</b> application for mobile phone and tablet usage in client settings.
-       - Extended the <b>Angular</b> application to include real-time test monitoring with secure <b>Websockets</b> and <b>Django Channels</b>.
-       - Created a <b>Docker Compose</b> setup for local development that boots all required services and additional development services (such as a fake mail server).
-       - Deployed the new application to the <b>AWS</b> platform using <b>ECS</b> on <b>Docker Compose</b>.
-       - Worked closely with vendors to establish technical specifications and debug hardware issues.
-       - Wrote basic installation scripts (.bat) for Windows using the <b>AWS CLI</b> and PowerShell.
+      - Worked with the founder of <b>Olleyes</b> to correct issues in a prototype medical device, a <b>FOVE VR</b> headset that performs visual tests, readying it for FDA class 1 medical device trials.
+      - Transitioned the device from an all-in-one prototype to a secure cloud-based platform using <b>AWS</b>, readying it for pre-release to first clients.
+      - Abstracted away platform-specific dependencies of different VR platforms behind interfaces using <b>Unity</b> and <b>Zenject</b>, and created a new product using that architecture on the <b>Pico 4k</b> (Android).
+      - Audited a <b>Django</b> application and re-wrote it to support multiple users, accounts, offices, devices, managers, employees, and patients.
+      - Leveraged <b>UniRx</b> (RxNET for Unity) and <b>Unidux</b> (Redux for Unity) to create a state-driven architecture that separated the data and network layer from the UI layer.
+      - Ported an <b>Electron</b> application to a web-native <b>Angular</b> application, which included the addition of new API endpoints.
+      - Customized and refined the <b>Angular</b> application for mobile phone and tablet usage in client settings.
+      - Extended the <b>Angular</b> application to include real-time test monitoring with secure <b>Websockets</b> and <b>Django Channels</b>.
+      - Created a <b>Docker Compose</b> setup for local development that boots all required services and additional development services (such as a fake mail server).
+      - Deployed the new application to the <b>AWS</b> platform using <b>ECS</b> on <b>Docker Compose</b>.
+      - Worked closely with vendors to establish technical specifications and debug hardware issues.
+      - Wrote basic installation scripts (.bat) for Windows using the <b>AWS CLI</b> and PowerShell.
 
   -
     company: Wandermight, LLC
     location: New York, NY
     position: Founder
-    when: January 2019 - Present
-    mobile_when: 1/19-Now
+    when: January 2018 - Present
+    mobile_when: 1/18-Now
     accomplishments:
-       - Worked with a business partner start work on a 3d "real-time survival" game in <b>Unity3D</b>, which stands at over <b>380+</b> classes and <b>50k</b> lines of code at this point in time.
-       - Created a system to procedurally generate a overland map representing a large, futuristic city with random encounters [<a href="/images/city.png">Image</a>].
-       - Created a system to procedurally generate a city mesh, complete with roads, building placement, zoning, cars, and lights [<a href="/images/arena.png">Image</a>].
-       - Created a system to dynamically generate buildings based on zone, intelligent placement of doors/windows, and splitting floors into rooms [<a href="/images/building.png">Image</a>].
-       - Worked with a 3d artist to design asset pipelines for all of the above systems so that they could create resources that could be used dynamically.
-       - Interviewed musicians and other contributors to work with the company.
-       - Wrote hundreds of tests to verify game functionality using <b>NUnit</b> and <b>NSubstitute</b>.
+      - Worked with a business partner start work on a 3d "real-time survival" game in <b>Unity3D</b>, which stands at over <b>380+</b> classes and <b>50k</b> lines of code at this point in time.
+      - Created a system to procedurally generate a overland map representing a large, futuristic city with random encounters [<a href="/images/city.png">Image</a>].
+      - Created a system to procedurally generate a city mesh, complete with roads, building placement, zoning, cars, and lights [<a href="/images/arena.png">Image</a>].
+      - Created a system to dynamically generate buildings based on zone, intelligent placement of doors/windows, and splitting floors into rooms [<a href="/images/building.png">Image</a>].
+      - Worked with a 3d artist to design asset pipelines for all of the above systems so that they could create resources that could be used dynamically.
+      - Interviewed musicians and other contributors to work with the company.
+      - Wrote hundreds of tests to verify game functionality using <b>NUnit</b> and <b>NSubstitute</b>.
 
   -
     company: Paperless Post
@@ -41,17 +81,17 @@
     when: January 2017 - January 2018
     mobile_when: 1/17-1/18
     accomplishments:
-       - Helped complete the transition from <b>Rails 2</b> to <b>Rails 4</b> for a large Rails codebase (250k+ lines in one major component) with a great deal of technical debt.
-       - Worked with a small team to develop a complete mobile version of the website, including virtual card creation, in <b>React/Redux</b> (using <b>RxJS</b> and <b>Redux-Observable</b>)
-       - Created a developer setup for the application and all required services (13+) using <b>Docker</b>, which included charting dependencies.
-       - Performed fundamental, decoupling changes required to <b>Rails</b> and <b>Go</b> services to facilitate <b>Dockerization</b>.
-       - Worked on a team to migrate our production environment from <b>AWS EC2</b> instances to <b>Docker</b> on <b>Kubernetes</b>, using the dependency chart I created as a guide.
-       - Worked extensively with the QA team to create a suite of <b>NightmareJS</b> tests, including instructional sessions and code review, to facilitate service integrity during these transitional periods.
-       - Made new API endpoints for the <b>Rails</b> application for mobile-specific purposes for our new <b>React</b> app and existing <b>iOS</b> app.
-       - Worked with the iOS Team Leader to ensure API consistency across versions, experience consistency between mobile app and mobile web, prevent service disruptions, and agree on new changes/additions.
-       - Wrote many tests to cover critical previously uncovered parts of the <b>Rails</b> and desktop <b>React</b> applications.
-       - Worked with load response teams to prepare the application to handle high volumes of users during the holidays and Valentine's Day.
-       - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
+      - Helped complete the transition from <b>Rails 2</b> to <b>Rails 4</b> for a large Rails codebase (250k+ lines in one major component) with a great deal of technical debt.
+      - Worked with a small team to develop a complete mobile version of the website, including virtual card creation, in <b>React/Redux</b> (using <b>RxJS</b> and <b>Redux-Observable</b>)
+      - Created a developer setup for the application and all required services (13+) using <b>Docker</b>, which included charting dependencies.
+      - Performed fundamental, decoupling changes required to <b>Rails</b> and <b>Go</b> services to facilitate <b>Dockerization</b>.
+      - Worked on a team to migrate our production environment from <b>AWS EC2</b> instances to <b>Docker</b> on <b>Kubernetes</b>, using the dependency chart I created as a guide.
+      - Worked extensively with the QA team to create a suite of <b>NightmareJS</b> tests, including instructional sessions and code review, to facilitate service integrity during these transitional periods.
+      - Made new API endpoints for the <b>Rails</b> application for mobile-specific purposes for our new <b>React</b> app and existing <b>iOS</b> app.
+      - Worked with the iOS Team Leader to ensure API consistency across versions, experience consistency between mobile app and mobile web, prevent service disruptions, and agree on new changes/additions.
+      - Wrote many tests to cover critical previously uncovered parts of the <b>Rails</b> and desktop <b>React</b> applications.
+      - Worked with load response teams to prepare the application to handle high volumes of users during the holidays and Valentine's Day.
+      - Developed an internal reputation in the company as a problem solver by reducing the complexity of previous solutions.
 
   -
     company: SBM Consulting (Contract w/ FarmersWeb)
@@ -136,6 +176,8 @@
       - Took project technical specifications and screen mocks from business analysts and translated them into architecture and attractive interfaces.
       - Worked with the Web Producer, Rewards Manager, and Rules Engine lead to quickly produce solutions to emerging business needs in ‘hot fix’ releases.
       - Fixed many long-standing <b>JavaScript</b> and <b>CSS</b> bugs (several years old) in the front end of the website.
+
+archived_jobs:
   -
     company: Kazoo Interactive
     location: Southbury, CT
@@ -152,7 +194,6 @@
       - Devised an advertising-free monetization scheme for our product in the educational social networking space and beyond.
       - Worked with a business partner in creating an initial vision for the company&#58; its logo, slogan, business plan, site design, and overall mission.
 
-archived_jobs:
   -
     company: Amedia Creative
     location: Ramsey, NJ
