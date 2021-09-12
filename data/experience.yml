@@ -6,11 +6,12 @@
     when: February 2021 - Present
     mobile_when: 2/21 - Now
     accomplishments:
-      - Oversaw the rapid growth of the department, personally hiring <b>20</b> developers and <b>8</b> QA Engineers, which saw the overall Engineering team scale to <b>70</b> from <b>27</b> in the space of a few months.
-      - Partnered with the CTO of <b>CapitalRX</b> to build out the Engineering tech leadership by promoting from within and hiring outside of the company.
+      - Oversaw the rapid growth of the department as the hiring manager for<b>20</b> developers and <b>8</b> QA Engineers, which saw the overall Engineering team scale to <b>70</b> from <b>27</b> in the space of a few months.
+      - Partnered with the CTO of <b>CapitalRX</b> to expand the tech leadership team by promoting from within and hiring outside of the company.
       - Worked with the SVP of Product to establish a system of metrics (<b>KPIs</b>) to measure team progress and ensure steady progress to hit important deadlines and milestones.
       - Oversaw the growth of the department from <b>2</b> scrum teams to <b>10</b>, working with the Director of Agile and product leadership to balance resources to meet needs.
       - Coached and directly managed <b>23</b> Engineers, including <b>2</b> Engineering Managers.
+      - Initiated continuing education through a series of Chapter Meetings with the Director of Agile and engineering leadership.
       - Collaborated with the new <b>Senior Director of Engineering</b> to deliver a <b>de-identification</b> framework to fully test highly data-driven behavior.
       - Spearheaded and organized a cross-team effort to develop a <b>microfrontend</b> framework, to enable fully indpendent teams.
       - Supervised the growth and development of the QA department, to group of <b>14</b> Engineers and a Director of QA.
@@ -18,7 +19,8 @@
       - Worked with the <b>Director of QA</b> to formalize processes and set new process standards within the QA department to meet growing needs, using a "shift left" mentality.
       - Made critical changes to automation strategy to deal with scaling issues, including introducing smoke tests and parallizing full runs.
       - Set work standards and processes for the Engineering and QA departments.
-      - Developed a reputation as a soft problem solver, working to address critical issues as they arose.
+      - Fixed many issues within the CI/CD pipeline and automation suites.
+      - Developed a reputation as a soft problem solver and technical expert, working to address critical issues as they arose.
 
   -
     company: CapitalRX
@@ -36,6 +38,7 @@
       - Developed several core packages to facilitate automated testing in <b>CypressJS</b> and <b>Pytest</b>, using <b>Python</b>, <b>NodeJS</b> and <b>AWS Lambda</b>.
       - Built core tooling for the dev experience, including automatic code linters and a seeding framework, written in <b>Python</b>, <b>NodeJS</b> and <b>Typescript</b>.
       - Built out a QA department and set up QA processes, including bug triage and testing requirements.
+      - Fixed production issues as they arose on our system health dashboard.
       - Worked with both vendors and clients on several critical integrations for launch.
 
 

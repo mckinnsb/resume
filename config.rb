@@ -24,6 +24,14 @@ activate :relative_assets
   proxy "#{name}.html", 'devlog.html', locals: { game: name }, ignore: true
 end
 
+PDFKit.configure do |config|
+  config.default_options = {
+    page_size: 'Letter',
+    print_media_type: true,
+    enable_local_file_access: true
+  }
+end
+
 # Simple class to save the resume as a PDF after build
 class PDFBuild < Middleman::Extension
   def initialize(app, options = {}, &block)
@@ -33,9 +41,7 @@ class PDFBuild < Middleman::Extension
   def after_build(_)
     file = File.new 'build/resume.html'
 
-    kit = PDFKit.new(file,
-                     page_size: 'Letter',
-                     print_media_type: true)
+    kit = PDFKit.new(file)
 
     kit.to_file('build/resume.pdf')
   end
