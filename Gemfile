@@ -14,7 +14,7 @@ gem 'wdm', '~> 0.1.0', platforms: %i[mswin mingw]
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: %i[mswin mingw]
 
-gem 'rack', '2.0.8'
+gem 'rack', '2.1.4'
 # Middleman gems
 gem 'middleman', '4.1.14'
 gem 'middleman-compass', '>= 4.0.0'

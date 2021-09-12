@@ -120,7 +120,7 @@ GEM
     parallel (1.19.2)
     pdfkit (0.8.4.3.2)
     public_suffix (4.0.6)
-    rack (2.0.8)
+    rack (2.1.4)
     rack-livereload (0.3.17)
       rack
     rake (13.0.6)
@@ -160,7 +160,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-sprockets (>= 4.0.0)
   pdfkit
-  rack (= 2.0.8)
+  rack (= 2.1.4)
   slim (>= 3.0)
   tzinfo-data
   wdm (~> 0.1.0)
